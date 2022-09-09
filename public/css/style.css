@@ -832,6 +832,30 @@ video {
   left: 2.75rem;
 }
 
+.left-\[-px\] {
+  left: -px;
+}
+
+.right-20 {
+  right: 5rem;
+}
+
+.right-12 {
+  right: 3rem;
+}
+
+.right-14 {
+  right: 3.5rem;
+}
+
+.right-4 {
+  right: 1rem;
+}
+
+.left-\[350-px\] {
+  left: 350-px;
+}
+
 .z-50 {
   z-index: 50;
 }
@@ -1427,6 +1451,10 @@ video {
   margin-top: 3rem;
 }
 
+.mt-\[130px\] {
+  margin-top: 130px;
+}
+
 .block {
   display: block;
 }
@@ -1597,6 +1625,18 @@ video {
 
 .h-\[505px\] {
   height: 505px;
+}
+
+.h-\[5px\] {
+  height: 5px;
+}
+
+.h-\[10px\] {
+  height: 10px;
+}
+
+.h-\[30px\] {
+  height: 30px;
 }
 
 .w-14 {
@@ -1781,6 +1821,28 @@ video {
   width: 73px;
 }
 
+.w-9 {
+  width: 2.25rem;
+}
+
+.w-\[3px\] {
+  width: 3px;
+}
+
+.w-\[35px\] {
+  width: 35px;
+}
+
+.w-\[4px\] {
+  width: 4px;
+}
+
+.border-spacing-1 {
+  --tw-border-spacing-x: 0.25rem;
+  --tw-border-spacing-y: 0.25rem;
+  border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
+}
+
 .translate-x-\[70px\] {
   --tw-translate-x: 70px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1812,6 +1874,10 @@ video {
 
 .flex-wrap {
   flex-wrap: wrap;
+}
+
+.items-start {
+  align-items: flex-start;
 }
 
 .items-center {
@@ -2313,6 +2379,22 @@ video {
   padding-left: 1rem;
 }
 
+.pb-4 {
+  padding-bottom: 1rem;
+}
+
+.pt-\[10px\] {
+  padding-top: 10px;
+}
+
+.pt-\[5px\] {
+  padding-top: 5px;
+}
+
+.pt-\[1px\] {
+  padding-top: 1px;
+}
+
 .text-left {
   text-align: left;
 }
@@ -2501,6 +2583,11 @@ video {
 .text-slate-700 {
   --tw-text-opacity: 1;
   color: rgb(51 65 85 / var(--tw-text-opacity));
+}
+
+.text-\[\#4372EA\] {
+  --tw-text-opacity: 1;
+  color: rgb(67 114 234 / var(--tw-text-opacity));
 }
 
 .shadow-3xl {
@@ -2742,6 +2829,11 @@ span {
   color: rgb(59 130 246 / var(--tw-text-opacity));
 }
 
+.hover\:text-\[\#4372EA\]:hover {
+  --tw-text-opacity: 1;
+  color: rgb(67 114 234 / var(--tw-text-opacity));
+}
+
 .focus\:border-blue-500:focus {
   --tw-border-opacity: 1;
   border-color: rgb(59 130 246 / var(--tw-border-opacity));
@@ -2765,6 +2857,11 @@ span {
 .active\:text-blue-500:active {
   --tw-text-opacity: 1;
   color: rgb(59 130 246 / var(--tw-text-opacity));
+}
+
+.active\:text-\[\#4372EA\]:active {
+  --tw-text-opacity: 1;
+  color: rgb(67 114 234 / var(--tw-text-opacity));
 }
 
 .peer:checked ~ .peer-checked\:bg-gray-200 {
