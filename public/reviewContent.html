@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/public/css/style.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Linimasa</title>
+  </head>
+  <body class="bg-slate-200">
+    <!-- header -->
+    <div class="container">
+      <div class="p-6 flex items-center w-full bg-white fixed top-0">
+        <img src="/public/img/back-icon.png" alt="icon back" class="w-10" onclick="history.back()">
+        <h1 class="text-lg ml-3 font-bold text-slate-800 w-full">PHK Startup</h1>
+      </div>
+    </div>
+    </header>
+
+    <!-- navMenu -->
+    <menu class="fixed top-[78px]">
+      <div class="container">
+        <div class="flex items-center bg-white pb-2 -mx-2">
+            <div class="grid grid-cols-3 gap-2 w-screen items-center">
+                <div class="px-3 border-2 rounded-full mx-auto w-max flex text-slate-700 font-thin text-sm" onclick="openUrutan()">
+                   <span>Urutkan</span>
+                   <i class="material-icons text-gray-300">keyboard_arrow_down</i>
+                </div>
+                <div class="px-3 border-2 rounded-full -mx-4 w-max flex text-slate-700 font-thin text-sm" onclick="openRentan()">
+                    <span>7 hari terakhir</span>
+                    <i class="material-icons text-gray-300">keyboard_arrow_down</i>
+                 </div>
+                 <div class="px-3 border-2 rounded-full -mx-1 w-max flex text-slate-700 font-thin text-sm" onclick="openFilter()">
+                    <span>Sumber Data</span>
+                    <i class="material-icons text-gray-300">keyboard_arrow_down</i>
+                 </div>
+            </div>
+        </div>
+      </div>
+    </menu>
+
+    <!-- konten linimasa 1 -->
+    <section class="mt-[126px]">
+        <h1 class="mx-4 my-2 text-sm text-slate-600 font-semibold">1.997 <span class="text-slate-400 font-light">data</span></h1>
+      <div class="container">
+        <div class="h-[487px] w-screen  px-4 py-2 bg-white">
+            <div class="flex items-center">
+                <img src="/public/img/dp.png" alt="display picture" class=" block w-16 mt-3">
+                <div class="ml-2 grid gap-1 grid-cols-4 mt-2 items-center">
+                    <h1 class="w-max text-lg font-bold text-slate-800">Arjuna Sky Kok</h1>
+                    <img src="/public/img/ctg biru png.png" alt="centang biru" class="w-[18px] ml-16">
+                    <div class="w-[72px] font-thin text-white text-center rounded-full bg-[#3EC764] mx-[53px]">
+                        <span>Positif</span>
+                    </div>
+                    <!-- titik 3 -->
+                    <div class="w-[5px] ml-[65px]">
+                        <img src="/public/img/titik 3 png.png" alt="icon titik"> 
+                    </div>
+                    <div class="w-5">
+                        <img src="/public/img/twitter png.png" alt="twitter">
+                    </div>
+                    <div class="text-sm w-full -mx-14 text-slate-300 text-light">
+                        <span>5 jam lalu</span>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-rows-2 gap-1 mt-4 justify-center">
+                <div>
+                    <h2 class="font-semibold text-md text-left">Universitas swasta dalam negeri terbaik untuk kerja di dunia startup indonesia adalah Binus. <span class="block pt-5">Nomor dua Anda Tentukan sendiri...</span></h2>
+                </div>
+                <div class="-my-11">
+                    <img src="/public/img/thumbnail.png" alt="thumbail" class="rounded-lg">
+                </div>
+            </div>
+            <div class="grid grid-cols-3 mt-14">
+                <div class="text-sm font-light text-slate-400">
+                    <span>15,7rb Suka</span>
+                </div>
+                <div class="text-sm font-light text-slate-400 -mx-8 w-full">
+                    <span>501 Komentar</span>
+                </div>
+                <div class="text-sm font-light text-slate-400 w-full -mx-11">
+                    <span>4,411 Retweet</span>
+                </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- konten linimasa 2 -->
+    <section>
+      <div class="container py-4">
+        <div class="h-[400px] w-screen px-4 py-2 bg-white">
+            <div class="flex items-center">
+                <img src="/public/img/dp3.png" alt="display picture" class=" block w-16 mt-3">
+                <div class="ml-2 grid gap-1 grid-cols-4 mt-2 items-center">
+                    <h1 class="w-max text-lg font-bold text-slate-800">Hesa Mahesa</h1>
+                    <div></div>
+                    <div class="w-[73px] font-thin text-white text-center rounded-full bg-[#F92B60] mx-[53px]">
+                        <span>Negatif</span>
+                    </div>
+                    <!-- titik 3 -->
+                    <div class="w-[5px] ml-[65px]">
+                        <img src="/public/img/titik 3 png.png" alt="icon titik"> 
+                    </div>
+                    <div class="w-5">
+                        <img src="/public/img/twitter png.png" alt="twitter">
+                    </div>
+                    <div class="text-sm -mx-14 text-slate-300 text-light">
+                        <span>12 Jul 2022, 10.44</span>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-rows-2 gap-1 mt-4 justify-center">
+                <div>
+                    <h2 class="font-semibold text-md text-left">Nah, biar lebih paham dan matang soal perencanaan uang, StepNesian bisa langsung konsultasi masalah pajak dan laporan keuangan dengan StepNesia lho!</h2>
+                </div>
+                <div>
+                    <h2 class="font-semibold text-md text-left">#Startup #StartupIndonesia #StepNesia #StartupBusiness #DigitalStartup #StartupCulture #akunting #laporanpajak #laporankeuangan #keuanganstartup #pajakstartup</h2>
+                </div>
+            </div>
+            <div class="grid grid-cols-3 mt-4">
+                <div class="text-sm font-light text-slate-400">
+                    <span>15,7rb Suka</span>
+                </div>
+                <div class="text-sm font-light text-slate-400 -mx-8 w-full">
+                    <span>501 Komentar</span>
+                </div>
+                <div class="text-sm font-light text-slate-400 w-full -mx-11">
+                    <span>4,411 Retweet</span>
+                </div>
+            </div>
+        </div>
+      </div>
+    </section>
+    <!-- konten linimasa 3 -->
+    <section>
+        <div class="container h-screen">
+          <div class="h-[505px] w-screen px-4 py-2 bg-white">
+              <div class="flex items-center">
+                  <img src="/public/img/dp2.png" alt="display picture" class=" block w-16 mt-3">
+                  <div class="ml-2 grid gap-1 grid-cols-4 mt-2 items-center">
+                      <h1 class="w-max text-lg font-bold text-slate-800">step.nesia</h1>
+                      <div>
+                        <img src="/public/img/ctg biru png.png" alt="centang biru" class="w-[18px] ml-4">
+                      </div>
+                      <div class="w-[73px] font-thin text-white text-center rounded-full bg-[#F92B60] mx-[53px]">
+                          <span>Negatif</span>
+                      </div>
+                      <!-- titik 3 -->
+                      <div class="w-[5px] ml-[65px]">
+                          <img src="/public/img/titik 3 png.png" alt="icon titik"> 
+                      </div>
+                      <div class="w-5">
+                          <img src="/public/img/twitter png.png" alt="twitter">
+                      </div>
+                      <div class="text-sm -mx-14 text-slate-300 text-light">
+                          <span>12 Jul 2022, 10.44</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="grid grid-rows-2 gap-1 mt-4 justify-center">
+                  <div>
+                      <h2 class="font-semibold text-md text-left">Nah, biar lebih paham dan matang soal perencanaan uang, StepNesian bisa langsung konsultasi masalah pajak dan laporan keuangan dengan StepNesia lho! <br> ...</h2>
+                  </div>
+                  <div class="-my-9">
+                    <img src="/public/img/thumnail2.png" alt="thumbail" class="rounded-lg">
+                  </div>
+              </div>
+              <div class="grid grid-cols-3 mt-12">
+                  <div class="text-sm font-light text-slate-400">
+                      <span>15,7rb Suka</span>
+                  </div>
+                  <div class="text-sm font-light text-slate-400 -mx-8 w-full">
+                      <span>501 Komentar</span>
+                  </div>
+                  <div class="text-sm font-light text-slate-400 w-full -mx-11">
+                      <span>4,411 Retweet</span>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- button setelah buat topik -->
+      <div class="container">
+        <div class="fixed mx-[16px] bg-white h-20 flex items-center mt-14 pb-6 bottom-0 border-t-2 pt-5">
+          <div class="flex">
+            <button class="w-[180px] h-[52px] bg-white border-2 rounded-lg text-gray-800 text-base" onclick="aturUlang()">Batal
+            </button>
+        </div>
+        <button class="w-[180px] h-[52px] bg-[#4372EA] rounded-lg mx-4 mr-10 hover:bg-[#EFF1FA]"><span class="font-light text-white text-base hover:text-[#4372EA]" onclick="openKustom()">Simpan Topik</button>
+        </span>
+    </div>
+  </div> 
+
+
+    <!-- component tombol urutan -->
+    <section>
+      <div class="container">
+        <div id="side-urutan" class="w-full bg-white shadow-top rounded-t-2xl fixed bottom-[-350px] h-80 z-50 flex flex-col space-y-5 text-gray-900 duration-300 shadow-3xl">
+          <span class="block self-center border-2 border-solid border-slate-300 w-12 rounded-full my-4"></span>
+          <a href="javascript:void(0)" class="text-right text-[40px] text-slate-400 mx-6 w-5 absolute right-3" onclick="closeUrutan()">&times;</a>
+          <h1 class="mx-7 absolute pt-6 text-xl text-gray-900 font-extrabold">Urutkan Berdasarkan</h1>
+          <div class="pt-12">
+            <div class="border-y-[1px] py-4 flex items-center w-screen px-16 -mx-8">
+              <input type="radio" name="radio terbaru" id="radio-terbaru" class="w-6 h-6">
+              <label for="radio-terbaru" class="mx-5 text-xl text-slate-400">Relevansi</label>
+            </div>
+          </div>
+          <div class="border-b-[1px] pb-4 flex items-center w-screen px-16 -mx-8">
+            <input type="radio" name="radio terbaru" id="radio-terbaru" class="w-6 h-6">
+            <label for="radio-terbaru" class="mx-5 text-xl text-slate-400">Terbaru</label>
+          </div>
+          <div class="flex items-center mx-8">
+            <input type="radio" name="radio terbaru" id="radio-terbaru" class="w-6 h-6">
+            <label for="radio-terbaru" class="mx-5 text-xl text-slate-400">Terlama</label>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- component tombol rentan tanggal -->
+    <section>
+      <div class="container">
+        <div id="side-rentan" class="w-full bg-white shadow-top rounded-t-2xl fixed bottom-[-380px] h-[370px] z-50 flex flex-col space-y-5 text-gray-900 duration-300 shadow-3xl">
+          <span class="block self-center border-2 border-solid border-slate-300 w-12 rounded-full my-4"></span>
+          <a href="javascript:void(0)" class="text-right text-[40px] text-slate-400 mx-6 w-5 absolute right-3" onclick="closeRentan()">&times;</a>
+          <h1 class="mx-7 absolute pt-6 text-xl text-gray-900 font-extrabold">Rentan tanggal</h1>
+          <div class="pt-9">
+            <div class="border-y-[1px] py-4 flex items-center w-screen px-16 -mx-8">
+              <input type="radio" name="radio terbaru" id="radio-terbaru" class="w-6 h-6">
+              <label for="radio-terbaru" class="mx-5 text-xl text-slate-400">1 hari Terakhir</label>
+            </div>
+          </div>
+          <div class="border-b-[1px] pb-4 flex items-center w-screen px-16 -mx-8">
+            <input type="radio" name="radio terbaru" id="radio-terbaru" class="w-6 h-6">
+            <label for="radio-terbaru" class="mx-5 text-xl text-slate-400">7 hari terakhir</label>
+          </div>
+          <div class="border-b-[1px] pb-4 flex items-center w-screen px-16 -mx-8">
+            <input type="radio" name="radio terbaru" id="radio-terbaru" class="w-6 h-6">
+            <label for="radio-terbaru" class="mx-5 text-xl text-slate-400">1 bulan terakhir</label>
+          </div>
+          <div class="flex items-center mx-8" onclick="openKustom()">
+            <input type="radio" name="radio terbaru" id="radio-terbaru" class="w-6 h-6">
+            <label for="radio-terbaru" class="mx-5 text-xl text-slate-400">Atur Waktu</label>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- filter Atur waktu -->
+<section>
+  <div class="container">
+    <div id="side-kustom" class="w-full bg-white shadow-top rounded-t-2xl fixed bottom-[-450px] h-[400px] z-50 flex flex-col space-y-5 text-gray-900 duration-300 shadow-3xl">
+      <span class="block self-center border-2 border-solid border-slate-300 w-12 rounded-full my-4"></span>
+      <span class="mx-20 absolute pt-6 text-2xl text-gray-900 font-extrabold my-auto">Atur Waktu</span>
+      <a href="javascript:void(0)" class="text-right text-slate-400 absolute left-1 flex" onclick="closeKustom(), openRentan()">
+        <img src="/public/img/back-icon.png" alt="icon back" class="w-11 h-9 m-6 flex">
+      </a>
+      <div class="flex items-center mx-8 pt-14">     
+        <form id="tanggal" date-rangepicker class="flex items-center">
+          <div class="relative">
+            <label for="date" class="block text-lg font-light mb-2 text-slate-400">Mulai</label>
+            <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+            <img src="/public/img/9 png.png" alt="" class="w-5 pt-[34px]">
+          </div>
+          <a href="javascript:void(0)" class="text-right text-[30px] text-slate-400 mx-3 w-5 absolute right-0" onclick="hapusTgl()" value="reset form">&times;</a>
+            <input name="start" type="text" class="bg-white border border-gray-300 text-gray-900 sm:text-sm rounded-l-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 datepicker-input" placeholder="30/05/2022">
+          </div>
+          </form>
+          <form id="jam" timepicker class="flex items-center" data-mdb-with-icon="false">
+          <div class="relative">
+            <label for="date" class="block text-lg font-semibold mb-2 text-white">M</label>
+            <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+            <img src="/public/img/7 png.png" alt="" class="w-5 pt-[34px]">
+            </div>
+            <a href="javascript:void(0)" class="text-right text-[30px] text-slate-400 mx-3 w-5 absolute right-0" onclick="hapusJam()" value="reset form">&times;</a>
+            <input name="start" type="text" class="bg-white border border-gray-300 text-gray-900 sm:text-sm rounded-r-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 datepicker-input" placeholder="12.00" data-mdb-toggle="input-toggle-timepicker">
+          </div>
+        </form>
+      </div>
+        <div class="flex items-center mx-8">     
+          <form id="tanggal1" date-rangepicker class="flex items-center">
+            <div class="relative">
+              <label for="date" class="block text-lg font-light mb-2 text-slate-400">Sampai</label>
+              <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                <img src="/public/img/9 png.png" alt="" class="w-5 pt-[34px]">
+              </div>
+              <a href="javascript:void(0)" class="text-right text-[30px] text-slate-400 mx-3 w-5 absolute right-0" onclick="hapusTgl1()" value="reset form">&times;</a>
+              <input name="start" type="text" class="bg-white border border-gray-300 text-gray-900 sm:text-sm rounded-l-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 datepicker-input" placeholder="30/05/2022">
+            </div>
+          </form>
+          <form id="jam1" timepicker class="flex items-center" data-mdb-with-icon="false">
+            <div class="relative">
+              <label for="date" class="block text-lg font-semibold mb-2 text-white">M</label>
+            <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+            <img src="/public/img/7 png.png" alt="" class="w-5 pt-[34px]">
+          </div>
+          <a href="javascript:void(0)" class="text-right text-[30px] text-slate-400 mx-3 w-5 absolute right-0" onclick="hapusJam1()" value="reset form">&times;</a>
+          <input name="start" type="text" class="bg-white border border-gray-300 text-gray-900 sm:text-sm rounded-r-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 datepicker-input" placeholder="12.00" data-mdb-toggle="input-toggle-timepicker">
+        </div>
+      </form>
+    </div>
+          <!-- button filter kustom -->
+          <div class="container">
+            <div class="absolute w-full bg-white h-20 flex items-center mt-14 pb-6 top-[260px]">
+              <div class="flex mx-auto">
+                <button class="w-[160px] h-[52px] bg-white border-2 rounded-lg text-gray-900 text-base ml-10" onclick="aturUlang()">Atur ulang
+                </button>
+            </div>
+            <button class="w-[160px] h-[52px] bg-blue-500 rounded-lg text-white text-base mx-4 mr-10"><a href="#" class="font-light">Simpan
+            </button>
+          </a>
+        </div>
+      </div> 
+
+    <!-- components tombol sumberdata -->
+    <section>
+      <div class="container">
+        <div id="side-filter" class="overflow-auto fixed w-full bg-white shadow-top rounded-t-2xl bottom-[-740px] h-[730px] z-50 flex flex-col space-y-5 text-gray-900 duration-300 shadow-3xl pb-20">
+          <span class="fixed block self-center border-2 border-solid border-slate-300 w-12 rounded-full my-4"></span>
+          <a href="javascript:void(0)" class="text-right text-[40px] text-slate-400 mx-6 w-5 absolute right-3" onclick="closeFilter()">&times;</a>
+          <h2 class="mx-7 block text-lg font-bold pt-7 text-black">Sumber Data</h2>
+          <div class="flex items-center px-7 pt-6 pb-3 border-solid border-y-2 w-full">
+            <input type="checkbox" name="checkbox semua" id="radio-semua" class="w-6 h-6 absolute check">
+            <label for="checkbox-semua" class="text-xl pl-10 text-slate-400 font-normal">Semua <span class="absolute text-[16px] font-extralight text-slate-400 right-12">3.465</span></label>
+          </div>
+          <div class="flex items-center px-7 pt-1 pb-3  w-full border-solid border-b-2">
+            <input type="checkbox" name="checkbox berita" id="radio-berita" class="w-6 h-6 absolute check">
+            <label for="checkbox-berita" class="text-xl pl-10 text-slate-400 font-normal">Berita<span class="absolute text-[16px] font-extralight text-slate-400 right-12">1.687</span></label>
+          </div>
+          <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-2 w-full">
+            <input type="checkbox" name="checkbox twitter" id="radio-twitter" class="w-6 h-6 absolute check">
+            <label for="checkbox-twitter" class="text-xl pl-10 text-slate-400 font-normal">Twiter<span class="absolute text-[16px] font-extralight text-slate-400 right-12">1.594</span></label>
+          </div>
+          <div class="flex items-center px-7 pt-1 pb-3  w-full border-solid border-b-2">
+            <input type="checkbox" name="checkbox facebook" id="radio-fb" class="w-6 h-6 absolute check">
+            <label for="checkbox-fb" class="text-xl pl-10 text-slate-400 font-normal">facebook<span class="absolute text-[16px] font-extralight text-slate-400 right-12">126</span></label>
+          </div>
+          <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-2 w-full">
+            <label for="checkbox-ig" class="text-xl pl-10 text-slate-400 font-normal">Instagram<span class="absolute text-[16px] font-extralight text-slate-400 right-12">56</span></label>
+            <input type="checkbox" name="checkbox instagram" id="radio-ig" class="w-6 h-6 absolute check ">
+          </div>
+          <div class="flex items-center px-7 pt-1 pb-3  w-full border-solid border-b-2">
+            <label for="checkbox-yt" class="text-xl text-slate-400 pl-10 font-normal">Youtube<span class="absolute text-[16px] font-extralight text-slate-400 right-12">0</span></label>
+            <input type="checkbox" name="checkbox youtube" id="radio-yt" class="w-6 h-6 absolute check">
+          </div>
+          <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-2 w-full">
+            <label for="checkbox-tiktok" class="text-xl text-slate-400 pl-10 font-normal">TikTok<span class="absolute text-[16px] font-extralight text-slate-400 right-12">0</span></label>
+            <input type="checkbox" name="checkbox tiktok" id="radio-tiktok" class="w-6 h-6  absolute check">
+          </div>
+          <div class="flex items-center px-7 pt-1 pb-3  w-full border-solid border-b-2">
+            <label for="checkbox-likedin" class="text-xl text-slate-400 pl-10 font-normal">Linkedln<span class="absolute text-[16px] font-extralight text-slate-400 right-12">0</span></label>
+            <input type="checkbox" name="checkbox likedin" id="radio-likedin" class="w-6 h-6 absolute check">
+          </div>
+          <!-- button filter -->
+          <div class="container fixed">
+            <div class=" absolute w-full bg-white h-20 flex items-center pb-6 top-[635px]">
+              <div class="flex mx-auto">
+                <button class="w-[160px] h-[52px] bg-white border-2 rounded-lg text-gray-900 text-base ml-10" onclick="uncek()"><a href="#" class="font-light text-black">Atur Ulang
+                </button>
+              </a>
+            </div>
+            <button class="w-[160px] h-[52px] bg-blue-500 rounded-lg text-white text-base mx-4 mr-10"><a href="#" class="font-light">Terapkan
+            </button>
+          </a>
+        </div>
+      </div>  
+      </div>
+    </div>
+  </div>
+ </div>
+</section>
+<!-- filter simpan topik -->
+<section>
+  <div class="container">
+    <div id="side-kustom" class="w-full bg-white shadow-top rounded-t-2xl fixed bottom-[-450px] h-[300px] z-50 flex flex-col space-y-5 text-gray-900 duration-300 shadow-3xl">
+      <span class="block self-center border-2 border-solid border-slate-300 w-12 rounded-full my-4"></span>
+      <span class="mx-5 absolute pt-6 text-xl text-gray-900 font-extrabold my-auto">Simpan Topik</span>
+        <div class="flex items-center mx-5 pt-10">     
+          <form id="form1" date-rangepicker class="flex items-center">
+            <div class="relative">
+              <label for="text" class="block text-lg font-light mb-2 text-slate-400">Silahkan masukan judul topik Anda</label>
+                <input name="start" type="text" class=" bg-white border border-gray-300 text-gray-900 sm:text-sm rounded-l-lg focus:ring-blue-500 focus:border-blue-500 block w-[370px] pl-5 p-2.5 datepicker-input" placeholder="Masukan judul">
+            </div>
+          </form>
+    </div>
+      <!-- button simpan topik -->
+      <div class="container">
+        <div class="absolute w-full bg-white h-20 flex items-center mt-14 pb-6 top-[150px]">
+          <div class="flex mx-auto">
+            <button class="w-[180px] h-[52px] bg-white border-2 rounded-lg mr-3 text-gray-900 text-base" onclick="aturUlang1()">Atur ulang
+            </button>
+            <button href="javascript:void" id="loading" onclick="delay()" class="w-[180px] h-[52px] bg-blue-500 rounded-lg text-white text-base hover:bg-[#BFBFBF]">Lanjutkan
+            </button>
+          </div>
+      </a>
+    </div>
+  </div> 
+     
+     
+    </div>
+  </div>
+</section>
+
+    <script src="/public/js/sideMenu.js">
+    </script>
+</body>
+</html>
