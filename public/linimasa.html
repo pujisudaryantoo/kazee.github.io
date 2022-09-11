@@ -48,15 +48,13 @@
           <img src="/public/img/topik png.png" alt="icon topik" class="w-[24px] h-full mx-56">
         </div>
         <div class="block">
-            <div class="flex items-center border-b-2 w-full">
-                <a href="semuaTopik.html">
-                    <h1 class="font-bold text-md mx-2 pb-4 w-screen hover:text-[#4372EA] active:text-[#4372EA]">Semua <span class="absolute right-12">1.997</span></h1>
-                </a>
-                    <img src="/public/img/titik 3 png.png" alt="icon titik3" class="w-[4px] h-[20px] mx-2">
+            <div class="flex border-b-2 w-full">
+                <h1 class="font-bold text-md mx-2 pb-4 w-screen text-slate-800 hover:text-[#4372EA] active:text-[#4372EA]" onclick="openSemua()">Semua <span class="absolute right-12">1.997</span></h1>
+                <img src="/public/img/titik 3 png.png" alt="icon titik3" class="w-[4px] h-[20px] mx-2 mt-1" onclick="openKeyword(), closeMenu()">
             </div>
             <div class="flex items-center border-b-2 w-full">
                 <h1 class="font-bold text-md mx-2 pb-4 pt-4 w-screen text-[#4372EA] hover:text-[#4372EA] active:text-[#4372EA]">PHK Startup Indonesia <span class="absolute right-12">1.997</span></h1>
-                <img src="/public/img/titik 3 png.png" alt="icon titik3" class="w-[4px] h-[20px] mx-2">
+                <img src="/public/img/titik 3 png.png" alt="icon titik3" class="w-[4px] h-[20px] mx-2" onclick="openKeyword(), closeMenu()">
             </div>
             <h1 class="w-[230px] border-3 border-solid border-slate-600 m-9 ">
             <a href="javascript:void(0)" class="text-right text-4xl text-white absolute right-1 w-full h-full" onclick="closeMenu()">&times;</a>
@@ -266,6 +264,75 @@
       </div>
     </section>
 
+    <!-- component icon lainnya side bar -->
+    <section>
+      <div class="container">
+        <div id="side-keyword" class="w-full bg-white shadow-top rounded-t-2xl fixed bottom-[-420px] h-[410px] z-50 flex flex-col space-y-5 text-gray-900 duration-300 shadow-3xl">
+          <span class="block self-center border-2 border-solid border-slate-300 w-12 rounded-full my-4"></span>
+          <a href="javascript:void(0)" class="text-right text-[40px] text-slate-400 mx-6 w-5 absolute right-3" onclick="closeKeyword()">&times;</a>
+          <h1 class="px-7 absolute pt-6 text-xl text-gray-900 font-extrabold border-b-[1px] pb-5 w-screen">PHK Startup Indenosia</h1>
+          <div class="grid grid-rows-2 grid-flow-col items-center px-8 pt-11 border-b-[1px] w-screen" onclick="openEdit(), closeKeyword()">
+            <div class="row-span-3">
+              <img src="/public/img/pensil png.png" alt="pensil" class="w-5">
+            </div>
+            <div class="col-span-2">
+              <h1 class="text-sm font-normal text-slate-700 -mx-[90px]">Judul topik</h1>
+            </div>
+            <div class="row-span-2">
+              <h1 class="text-sm font-light text-slate-300 pb-3 -mx-[90px]">PHK Startup Indonesia</h1>
+            </div>
+          </div>
+
+          <div class="grid grid-rows-2 grid-flow-col items-center px-8 w-screen">
+            <div class="row-span-3">
+              <svg aria-hidden="false" focusable="false" data-prefix="fas" data-icon="search" class="w-5 text-gray-400" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+              </svg>
+            </div>
+            <div class="col-span-2">
+              <h1 class="text-sm font-normal text-slate-700 -mx-[90px]"  onclick="openUbahKeyword()">Keyword pencarian</h1>
+            </div>
+            <div class="row-span-2">
+              <h1 class="text-sm font-light text-slate-300 -mx-[90px]">PHK Startup</h1>
+            </div>
+            <div class="row-span-3 absolute right-8">
+              <img src="/public/img/copy png.png" alt="pensil" class="w-5" onclick="toast()">
+            </div>
+          </div>
+          <!-- toast berhasil disalin -->
+           <div id="snackbar">
+            <div class="flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white " viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                clip-rule="evenodd" />
+              </svg> 
+              <span class="font-thin text-[16px] mx-3">Keyword Pencarian berhasil disalin</span>
+            </div>
+          </div>
+
+          <div class="grid grid-rows-2 grid-flow-col items-center px-8 pt-4 border-t-[1px] w-screen" onclick="openNotifikasi(), closeFilter()">
+            <div class="row-span-3">
+              <img src="/public/img/notif png.png" alt="pensil" class="w-4">
+            </div>
+            <div class="col-span-2">
+              <h1 class="text-sm font-normal text-slate-700 -mx-[90px]">Notifikasi</h1>
+            </div>
+            <div class="row-span-2">
+              <h1 class="text-sm font-light text-slate-300 -mx-[90px]">Aktif</h1>
+            </div>
+          </div>
+          <div class="flex items-center mx-8 border-t-[1px] pt-5" onclick="openHapus(), closeKeyword()">
+            <img src="/public/img/Sampah png.png" class="w-4 h-5">
+            <h1 class="mx-5 text-sm text-slate-700">Hapus</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+
     <!-- components tombol filter -->
     <section>
       <div class="container">
@@ -312,45 +379,45 @@
           <h2 class="mx-7 block text-lg font-bold pt-7 text-black">Sumber Data</h2>
           <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-2 w-full">
             <label for="checkbox-semua" class="text-xl text-slate-400 font-normal">Pilih Semua</label>
-            <input type="checkbox" name="checkbox semua" id="radio-semua" class="w-6 h-6 right-8 absolute ">
+            <input type="checkbox" name="checkbox semua" id="radio-semua" class="w-6 h-6 right-8 absolute check">
           </div>
           <div class="flex items-center px-7 pt-1 pb-3  w-full border-solid border-b-2">
             <label for="checkbox-berita" class="text-xl text-slate-400 font-normal">Berita</label>
-            <input type="checkbox" name="checkbox berita" id="radio-berita" class="w-6 h-6 right-8 absolute">
+            <input type="checkbox" name="checkbox berita" id="radio-berita" class="w-6 h-6 right-8 absolute check">
           </div>
           <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-2 w-full">
             <label for="checkbox-twitter" class="text-xl text-slate-400 font-normal">Twiter</label>
-            <input type="checkbox" name="checkbox twitter" id="radio-twitter" class="w-6 h-6 right-8 absolute ">
+            <input type="checkbox" name="checkbox twitter" id="radio-twitter" class="w-6 h-6 right-8 absolute check">
           </div>
           <div class="flex items-center px-7 pt-1 pb-3  w-full border-solid border-b-2">
             <label for="checkbox-fb" class="text-xl text-slate-400 font-normal">facebook</label>
-            <input type="checkbox" name="checkbox facebook" id="radio-fb" class="w-6 h-6 right-8 absolute">
+            <input type="checkbox" name="checkbox facebook" id="radio-fb" class="w-6 h-6 right-8 absolute check">
           </div>
           <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-2 w-full">
             <label for="checkbox-ig" class="text-xl text-slate-400 font-normal">Instagram</label>
-            <input type="checkbox" name="checkbox instagram" id="radio-ig" class="w-6 h-6 right-8 absolute ">
+            <input type="checkbox" name="checkbox instagram" id="radio-ig" class="w-6 h-6 right-8 absolute check">
           </div>
           <div class="flex items-center px-7 pt-1 pb-3  w-full border-solid border-b-2">
             <label for="checkbox-yt" class="text-xl text-slate-400 font-normal">Youtube</label>
-            <input type="checkbox" name="checkbox youtube" id="radio-yt" class="w-6 h-6 right-8 absolute">
+            <input type="checkbox" name="checkbox youtube" id="radio-yt" class="w-6 h-6 right-8 absolute check">
           </div>
           <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-2 w-full">
             <label for="checkbox-tiktok" class="text-xl text-slate-400 font-normal">TikTok</label>
-            <input type="checkbox" name="checkbox tiktok" id="radio-tiktok" class="w-6 h-6 right-8 absolute ">
+            <input type="checkbox" name="checkbox tiktok" id="radio-tiktok" class="w-6 h-6 right-8 absolute check">
           </div>
           <div class="flex items-center px-7 pt-1 pb-3  w-full border-solid border-b-2">
             <label for="checkbox-likedin" class="text-xl text-slate-400 font-normal">Linkedln</label>
-            <input type="checkbox" name="checkbox likedin" id="radio-likedin" class="w-6 h-6 right-8 absolute">
+            <input type="checkbox" name="checkbox likedin" id="radio-likedin" class="w-6 h-6 right-8 absolute check">
           </div>
           <div class="flex items-center px-7 pt-3 pb-24  w-full border-solid border-b-2">
             <label for="checkbox-sembunyi" class="text-xl text-slate-900 font-semibold">Tampilkan konten tersembunyi</label>
-            <input type="checkbox" name="checkbox sembunyi" id="radio-sembunyi" class="w-6 h-6 right-8 absolute">
+            <input type="checkbox" name="checkbox sembunyi" id="radio-sembunyi" class="w-6 h-6 right-8 absolute check">
           </div>
           <!-- button filter -->
           <div class="container fixed">
             <div class=" absolute w-full bg-white h-20 flex items-center pb-6 top-[735px]">
               <div class="flex mx-auto">
-                <button class="w-[160px] h-[52px] bg-white border-2 rounded-lg text-gray-900 text-base ml-10"><a href="#" class="font-light text-black">Reset
+                <button class="w-[160px] h-[52px] bg-white border-2 rounded-lg text-gray-900 text-base ml-10" onclick="uncek()"><a href="#" class="font-light text-black">Reset
                 </button>
               </a>
             </div>
@@ -417,7 +484,7 @@
         </div>
       </form>
     </div>
-      <!-- button filter kustom -->
+      <!-- button filter atur waktu -->
       <div class="container">
         <div class="absolute w-full bg-white h-20 flex items-center mt-14 pb-6 top-[260px]">
           <div class="flex mx-auto">
@@ -431,9 +498,298 @@
   </div> 
      
      
+<!-- side Edit Topik -->
+<section>
+  <div class="container">
+    <div id="side-edit" class="w-full bg-white shadow-top rounded-t-2xl fixed bottom-[-450px] h-[300px] z-50 flex flex-col space-y-5 text-gray-900 duration-300 shadow-3xl">
+      <span class="block self-center border-2 border-solid border-slate-300 w-12 rounded-full my-4"></span>
+      <span class="mx-5 absolute pt-6 text-xl text-gray-900 font-extrabold my-auto">Edit Topik</span>
+        <div class="flex items-center mx-5 pt-10">     
+          <form id="form1" date-rangepicker class="flex items-center">
+            <div class="relative">
+              <label for="text" class="block text-lg font-light mb-2 text-slate-400">Silahkan masukan judul topik Anda</label>
+                <input name="start" type="text" class=" bg-white border border-gray-300 text-gray-900 sm:text-sm rounded-l-lg focus:ring-blue-500 focus:border-blue-500 block w-[370px] pl-5 p-2.5 datepicker-input" placeholder="Masukan judul">
+            </div>
+          </form>
+    </div>
+      <!-- button simpan topik -->
+      <div class="container">
+        <div class="absolute w-full bg-white h-20 flex items-center mt-14 pb-6 top-[150px]">
+          <div class="flex mx-auto">
+            <button class="w-[180px] h-[52px] bg-white border-2 rounded-lg mr-3 text-gray-900 text-base" onclick="openKeyword(), closeEdit()">Batal
+            </button>
+            <button href="javascript:void" onclick="openKeyword(), closeEdit()" class="w-[180px] h-[52px] bg-blue-500 rounded-lg text-white text-base hover:bg-[#BFBFBF]">Simpan
+            </button>
+          </div>
+      </a>
+    </div>
+  </div> 
+  </div>
+  </div>
+  </section>
+
+  <!-- side hapus -->
+<section>
+  <div class="container">
+    <div id="side-hapus" class="w-full bg-white shadow-top rounded-t-2xl fixed bottom-[-490px] h-[480px] z-50 flex flex-col space-y-5 text-gray-900 duration-300 shadow-3xl">
+      <a href="javascript:void(0)" class="text-right text-[40px] text-slate-400 mx-6 w-5 absolute right-3" onclick="closeHapus(), openKeyword()">&times;</a>
+      <span class="block self-center border-2 border-solid border-slate-300 w-12 rounded-full my-4"></span>
+      <div class="flex items-center mx-8">     
+          <div class="block mx-auto">
+           <img src="/public/img/Topik.jpg" alt="ilustrasi" class="w-[250px]">
+
+          </div>
+      </div>
+      <div class="block mx-auto text-center px-11">
+        <h1 class="font-semibold text-slate-800">Anda yakin ingin menghapus topik "PHK Startup Indonesia"?</h1>
+      </div>
+      
+      <!-- button filter hapus -->
+      <div class="container">
+        <div class="absolute w-full bg-white h-20 flex items-center mt-14 pb-6 top-[350px]">
+          <div class="flex mx-auto">
+            <button class="w-[170px] h-[52px] bg-white border-2 rounded-lg text-gray-900 text-base ml-5" onclick="closeHapus(), openKeyword()"><span>Batalkan</span> 
+            </button>
+        </div>
+        <button class="w-[170px] h-[52px] bg-[#E62864] rounded-lg text-white text-base mr-8" onclick="toast2(), openWelcome()"><span>Ya. Hapus</span> 
+        </button>
+    </div>
+  </div> 
+   <!-- toast berhasil disalin -->
+   <div id="snackbar2">
+    <div class="flex items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white " viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd"
+        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+        clip-rule="evenodd" />
+      </svg> 
+      <span class="font-thin text-[16px] mx-3">Topik berhasil dihapus</span>
     </div>
   </div>
-</section>
+ 
+  </div>
+  </div>
+  </section>
+
+      <!-- side notifikasi -->
+      <section>
+        <div class="container">
+          <div id="side-notifikasi" class="overflow-auto fixed w-full bg-white bottom-[-920px] h-screen z-50 flex flex-col space-y-5 text-gray-900 duration-300 shadow-3xl pb-20">
+            <div class="mb-10">
+              <span class="pl-[70px] absolute pt-6 text-lg text-gray-900 font-extrabold my-auto w-full">Notifikasi "PHK Startup Indonesia"</span>
+              <a href="javascript:void(0)" class="text-right text-slate-400 absolute left-1 flex" onclick="closeNotifikasi(), openKeyword()">
+                <img src="/public/img/back-icon.png" alt="icon back" class="w-9 h-7 m-6 flex">
+              </a>
+            </div>
+            <div>
+              <h1 class="px-9 absolute pt-6 pb-3 text-sm text-slate-300 font-normal bg-slate-100 w-screen">kirim melalui</h1>
+              <div class="flex items-center mt-4 px-10 pt-16 pb-4 w-full">
+                <img src="/public/img/email png (1).png" alt="email" class="w-5">
+                <span class="mx-4 text-md font-bold text-slate-800">Email</span>
+                <label for="default-email" class="inline-flex absolute right-8 items-center cursor-pointer ">
+                  <input type="checkbox" value="" id="default-email" class="sr-only peer">
+                  <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                </label>
+              </div>
+              <div class="flex items-center my-2 px-10 pt-5 border-t-[1px] w-full">
+                <img src="/public/img/phone png.png" alt="aplikais" class="w-4">
+                <span class="mx-5 text-md font-bold text-slate-800">Aplikasi</span>
+                <label for="default-aplikasi" class="inline-flex absolute right-8 items-center cursor-pointer ">
+                  <input type="checkbox" value="" id="default-aplikasi" class="sr-only peer">
+                  <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                </label>
+              </div>
+            </div>
+  
+            <div>
+              <h1 class="px-9 absolute pt-6 pb-3 text-sm text-slate-300 font-normal bg-slate-100 w-screen">Beritahu saya ketika</h1>
+              <div class="flex items-center my-2 px-10 pt-16 pb-3 border-solid border-b-[1px] w-full" onclick="openMin()">
+                <img src="/public/img/min png.png" alt="email" class="w-5">
+                <span class="mx-4 text-md font-bold text-slate-800">Minimal data terkumpul</span>
+                <label for="default-toggle" class="inline-flex absolute right-8 items-center cursor-pointer ">
+                    <h2 class="text-slate-300">1.000 <span class="ml-2 text-2xl">&#8226;</span></h2>
+                </label>
+              </div>
+              <div class="flex items-center px-10 pt-2 pb-3 border-solid border-b-[1px] w-full" onclick="openCek()">
+                <img src="/public/img/cek png.png" alt="aplikais" class="w-4">
+                <span class="mx-5 text-md font-bold text-slate-800">Cek setiap</span>
+                <label for="default-toggle" class="inline-flex absolute right-8 items-center cursor-pointer ">
+                  <h2 class="text-slate-300">1 jam <span class="ml-2 text-2xl">&#8226;</span></h2>
+                </label>
+              </div>
+            </div>
+
+          <h1 class="px-9 block pt-6 pb-3 text-sm text-slate-300 font-normal bg-slate-100 w-screen">Sentimen</h1>
+          <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-[1px] w-full">
+            <label for="radio-semua" class="text-lg text-slate-400 font-normal pl-12">Semua</label>
+            <input type="radio" name="radio semua" id="radio-semua" class="w-6 h-6 left-8 absolute ">
+          </div>
+          <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-[1px] w-full">
+            <label for="radio-semua" class="text-lg text-slate-400 font-normal pl-12">Negatif</label>
+            <input type="radio" name="radio semua" id="radio-semua" class="w-6 h-6 left-8 absolute ">
+          </div>
+          <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-[1px] w-full">
+            <label for="radio-semua" class="text-lg text-slate-400 font-normal pl-12">Netral</label>
+            <input type="radio" name="radio semua" id="radio-semua" class="w-6 h-6 left-8 absolute ">
+          </div>
+          <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-[1px] w-full">
+            <label for="radio-semua" class="text-lg text-slate-400 font-normal pl-12">Positif</label>
+            <input type="radio" name="radio semua" id="radio-semua" class="w-6 h-6 left-8 absolute ">
+          </div>
+
+          <div>
+            <h1 class="px-9 absolute pt-6 pb-3 text-sm text-slate-300 font-normal bg-slate-100 w-screen">kirim melalui</h1>
+            <div class="flex items-center my-2 mt-4 px-10 pt-16 pb-3 w-full">
+              <span class="text-md font-bold text-slate-800">Semua</span>
+              <label for="default-semua" class="inline-flex absolute right-8 items-center cursor-pointer ">
+                <input type="checkbox" value="" id="default-semua" class="sr-only peer">
+                <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+              </label>
+            </div>
+            <div class="flex items-center my-2 px-10 pt-5 pb-3 border-solid border-t-[1px] w-full">
+              <img src="/public/img/berita png.png" alt="aplikais" class="w-5">
+              <span class="mx-5 text-md font-bold text-slate-800">Berita</span>
+              <label for="default-berita" class="inline-flex absolute right-8 items-center cursor-pointer ">
+                <input type="checkbox" value="" id="default-berita" class="sr-only peer">
+                <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+              </label>
+            </div>
+            <div class="flex items-center my-2 px-10 pt-5 pb-3 border-solid border-t-[1px] w-full">
+              <img src="/public/img/twitter png.png" alt="aplikais" class="w-5">
+              <span class="mx-5 text-md font-bold text-slate-800">Twitter</span>
+              <label for="default-twitter" class="inline-flex absolute right-8 items-center cursor-pointer ">
+                <input type="checkbox" value="" id="default-twitter" class="sr-only peer">
+                <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+              </label>
+            </div>
+            <div class="flex items-center my-2 px-10 pt-5 pb-3 border-solid border-t-[1px] w-full">
+              <img src="/public/img/fb png.png" alt="aplikais" class="w-5">
+              <span class="mx-5 text-md font-bold text-slate-800">facebook</span>
+              <label for="default-fb" class="inline-flex absolute right-8 items-center cursor-pointer ">
+                <input type="checkbox" value="" id="default-fb" class="sr-only peer">
+                <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+              </label>
+            </div>
+            <div class="flex items-center my-2 px-10 pt-5 pb-3 border-solid border-t-[1px] w-full">
+              <img src="/public/img/yt png.png" alt="aplikais" class="w-5">
+              <span class="mx-5 text-md font-bold text-slate-800">Youtube</span>
+              <label for="default-yt" class="inline-flex absolute right-8 items-center cursor-pointer ">
+                <input type="checkbox" value="" id="default-yt" class="sr-only peer">
+                <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+              </label>
+            </div>
+            <div class="flex items-center my-2 px-10 pt-5 pb-3 border-solid border-t-[1px] w-full">
+              <img src="/public/img/linkedin png.png" alt="aplikais" class="w-5">
+              <span class="mx-5 text-md font-bold text-slate-800">LinkedIn</span>
+              <label for="default-liken" class="inline-flex absolute right-8 items-center cursor-pointer ">
+                <input type="checkbox" value="" id="default-liken" class="sr-only peer">
+                <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+              </label>
+            </div>
+            <div class="flex items-center my-2 px-10 pt-5 pb-3 border-solid border-t-[1px] w-full">
+              <img src="/public/img/ig png.png" alt="aplikais" class="w-5">
+              <span class="mx-5 text-md font-bold text-slate-800">Instagram</span>
+              <label for="default-ig" class="inline-flex absolute right-8 items-center cursor-pointer ">
+                <input type="checkbox" value="" id="default-ig" class="sr-only peer">
+                <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+              </label>
+            </div>
+            <div class="flex items-center my-2 px-10 pt-5 pb-3 border-solid border-t-[1px] w-full">
+              <img src="/public/img/tik tok png.png" alt="aplikais" class="w-5">
+              <span class="mx-5 text-md font-bold text-slate-800">TikTok</span>
+              <label for="default-tt" class="inline-flex absolute right-8 items-center cursor-pointer ">
+                <input type="checkbox" value="" id="default-tt" class="sr-only peer">
+                <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   </div>
+  </section>
+<!-- side minimal data terkumpul -->
+  <section>
+    <div class="container">
+      <div id="side-min" class="w-full bg-white shadow-top rounded-t-2xl fixed bottom-[-560px] h-[550px] z-50 flex flex-col space-y-5 text-gray-900 duration-300 shadow-3xl">
+        <span class="block self-center border-2 border-solid border-slate-300 w-12 rounded-full my-4"></span>
+        <a href="javascript:void(0)" class="text-right text-[40px] text-slate-400 mx-6 w-5 absolute right-3" onclick="closeMin(), openNotifikasi()">&times;</a>
+        <h1 class="mx-7 absolute pt-6 text-xl text-gray-900 font-extrabold">Minimal data terkumpul</h1>
+        <div class="top-[70px] absolute marker:">
+        <div class="flex items-center px-8 border-y-[1px] py-4 w-screen">
+          <input type="radio" name="radio terbaru" id="radio-terbaru" class="w-6 h-6">
+          <label for="radio-terbaru" class="px-3 text-xl font-light text-slate-400">Berapapun</label>
+        </div>
+        <div class="flex items-center px-8 border-y-[1px] py-4 w-screen">
+          <input type="radio" name="radio terbaru" id="radio-terbaru" class="w-6 h-6">
+          <label for="radio-terbaru" class="px-3 text-xl font-light text-slate-400">1.000</label>
+        </div>
+        <div class="flex items-center px-8 border-y-[1px] py-4 w-screen">
+          <input type="radio" name="radio terbaru" id="radio-terbaru" class="w-6 h-6">
+          <label for="radio-terbaru" class="px-3 text-xl font-light text-slate-400">10.000</label>
+        </div>
+        <div class="flex items-center px-8 border-y-[1px] py-4 w-screen">
+          <input type="radio" name="radio terbaru" id="radio-terbaru" class="w-6 h-6">
+          <label for="radio-terbaru" class="px-3 text-xl font-light text-slate-400">20.000</label>
+        </div>
+        <div class="flex items-center px-8 border-y-[1px] py-4 w-screen">
+          <input type="radio" name="radio terbaru" id="radio-terbaru" class="w-6 h-6">
+          <label for="radio-terbaru" class="px-3 text-xl font-light text-slate-400">50.000</label>
+        </div>
+        <div class="flex items-center px-8 border-y-[1px] py-4 w-screen">
+          <input type="radio" name="radio terbaru" id="radio-terbaru" class="w-6 h-6">
+          <label for="radio-terbaru" class="px-3 text-xl font-light text-slate-400">5.000</label>
+        </div>
+        <div class="flex items-center px-8 border-y-[1px] py-4 w-screen">
+          <input type="radio" name="radio terbaru" id="radio-terbaru" class="w-6 h-6">
+          <label for="radio-terbaru" class="px-3 text-xl font-light text-slate-400">100.000</label>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+  
+<!-- side cek setiap -->
+  <section>
+    <div class="container">
+      <div id="side-cek" class="w-full bg-white shadow-top rounded-t-2xl fixed bottom-[-560px] h-[550px] z-50 flex flex-col space-y-5 text-gray-900 duration-300 shadow-3xl">
+        <span class="block self-center border-2 border-solid border-slate-300 w-12 rounded-full my-4"></span>
+        <a href="javascript:void(0)" class="text-right text-[40px] text-slate-400 mx-6 w-5 absolute right-3" onclick="closeCek(), openNotifikasi()">&times;</a>
+        <h1 class="mx-7 absolute pt-6 text-xl text-gray-900 font-extrabold">Cek setiap</h1>
+        <div class="top-[70px] absolute marker:">
+        <div class="flex items-center px-8 border-y-[1px] py-4 w-screen">
+          <input type="radio" name="radio terbaru" id="radio-terbaru" class="w-6 h-6">
+          <label for="radio-terbaru" class="px-3 text-xl font-light text-slate-400">1 jam</label>
+        </div>
+        <div class="flex items-center px-8 border-y-[1px] py-4 w-screen">
+          <input type="radio" name="radio terbaru" id="radio-terbaru" class="w-6 h-6">
+          <label for="radio-terbaru" class="px-3 text-xl font-light text-slate-400">2 jam</label>
+        </div>
+        <div class="flex items-center px-8 border-y-[1px] py-4 w-screen">
+          <input type="radio" name="radio terbaru" id="radio-terbaru" class="w-6 h-6">
+          <label for="radio-terbaru" class="px-3 text-xl font-light text-slate-400">3 jam</label>
+        </div>
+        <div class="flex items-center px-8 border-y-[1px] py-4 w-screen">
+          <input type="radio" name="radio terbaru" id="radio-terbaru" class="w-6 h-6">
+          <label for="radio-terbaru" class="px-3 text-xl font-light text-slate-400">4 jam</label>
+        </div>
+        <div class="flex items-center px-8 border-y-[1px] py-4 w-screen">
+          <input type="radio" name="radio terbaru" id="radio-terbaru" class="w-6 h-6">
+          <label for="radio-terbaru" class="px-3 text-xl font-light text-slate-400">6 jam</label>
+        </div>
+        <div class="flex items-center px-8 border-y-[1px] py-4 w-screen">
+          <input type="radio" name="radio terbaru" id="radio-terbaru" class="w-6 h-6">
+          <label for="radio-terbaru" class="px-3 text-xl font-light text-slate-400">12 jam</label>
+        </div>
+        <div class="flex items-center px-8 border-y-[1px] py-4 w-screen">
+          <input type="radio" name="radio terbaru" id="radio-terbaru" class="w-6 h-6">
+          <label for="radio-terbaru" class="px-3 text-xl font-light text-slate-400">24 jam</label>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
 
     <script src="/public/js/sideMenu.js">
     </script>
