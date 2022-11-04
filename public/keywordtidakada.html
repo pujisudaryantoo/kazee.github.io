@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../public/css/style.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Tidak ditemukan</title>
+  </head>
+  <body>
+    <!-- header -->
+    <div class="container">
+      <div class="p-6 flex items-center w-full bg-white fixed top-0">
+        <img src="../public/img/back-icon.png" alt="icon back" class="w-10" onclick="openBuatTopikback()">
+        <h1 class="text-xl ml-3 font-bold text-slate-800 w-full">"PHK" OR "Startup"</h1>
+      </div>
+    </div>
+    </header>
+
+    <!-- navMenu -->
+    <menu class="fixed top-[78px] w-full">
+      <div class="container">
+        <div class="flex items-center bg-white pb-2 -mx-2">
+            <div class="grid grid-cols-3 gap-2 w-screen items-center">
+                <div class="px-3 border-2 rounded-full mx-auto w-max flex text-slate-700 font-thin text-sm" onclick="openList()">
+                   <span>Urutkan</span>
+                   <i class="material-icons text-gray-300">keyboard_arrow_down</i>
+                </div>
+                <div class="px-3 border-2 rounded-full -mx-4 w-max flex text-slate-700 font-thin text-sm" onclick="openRentan()">
+                    <span>7 hari terakhir</span>
+                    <i class="material-icons text-gray-300">keyboard_arrow_down</i>
+                 </div>
+                 <div class="px-3 border-2 rounded-full -mx-1 w-max flex text-slate-700 font-thin text-sm" onclick="openSumber()">
+                    <span>Sumber Data</span>
+                    <i class="material-icons text-gray-300">keyboard_arrow_down</i>
+                 </div>
+            </div>
+        </div>
+      </div>
+    </menu>
+
+    <section>
+        <div class=" block w-80 mx-auto pt-72">
+            <img src="../public/img/gambar1.jpg" alt="ilustrasi">
+            <h1 class="text-center pt-12 font-extrabold text-xl text-slate-900">Tidak ada hasil yang ditemukan</h1>
+            <h2 class="text-center -mx-5 w-[360px] pt-3 font-bold text-lg text-slate-400">Maaf kami tidak dapat menemukan hasilnya. Coba sesuatu dari rekomendasi Tren Terkini.</h2>
+        </div>
+    </section>
+
+    <!-- component tombol urutan -->
+    <section>
+      <div class="container">
+        <div id="side-list" class="w-full bg-white shadow-top rounded-t-2xl fixed bottom-[-350px] h-80 z-50 flex flex-col space-y-5 text-gray-900 duration-300 shadow-3xl">
+          <span class="block self-center border-2 border-solid border-slate-300 w-12 rounded-full my-4"></span>
+          <a href="javascript:void(0)" class="text-right text-[40px] text-slate-400 mx-6 w-5 absolute right-3" onclick="closeList()">&times;</a>
+          <h1 class="mx-7 absolute pt-6 text-xl text-gray-900 font-extrabold">Urutkan Berdasarkan</h1>
+          <div class="pt-12">
+            <div class="border-y-[1px] py-4 flex items-center w-screen px-16 -mx-8">
+              <input type="radio" name="radio terbaru" id="radio-terbaru" class="w-6 h-6" onclick="toast(), closeList(), openReview()" checked>
+              <label for="radio-terbaru" class="mx-5 text-xl text-slate-400">Relevansi</label>
+            </div>
+          </div>
+          <div class="border-b-[1px] pb-4 flex items-center w-screen px-16 -mx-8">
+            <input type="radio" name="radio terbaru" id="radio-terbaru" class="w-6 h-6" onclick="toast(), closeList(), openReview()">
+            <label for="radio-terbaru" class="mx-5 text-xl text-slate-400">Terbaru</label>
+          </div>
+          <div class="flex items-center mx-8">
+            <input type="radio" name="radio terbaru" id="radio-terbaru" class="w-6 h-6" onclick="toast(), closeList(), openReview()">
+            <label for="radio-terbaru" class="mx-5 text-xl text-slate-400">Terlama</label>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- component tombol rentan tanggal -->
+    <section>
+      <div class="container">
+        <div id="side-rentan" class="w-full bg-white shadow-top rounded-t-2xl fixed bottom-[-380px] h-[370px] z-50 flex flex-col space-y-5 text-gray-900 duration-300 shadow-3xl">
+          <span class="block self-center border-2 border-solid border-slate-300 w-12 rounded-full my-4"></span>
+          <a href="javascript:void(0)" class="text-right text-[40px] text-slate-400 mx-6 w-5 absolute right-3" onclick="closeRentan()">&times;</a>
+          <h1 class="mx-7 absolute pt-6 text-xl text-gray-900 font-extrabold">Rentang tanggal</h1>
+          <div class="pt-9">
+            <div class="border-y-[1px] py-4 flex items-center w-screen px-16 -mx-8">
+              <input type="radio" name="radio terbaru" id="radio-terbaru" class="w-6 h-6" onclick="closeRentan(), openReview()">
+              <label for="radio-terbaru" class="mx-5 text-xl text-slate-400">1 hari Terakhir</label>
+            </div>
+          </div>
+          <div class="border-b-[1px] pb-4 flex items-center w-screen px-16 -mx-8">
+            <input type="radio" name="radio terbaru" id="radio-terbaru" class="w-6 h-6" onclick="closeRentan(), openReview()" checked>
+            <label for="radio-terbaru" class="mx-5 text-xl text-slate-400">7 hari terakhir</label>
+          </div>
+          <div class="border-b-[1px] pb-4 flex items-center w-screen px-16 -mx-8">
+            <input type="radio" name="radio terbaru" id="radio-terbaru" class="w-6 h-6" onclick="closeRentan(), openReview()">
+            <label for="radio-terbaru" class="mx-5 text-xl text-slate-400">1 bulan terakhir</label>
+          </div>
+          <div class="flex items-center mx-8" onclick="openKustom(), closeRentan()">
+            <input type="radio" name="radio terbaru" id="radio-terbaru" class="w-6 h-6" >
+            <label for="radio-terbaru" class="mx-5 text-xl text-slate-400">Atur Waktu</label>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- filter Atur waktu -->
+<section>
+  <div class="container">
+    <div id="side-kustom" class="w-full bg-white shadow-top rounded-t-2xl fixed bottom-[-450px] h-[400px] z-50 flex flex-col space-y-5 text-gray-900 duration-300 shadow-3xl">
+      <span class="block self-center border-2 border-solid border-slate-300 w-12 rounded-full my-4"></span>
+      <span class="mx-20 absolute pt-6 text-2xl text-gray-900 font-extrabold my-auto">Atur Waktu</span>
+      <a href="javascript:void(0)" class="text-right text-slate-400 absolute left-1 flex" onclick="closeKustom(), openRentan()">
+        <img src="../public/img/back-icon.png" alt="icon back" class="w-11 h-9 m-6 flex">
+      </a>
+      <div class="flex items-center mx-8 pt-14">     
+        <form id="tanggal" date-rangepicker class="flex items-center">
+          <div class="relative">
+            <label for="date" class="block text-lg font-light mb-2 text-slate-400">Mulai</label>
+            <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+            <img src="../public/img/9 png.png" alt="" class="w-5 pt-[34px]">
+          </div>
+          <a href="javascript:void(0)" class="text-right text-[30px] text-slate-400 mx-3 w-5 absolute right-0" onclick="hapusTgl()" value="reset form">&times;</a>
+            <input name="start" type="text" class="bg-white border border-gray-300 text-gray-900 sm:text-sm rounded-l-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 datepicker-input" placeholder="30/05/2022">
+          </div>
+          </form>
+          <form id="jam" timepicker class="flex items-center" data-mdb-with-icon="false">
+          <div class="relative">
+            <label for="date" class="block text-lg font-semibold mb-2 text-white">M</label>
+            <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+            <img src="../public/img/7 png.png" alt="" class="w-5 pt-[34px]">
+            </div>
+            <a href="javascript:void(0)" class="text-right text-[30px] text-slate-400 mx-3 w-5 absolute right-0" onclick="hapusJam()" value="reset form">&times;</a>
+            <input name="start" type="text" class="bg-white border border-gray-300 text-gray-900 sm:text-sm rounded-r-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 datepicker-input" placeholder="12.00" data-mdb-toggle="input-toggle-timepicker">
+          </div>
+        </form>
+      </div>
+        <div class="flex items-center mx-8">     
+          <form id="tanggal1" date-rangepicker class="flex items-center">
+            <div class="relative">
+              <label for="date" class="block text-lg font-light mb-2 text-slate-400">Sampai</label>
+              <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                <img src="../public/img/9 png.png" alt="" class="w-5 pt-[34px]">
+              </div>
+              <a href="javascript:void(0)" class="text-right text-[30px] text-slate-400 mx-3 w-5 absolute right-0" onclick="hapusTgl1()" value="reset form">&times;</a>
+              <input name="start" type="text" class="bg-white border border-gray-300 text-gray-900 sm:text-sm rounded-l-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 datepicker-input" placeholder="30/05/2022">
+            </div>
+          </form>
+          <form id="jam1" timepicker class="flex items-center" data-mdb-with-icon="false">
+            <div class="relative">
+              <label for="date" class="block text-lg font-semibold mb-2 text-white">M</label>
+            <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+            <img src="../public/img/7 png.png" alt="" class="w-5 pt-[34px]">
+          </div>
+          <a href="javascript:void(0)" class="text-right text-[30px] text-slate-400 mx-3 w-5 absolute right-0" onclick="hapusJam1()" value="reset form">&times;</a>
+          <input name="start" type="text" class="bg-white border border-gray-300 text-gray-900 sm:text-sm rounded-r-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 datepicker-input" placeholder="12.00" data-mdb-toggle="input-toggle-timepicker">
+        </div>
+      </form>
+    </div>
+          <!-- button filter kustom -->
+          <div class="container">
+            <div class="absolute w-full bg-white h-20 flex items-center mt-14 pb-6 top-[260px]">
+              <div class="flex mx-auto">
+                <button class="w-[160px] h-[52px] bg-white border-2 rounded-lg text-gray-900 text-base ml-10" onclick="aturUlang()">Atur ulang
+                </button>
+            </div>
+            <button class="w-[160px] h-[52px] bg-blue-500 rounded-lg text-white text-base mx-4 mr-10" onclick="toast(), closeKustom(), openReview()"><a href="#" class="font-light">Simpan
+            </button>
+          </a>
+        </div>
+      </div> 
+
+    <!-- components tombol sumberdata -->
+    <section>
+      <div class="container">
+        <div id="side-sumber" class="overflow-auto fixed w-full bg-white shadow-top rounded-t-2xl bottom-[-740px] h-[730px] z-50 flex flex-col space-y-5 text-gray-900 duration-300 shadow-3xl pb-20">
+          <span class="fixed block self-center border-2 border-solid border-slate-300 w-12 rounded-full my-4"></span>
+          <a href="javascript:void(0)" class="text-right text-[40px] text-slate-400 mx-6 w-5 absolute right-3" onclick="closeSumber()">&times;</a>
+          <h2 class="mx-7 block text-lg font-bold pt-7 text-black">Sumber Data</h2>
+          <div class="flex items-center px-7 pt-6 pb-3 border-solid border-y-2 w-full">
+            <input type="checkbox" name="checkboxsumber" id="radio-semua" class="w-6 h-6 absolute check" onclick="aktif(this)">
+            <label for="checkbox-semua" class="text-xl pl-10 text-slate-400 font-normal">Semua <span class="absolute text-[16px] font-extralight text-slate-400 right-12">3.465</span></label>
+          </div>
+          <div class="flex items-center px-7 pt-1 pb-3  w-full border-solid border-b-2">
+            <input type="checkbox" name="checkboxsumber" id="radio-berita" class="w-6 h-6 absolute check">
+            <label for="checkbox-berita" class="text-xl pl-10 text-slate-400 font-normal">Berita<span class="absolute text-[16px] font-extralight text-slate-400 right-12">1.687</span></label>
+          </div>
+          <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-2 w-full">
+            <input type="checkbox" name="checkboxsumber" id="radio-twitter" class="w-6 h-6 absolute check">
+            <label for="checkbox-twitter" class="text-xl pl-10 text-slate-400 font-normal">Twiter<span class="absolute text-[16px] font-extralight text-slate-400 right-12">1.594</span></label>
+          </div>
+          <div class="flex items-center px-7 pt-1 pb-3  w-full border-solid border-b-2">
+            <input type="checkbox" name="checkboxsumber" id="radio-fb" class="w-6 h-6 absolute check">
+            <label for="checkbox-fb" class="text-xl pl-10 text-slate-400 font-normal">facebook<span class="absolute text-[16px] font-extralight text-slate-400 right-12">126</span></label>
+          </div>
+          <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-2 w-full">
+            <label for="checkbox-ig" class="text-xl pl-10 text-slate-400 font-normal">Instagram<span class="absolute text-[16px] font-extralight text-slate-400 right-12">56</span></label>
+            <input type="checkbox" name="checkboxsumber" id="radio-ig" class="w-6 h-6 absolute check ">
+          </div>
+          <div class="flex items-center px-7 pt-1 pb-3  w-full border-solid border-b-2">
+            <label for="checkbox-yt" class="text-xl text-slate-400 pl-10 font-normal">Youtube<span class="absolute text-[16px] font-extralight text-slate-400 right-12">0</span></label>
+            <input type="checkbox" name="checkboxsumber" id="radio-yt" class="w-6 h-6 absolute check">
+          </div>
+          <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-2 w-full">
+            <label for="checkbox-tiktok" class="text-xl text-slate-400 pl-10 font-normal">TikTok<span class="absolute text-[16px] font-extralight text-slate-400 right-12">0</span></label>
+            <input type="checkbox" name="checkboxsumber" id="radio-tiktok" class="w-6 h-6  absolute check">
+          </div>
+          <div class="flex items-center px-7 pt-1 pb-3  w-full border-solid border-b-2">
+            <label for="checkbox-likedin" class="text-xl text-slate-400 pl-10 font-normal">Linkedln<span class="absolute text-[16px] font-extralight text-slate-400 right-12">0</span></label>
+            <input type="checkbox" name="checkboxsumber" id="radio-likedin" class="w-6 h-6 absolute check">
+          </div>
+          <!-- button sumberdata -->
+          <div class="container fixed">
+            <div class=" absolute w-full bg-white h-20 flex items-center pb-6 top-[635px]">
+              <div class="flex mx-auto">
+                <button class="w-[160px] h-[52px] bg-white border-2 rounded-lg text-gray-900 text-base ml-10" onclick="uncek()"><a href="#" class="font-light text-black">Atur Ulang
+                </button>
+              </a>
+            </div>
+            <button class="w-[160px] h-[52px] bg-blue-500 rounded-lg text-white text-base mx-4 mr-10" onclick="closeSumber(), toast(), openReview()"><a href="#" class="font-light">Terapkan
+            </button>
+          </a>
+        </div>
+      </div>  
+      </div>
+    </div>
+  </div>
+ </div>
+</section>
+
+<!-- toast -->
+<div id="snackbar">
+    <div class="flex items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white " viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd"
+        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+        clip-rule="evenodd" />
+      </svg> 
+      <span class="font-thin text-[16px] mx-3">Filter Berhasil diterapkan</span>
+    </div>
+  </div>
+
+<!-- filter simpan topik -->
+<section>
+  <div class="container">
+    <div id="side-simpan" class="w-full bg-white shadow-top rounded-t-2xl fixed bottom-[-450px] h-[300px] z-50 flex flex-col space-y-5 text-gray-900 duration-300 shadow-3xl">
+      <span class="block self-center border-2 border-solid border-slate-300 w-12 rounded-full my-4"></span>
+      <span class="mx-5 absolute pt-6 text-xl text-gray-900 font-extrabold my-auto">Simpan Topik</span>
+        <div class="flex items-center mx-5 pt-10">     
+          <form id="form1" date-rangepicker class="flex items-center">
+            <div class="relative">
+              <label for="text" class="block text-lg font-light mb-2 text-slate-400">Silahkan masukan judul topik Anda</label>
+                <input name="start" type="text" class=" bg-white border border-gray-300 text-gray-900 sm:text-sm rounded-l-lg focus:ring-blue-500 focus:border-blue-500 block w-[370px] pl-5 p-2.5 datepicker-input" placeholder="Masukan judul">
+            </div>
+          </form>
+    </div>
+      <!-- button simpan topik -->
+      <div class="container">
+        <div class="absolute w-full bg-white h-20 flex items-center mt-14 pb-6 top-[150px]">
+          <div class="flex mx-auto">
+            <button class="w-[180px] h-[52px] bg-white border-2 rounded-lg mr-3 text-gray-900 text-base" onclick="aturUlang1()">Atur ulang
+            </button>
+            <button href="javascript:void" id="loading" onclick="delay()" class="w-[180px] h-[52px] bg-blue-500 rounded-lg text-white text-base hover:bg-[#BFBFBF]">Lanjutkan
+            </button>
+          </div>
+      </a>
+    </div>
+  </div> 
+
+    </div>
+  </div>
+</section>
+
+    <script src="../public/js/sideMenu.js">
+    </script>
+</body>
+</html>

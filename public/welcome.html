@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../public/css/style.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/datepicker.js"></script>
     <title>Welcome</title>
   </head>
   <body>
@@ -67,9 +68,9 @@
     <div class="container">
       <div class="p-8 flex items-center w-full">
         <span class="cursor-pointer text-3xl text-gray-400" onclick="openMenu()">&#9776;</span>
-        <div class="relative left-60">
-            <img src="../public/img/urutkan png.png" alt="icon filter" class="w-[21px] h-[22px] absolute -mx-2" onclick="openUrutan()">
-            <img src="../public/img/filter png.png" alt="icon filter" class="w-[21px] h-[22px] mx-[45px]" onclick="openFilter()"> 
+        <div class="relative left-[268px]">
+            <img src="../public/img/urutkan png.png" alt="icon filter" class="w-[21px] h-[22px] absolute -mx-5" onclick="openUrutan()">
+            <img src="../public/img/filter png.png" alt="icon filter" class="w-[21px] h-[22px] mx-[33px]" onclick="openFilter()"> 
         </div>
       </div>
     </div>
@@ -82,7 +83,7 @@
           <a href="#" class="relative mx-auto">
             <h1 class="text-xl font-semibold text-blue-400 border-blue-500 border-b-4 w-52 text-center pb-2">Linimasa</h1>
           </a>
-          <a href="#">
+          <a href="overviewKosong.html">
             <h1 class="text-xl font-thin text-slate-300 border-slate-300 border-b-2 w-52 text-center pb-2">Overview</h1>
           </a>
         </div>
@@ -93,7 +94,7 @@
       <div class="container">
         <div class="block pt-32">
           <img src="../public/img/gbr.jpg" alt="ilustrasi" class="w-80 mx-auto">
-          <h1 class="block pt-7 text-lg font-extrabold px-[70px] w-full text-slate-900">Kami belum menemukan apapun</h1>
+          <h1 class="block pt-7 text-lg font text-center font-extrabold w-full text-slate-900">Kami belum menemukan apapun</h1>
           <h2 class="absolute text-center text-base text-slate-300 w-80 mx-10 pt-3">Silahkan cek penggunaan filter Anda atau coba lihat kembali dilain waktu</h2>
         </div>
       </div>
@@ -106,111 +107,111 @@
           <span class="block self-center border-2 border-solid border-slate-300 w-12 rounded-full my-4"></span>
           <a href="javascript:void(0)" class="text-right text-[40px] text-slate-400 mx-6 w-5 absolute right-3" onclick="closeUrutan()">&times;</a>
           <h1 class="mx-7 absolute pt-6 text-2xl text-gray-900 font-extrabold">Urutkan</h1>
-          <div class="flex items-center mx-8 pt-14">
-            <input type="radio" name="radio terbaru" id="radio-terbaru" class="w-6 h-6">
-            <label for="radio-terbaru" class="mx-5 text-xl text-slate-400">Terbaru</label>
+          <div class="flex items-center px-7 pt-11 pb-3 border-solid border-b-2 w-full">
+            <input type="radio" name="radio terbaru" id="radio-terbaru" class="w-6 h-6 right-8 absolute" onclick="closeUrutan(), toast(), openLinimasaKosong()">
+            <label for="radio-terbaru" class=" text-xl text-slate-400">Terbaru</label>
           </div>
-          <div class="flex items-center mx-8">
-            <input type="radio" name="radio terbaru" id="radio-terbaru" class="w-6 h-6">
-            <label for="radio-terbaru" class="mx-5 text-xl text-slate-400">Terlama</label>
+          <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-2 w-full" >
+            <input type="radio" name="radio terbaru" id="radio-terbaru" class="w-6 h-6 right-8 absolute" onclick="closeUrutan(), toast()">
+            <label for="radio-terbaru" class=" text-xl text-slate-400">Terlama</label>
           </div>
-          <div class="flex items-center mx-8">
-            <input type="radio" name="radio terbaru" id="radio-terbaru" class="w-6 h-6">
-            <label for="radio-terbaru" class="mx-5 text-xl text-slate-400">Relevansi</label>
+          <div class="flex items-center px-7 pt-1 pb-3 w-full">
+            <input type="radio" name="radio terbaru" id="radio-terbaru" class="w-6 h-6 right-8 absolute" onclick="closeUrutan(), toast()">
+            <label for="radio-terbaru" class=" text-xl text-slate-400">Relevansi</label>
           </div>
         </div>
       </div>
     </section>
 
     <!-- components tombol filter -->
-    <section>
+    <section >
       <div class="container">
-        <div id="side-filter" class="overflow-scroll fixed w-full bg-white shadow-top rounded-t-2xl bottom-[-920px] h-screen z-50 flex flex-col space-y-5 text-gray-900 duration-300 shadow-3xl pb-20">
+        <div id="side-filter" class="overflow-auto fixed w-full bg-white shadow-top rounded-t-2xl bottom-[-920px] h-screen z-50 flex flex-col space-y-5 text-gray-900 duration-300 shadow-3xl pb-20">
           <span class="fixed block self-center border-2 border-solid border-slate-300 w-12 rounded-full my-4"></span>
           <a href="javascript:void(0)" class="text-right text-[40px] text-slate-400 mx-6 w-5 absolute right-3" onclick="closeFilter()">&times;</a>
           <h1 class="mx-7 absolute pt-6 text-2xl text-gray-900 font-extrabold">Filter</h1>
-          <h2 class="mx-7 block text-lg font-bold pt-24 text-black">Rentan Waktu</h2>
+          <h2 class="mx-7 block text-lg font-bold pt-24 text-black">Rentang Waktu</h2>
           <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-2 w-full">
             <label for="radio-sehari" class="text-xl text-slate-400 font-normal">1 hari terakhir</label>
-            <input type="radio" name="radio sehari" id="radio-sehari" class="w-6 h-6 right-8 absolute ">
+            <input type="radio" name="radiowaktu" id="radio-sehari" class="w-6 h-6 right-8 absolute ">
           </div>
           <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-2 w-full">
-            <label for="radio-sehari" class="text-xl text-slate-400 font-normal">7 hari terakhir</label>
-            <input type="radio" name="radio 7hari" id="radio-sehari" class="w-6 h-6 right-8 absolute ">
+            <label for="radio-7hari" class= "text-xl text-slate-400 font-normal">7 hari terakhir</label>
+            <input type="radio" name="radiowaktu" id="radio-7hari" class="w-6 h-6 right-8 absolute ">
           </div>
           <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-2 w-full">
             <label for="radio-1bulan" class="text-xl text-slate-400 font-normal">1 bulan terakhir</label>
-            <input type="radio" name="radio 1bulan" id="radio-1bulan" class="w-6 h-6 right-8 absolute ">
+            <input type="radio" name="radiowaktu" id="radio-1bulan" class="w-6 h-6 right-8 absolute ">
           </div>
           <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-2 w-full">
             <label for="radio-kustom" class="text-xl text-slate-400 font-normal">Atur waktu</label>
-            <input type="radio" name="radio kustom" id="radio-kustom" class="w-6 h-6 right-8 absolute" onclick="openKustom(), closeFilter()">
+            <input type="radio" name="radiowaktu" id="radio-kustom" class="w-6 h-6 right-8 absolute" onclick="openKustom(), closeFilter()">
           </div>
 
           <h2 class="mx-7 block text-lg font-bold pt-7 text-black">Sentimen</h2>
           <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-2 w-full">
             <label for="radio-semua" class="text-xl text-slate-400 font-normal">Semua</label>
-            <input type="radio" name="radio semua" id="radio-semua" class="w-6 h-6 right-8 absolute ">
+            <input type="radio" name="radiosemua" id="radio" class="w-6 h-6 right-8 absolute ">
           </div>
           <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-2 w-full">
             <label for="radio-positif" class="text-xl text-slate-400 font-normal">Positif</label>
-            <input type="radio" name="radio positif" id="radio-positif" class="w-6 h-6 right-8 absolute ">
+            <input type="radio" name="radiosemua" id="radio-positif" class="w-6 h-6 right-8 absolute ">
           </div>
           <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-2 w-full">
             <label for="radio-netral" class="text-xl text-slate-400 font-normal">Netral</label>
-            <input type="radio" name="radio netral" id="radio-netral" class="w-6 h-6 right-8 absolute ">
+            <input type="radio" name="radiosemua" id="radio-netral" class="w-6 h-6 right-8 absolute ">
           </div>
           <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-2 w-full">
             <label for="radio-negatif" class="text-xl text-slate-400 font-normal">Negatif</label>
-            <input type="radio" name="radio negatif" id="radio-negatif" class="w-6 h-6 right-8 absolute ">
+            <input type="radio" name="radiosemua" id="radio-negatif" class="w-6 h-6 right-8 absolute ">
           </div>
-
-          <h2 class="mx-7 block text-lg font-bold pt-7 text-black">Sumber Data</h2>
-          <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-2 w-full">
-            <label for="checkbox-semua" class="text-xl text-slate-400 font-normal">Pilih Semua</label>
-            <input type="checkbox" name="checkbox semua" id="radio-semua" class="w-6 h-6 right-8 absolute ">
-          </div>
-          <div class="flex items-center px-7 pt-1 pb-3  w-full border-solid border-b-2">
-            <label for="checkbox-berita" class="text-xl text-slate-400 font-normal">Berita</label>
-            <input type="checkbox" name="checkbox berita" id="radio-berita" class="w-6 h-6 right-8 absolute">
-          </div>
-          <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-2 w-full">
+          
+            <h2 class="mx-7 block text-lg font-bold pt-7 text-black">Sumber Data</h2>
+            <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-2 w-full">
+              <label for="checkbox-semua" class="text-xl text-slate-400 font-normal">Pilih Semua</label>
+              <input type="checkbox" name="checkboxsumber" id="radio-semua" class="w-6 h-6 right-8 absolute check" onclick="aktif(this)">
+            </div>
+            <div class="flex items-center px-7 pt-1 pb-3  w-full border-solid border-b-2">
+              <label for="checkbox-berita" class="text-xl text-slate-400 font-normal">Berita</label>
+              <input type="checkbox" name="checkboxsumber" id="radio-berita" class="w-6 h-6 right-8 absolute check">
+            </div>
+            <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-2 w-full">
             <label for="checkbox-twitter" class="text-xl text-slate-400 font-normal">Twiter</label>
-            <input type="checkbox" name="checkbox twitter" id="radio-twitter" class="w-6 h-6 right-8 absolute ">
+            <input type="checkbox" name="checkboxsumber" id="radio-twitter" class="w-6 h-6 right-8 absolute check">
           </div>
           <div class="flex items-center px-7 pt-1 pb-3  w-full border-solid border-b-2">
             <label for="checkbox-fb" class="text-xl text-slate-400 font-normal">facebook</label>
-            <input type="checkbox" name="checkbox facebook" id="radio-fb" class="w-6 h-6 right-8 absolute">
+            <input type="checkbox" name="checkboxsumber" id="radio-fb" class="w-6 h-6 right-8 absolute check">
           </div>
           <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-2 w-full">
             <label for="checkbox-ig" class="text-xl text-slate-400 font-normal">Instagram</label>
-            <input type="checkbox" name="checkbox instagram" id="radio-ig" class="w-6 h-6 right-8 absolute ">
+            <input type="checkbox" name="checkboxsumber" id="radio-ig" class="w-6 h-6 right-8 absolute check">
           </div>
           <div class="flex items-center px-7 pt-1 pb-3  w-full border-solid border-b-2">
             <label for="checkbox-yt" class="text-xl text-slate-400 font-normal">Youtube</label>
-            <input type="checkbox" name="checkbox youtube" id="radio-yt" class="w-6 h-6 right-8 absolute">
+            <input type="checkbox" name="checkboxsumber" id="radio-yt" class="w-6 h-6 right-8 absolute check">
           </div>
           <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-2 w-full">
             <label for="checkbox-tiktok" class="text-xl text-slate-400 font-normal">TikTok</label>
-            <input type="checkbox" name="checkbox tiktok" id="radio-tiktok" class="w-6 h-6 right-8 absolute ">
+            <input type="checkbox" name="checkboxsumber" id="radio-tiktok" class="w-6 h-6 right-8 absolute check">
           </div>
           <div class="flex items-center px-7 pt-1 pb-3  w-full border-solid border-b-2">
             <label for="checkbox-likedin" class="text-xl text-slate-400 font-normal">Linkedln</label>
-            <input type="checkbox" name="checkbox likedin" id="radio-likedin" class="w-6 h-6 right-8 absolute">
+            <input type="checkbox" name="checkboxsumber" id="radio-likedin" class="w-6 h-6 right-8 absolute check">
           </div>
           <div class="flex items-center px-7 pt-3 pb-24  w-full border-solid border-b-2">
             <label for="checkbox-sembunyi" class="text-xl text-slate-900 font-semibold">Tampilkan konten tersembunyi</label>
-            <input type="checkbox" name="checkbox sembunyi" id="radio-sembunyi" class="w-6 h-6 right-8 absolute">
+            <input type="checkbox" name="checkbox" id="radio-sembunyi" class="w-6 h-6 right-8 absolute check">
           </div>
           <!-- button filter -->
           <div class="container fixed">
             <div class=" absolute w-full bg-white h-20 flex items-center pb-6 top-[735px]">
               <div class="flex mx-auto">
-                <button class="w-[160px] h-[52px] bg-white border-2 rounded-lg text-gray-900 text-base ml-10"><a href="#" class="font-light text-black">Reset
+                <button class="w-[160px] h-[52px] bg-white border-2 rounded-lg text-gray-900 text-base ml-10" onclick="uncek()"><a href="#" class="font-light text-black">Reset
                 </button>
               </a>
             </div>
-            <button class="w-[160px] h-[52px] bg-blue-500 rounded-lg text-white text-base mx-4 mr-10"><a href="welcome.html" class="font-light">Terapkan
+            <button class="w-[160px] h-[52px] bg-blue-500 rounded-lg text-white text-base mx-4 mr-10"><a href="linimasakosong.html" class="font-light">Terapkan
             </button>
           </a>
         </div>
@@ -220,6 +221,20 @@
   </div>
  </div>
 </section>
+
+
+    <!-- toast urutan -->
+    <div id="snackbar">
+      <div class="flex items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white " viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd"
+          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+          clip-rule="evenodd" />
+        </svg> 
+        <span class="font-thin text-[16px] mx-3">Filter Berhasil diterapkan</span>
+      </div>
+    </div>
+
 <!-- filter Atur waktu -->
 <section>
   <div class="container">
@@ -230,7 +245,6 @@
         <img src="../public/img/back-icon.png" alt="icon back" class="w-11 h-9 m-6 flex">
       </a>
       <div class="flex items-center mx-8 pt-14">     
-        <form id="tanggal" date-rangepicker class="flex items-center">
           <div class="relative">
             <label for="date" class="block text-lg font-light mb-2 text-slate-400">Mulai</label>
             <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
@@ -286,12 +300,12 @@
     </div>
   </div> 
      
-     
     </div>
   </div>
 </section>
 
     <script src="../public/js/sideMenu.js">
     </script>
+    
 </body>
 </html>

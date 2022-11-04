@@ -19,6 +19,26 @@ var sideUrutan = document.getElementById('side-urutan');
             sideUrutan.classList.remove('bottom-0');
             sideUrutan.classList.add('bottom-[-300px]');
         }
+var sideLainnya = document.getElementById('side-lainnya');
+        function openLainnya(){
+            sideLainnya.classList.remove('bottom-[-300px]');
+            sideLainnya.classList.add('bottom-0');
+        }
+
+        function closeLainnya(){
+            sideLainnya.classList.remove('bottom-0');
+            sideLainnya.classList.add('bottom-[-300px]');
+        }
+var sideSentimen = document.getElementById('side-sentimen');
+        function openSentimen(){
+            sideSentimen.classList.remove('bottom-[-300px]');
+            sideSentimen.classList.add('bottom-0');
+        }
+
+        function closeSentimen(){
+            sideSentimen.classList.remove('bottom-0');
+            sideSentimen.classList.add('bottom-[-300px]');
+        }
 var sideMin = document.getElementById('side-min');
         function openMin(){
             sideMin.classList.remove('bottom-[-560px]');
@@ -123,6 +143,16 @@ var sideHapus = document.getElementById('side-hapus');
             sideHapus.classList.remove('bottom-0');
             sideHapus.classList.add('bottom-[-490px]');
         }
+var sideSembunyi = document.getElementById('side-sembunyi');
+        function openSembunyi(){
+            sideSembunyi.classList.remove('bottom-[-490px]');
+            sideSembunyi.classList.add('bottom-0');
+        }
+
+        function closeSembunyi(){
+            sideSembunyi.classList.remove('bottom-0');
+            sideSembunyi.classList.add('bottom-[-490px]');
+        }
 var sideSimpan = document.getElementById('side-simpan');
         function openSimpan(){
             sideSimpan.classList.remove('bottom-[-450px]');
@@ -147,6 +177,9 @@ var sideEdit = document.getElementById('side-edit');
         function hapusTgl() {
             document.getElementById("tanggal").reset();
         }
+        function hapusTeks() {
+            document.getElementById("hapusteks").reset();
+        }
         function hapusTgl1() {
             document.getElementById("tanggal1").reset();
         }
@@ -166,11 +199,16 @@ var sideEdit = document.getElementById('side-edit');
         function delay(){
             setTimeout(function(){ 
             window.location="linimasa.html"
-         }, 1000);
+         }, 1200);
         }
         function openSemua(){
             setTimeout(function(){ 
             window.location="semuaTopik.html"
+         }, 0);
+        }
+        function openLinimasanotif(){
+            setTimeout(function(){ 
+            window.location="linimasanotif.html"
          }, 0);
         }
         function openLinimasa(){
@@ -178,9 +216,29 @@ var sideEdit = document.getElementById('side-edit');
             window.location="linimasa.html"
          }, 0);
         }
+        function openLinimasa(){
+            setTimeout(function(){ 
+            window.location="linimasaside.html"
+         }, 0);
+        }
         function openUbahKeyword(){
             setTimeout(function(){ 
             window.location="ubahKeyword.html"
+         }, 0);
+        }
+        function openLinimasaKeyword(){
+            setTimeout(function(){ 
+            window.location="linimasakeyword.html"
+         }, 0);
+        }
+        function openLinimasaKosong(){
+            setTimeout(function(){ 
+            window.location="linimasakosong.html"
+         }, 0);
+        }
+        function openBuatTopikback(){
+            setTimeout(function(){ 
+            window.location="buattopikkembali.html"
          }, 0);
         }
         function openWelcome(){
@@ -188,12 +246,101 @@ var sideEdit = document.getElementById('side-edit');
             window.location="welcome.html"
          }, 1500);
         }
+        function openWelcome1(){
+            setTimeout(function(){ 
+            window.location="welcome.html"
+         }, 0);
+        }
+        function openReview(){
+            setTimeout(function(){ 
+            window.location="reviewContentKeyword.html"
+         }, 0);
+        }
         // tombol loading
         const btn = document.getElementById('loading');
             btn.addEventListener('click', function handleClick() {
             btn.textContent = 'Menyimpan...';
         });
 
+        const berapapun = document.getElementById('berapapun');
+            berapapun.addEventListener('click', function handleClick() {
+            berapapun.textContent = 'Berapapun...';
+        });
+
+        
+        function gantiMin1() {
+            var x = document.getElementById("pilih").value;
+            document.getElementById("demo").innerHTML = "" + x;
+          }
+        function gantiMin2() {
+            var x = document.getElementById("pilih2").value;
+            document.getElementById("demo").innerHTML = "" + x;
+          }
+        function gantiMin3() {
+            var x = document.getElementById("pilih3").value;
+            document.getElementById("demo").innerHTML = "" + x;
+          }
+        function gantiMin4() {
+            var x = document.getElementById("pilih4").value;
+            document.getElementById("demo").innerHTML = "" + x;
+          }
+        function gantiMin5() {
+            var x = document.getElementById("pilih5").value;
+            document.getElementById("demo").innerHTML = "" + x;
+          }
+        function gantiMin6() {
+            var x = document.getElementById("pilih6").value;
+            document.getElementById("demo").innerHTML = "" + x;
+          }
+        function gantiMin7() {
+            var x = document.getElementById("pilih7").value;
+            document.getElementById("demo").innerHTML = "" + x;
+          }
+
+
+// ganti cek seiap notifikasi
+        function ganti1() {
+            var x = document.getElementById("pilih1").value;
+            document.getElementById("demo1").innerHTML = "" + x;
+          }
+        function ganti2() {
+            var x = document.getElementById("pilih2").value;
+            document.getElementById("demo1").innerHTML = "" + x;
+          }
+        function ganti3() {
+            var x = document.getElementById("pilih3").value;
+            document.getElementById("demo1").innerHTML = "" + x;
+          }
+        function ganti4() {
+            var x = document.getElementById("pilih4").value;
+            document.getElementById("demo1").innerHTML = "" + x;
+          }
+        function ganti5() {
+            var x = document.getElementById("pilih5").value;
+            document.getElementById("demo1").innerHTML = "" + x;
+          }
+        function ganti6() {
+            var x = document.getElementById("pilih6").value;
+            document.getElementById("demo1").innerHTML = "" + x;
+          }
+        function ganti7() {
+            var x = document.getElementById("pilih7").value;
+            document.getElementById("demo1").innerHTML = "" + x;
+          }
+
+          // ubah sentimen
+          function ubahSentimen(){
+            var x = document.getElementById("ubahsentimen").value;
+            document.getElementById("ganti").innerHTML = "" +x;
+          }
+          function ubahSentimen1(){
+            var x = document.getElementById("ubahsentimen1").value;
+            document.getElementById("ganti").innerHTML = "" +x;
+          }
+          function ubahSentimen2(){
+            var x = document.getElementById("ubahsentimen2").value;
+            document.getElementById("ganti").innerHTML = "" +x;
+          }
 
         //hapus semua checkbox
         function uncek() {
@@ -217,10 +364,79 @@ var sideEdit = document.getElementById('side-edit');
           function toast2() {
             var x = document.getElementById("snackbar2");
             x.className = "show";
-            setTimeout(function(){ x.className = x.className.replace("show", ""); }, 1500);
+            setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
           }
 
+          function toast3() {
+            var x = document.getElementById("snackbar3");
+            x.className = "show";
+            setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+          }
+          function toast4() {
+            var x = document.getElementById("snackbar4");
+            x.className = "show";
+            setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+          }
+          function toast5() {
+            var x = document.getElementById("snackbar5");
+            x.className = "show";
+            setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+          }
+          function toast6() {
+            var x = document.getElementById("snackbar6");
+            x.className = "show";
+            setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+          }
+          function toast7() {
+            var x = document.getElementById("snackbar7");
+            x.className = "show";
+            setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+          }
+
+          function toastUrutan() {
+            var x = document.getElementById("toastUrutan");
+            x.className = "show";
+            setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+          }
+        //   validation
           
+        function validasi(){
+            var form = document.getElementById("form");
+            var email = document.getElementById("email").value;
+            var text = document.getElementById("text");
+            var pattern = "[sudaryanto]+@[gmail]+\.[a-z]{2,3}$";
 
+            if(email.match(pattern))
+            {
+                form.classList.add("valid");
+                form.classList.remove("invalid");
+                text.innerHTML = "email atau kata sandi salah";
+                text.style.color = "#E31F26";
+            }
+            else
+            {
+                form.classList.remove("valid");
+                form.classList.add("invalid");
+                text.innerHTML = "email Anda belum terdaftar";
+                text.style.color = "#E31F26";
+            }
+        }
 
+        function aktif(source) {
+            checkboxes = document.getElementsByName('checkboxsumber');
+            for(var i=0, n=checkboxes.length;i<n;i++) {
+              checkboxes[i].checked = source.checked;
+            }
+          }
 
+          function aktifSemua(source) {
+            checkboxes = document.getElementsByName('all');
+            for(var i=0, n=checkboxes.length;i<n;i++) {
+              checkboxes[i].checked = source.checked;
+            }
+          }
+
+          function date() {
+            var x = document.getElementById("myDate").value;
+            document.getElementById("demo").innerHTML = x;
+          }

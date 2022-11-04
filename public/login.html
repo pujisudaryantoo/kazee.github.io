@@ -16,7 +16,7 @@
         <h1 class="pt-5 font-semibold text-3xl text-blue-600">Masuk</h1>
         <h2 class="pt-3 text-base text-gray-400">Selamat datang di akun Anda</h2>
         <div>
-        <form class="w-[330px] border-solid border-[1px] border-gray-500 rounded-xl mx-auto p-3 my-10" action="#">
+        <form id="form" class="w-[330px] border-solid border-[1px] border-gray-500 rounded-xl mx-auto p-3 my-10" action="#">
             <div class="grid grid-rows-2 grid-flow-col gap-1">
                 <div class="row-span-3">
                     <img src="../public/img/email png.png" alt="" class="w-8 mx-3 py-3">
@@ -25,11 +25,12 @@
                     <label for="email" class="">Alamat Email</label>
                 </div>
                 <div class="row-span-2 col-span-2">
-                    <input type="email" name="email" id="email" class="w-full" placeholder="Cth: user@email.com">
+                    <input type="email" name="email" id="email" required class="w-full peer" placeholder="Cth: user@email.com">
+                    <span class="absolute left-0 pt-40 visible peer-invalid:invisible ml-11 font-extrabold text-[#E31F26]">Email Anda Belum Terdaftar</span>
                 </div>
               </div>
+            </form>
         </div>
-        </form>
         <form class="w-[330px] border-solid border-[1px] border-gray-500 rounded-xl mx-auto p-3 -my-4" action="#">
             <div class="grid grid-rows-2 grid-flow-col gap-1">
                 <div class="row-span-3">
@@ -39,7 +40,8 @@
                     <label for="email" class="">Password</label>
                 </div>
                 <div class="row-span-2 col-span-2">
-                    <input type="password" name="password" id="email" class="w-full" placeholder="Masukkan kata sandi">
+                    <input type="password" name="password" id="email" required class="w-full peer" placeholder="Masukkan kata sandi">
+                    <span class="absolute left-0 pt-14 visible peer-invalid:invisible ml-11 font-extrabold text-[#E31F26]">Email atau kata sandi salah</span>
                 </div>
               </div>
         </div>
@@ -50,20 +52,20 @@
         <label for="default-toggle" class="inline-flex relative items-center cursor-pointer m-11">
             <input type="checkbox" value="" id="default-toggle" class="sr-only peer">
             <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-200 rounded-full peer  peer-checked:after:translate-x-full peer-checked:after:bg-blue-700 after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-gray-200"></div>
-            <span class="ml-3 text-lg font-medium text-gray-900 dark:text-gray-300">Ingat akun</span>
+            <span class="ml-3 text-base font-medium text-gray-900 dark:text-gray-300">Ingat akun</span>
           </label>
-          <a href="lupasandi.html" class="absolute font-normal text-gray-300 mx-auto text-lg py-11 -ml-4"><span>Lupa Kata Sandi?</span></a>
-
+          <a href="lupasandi.html" class="absolute font-normal text-gray-300  mx-auto text-base py-11"><span>Lupa Kata Sandi?</span></a>
           <div class="container">
-            <div class="flex mx-auto px-9">
+            <div class="flex mx-auto px-9 pt-10">
                 <div class="flex flex-wrap">
                     <button class="w-[160px] h-[52px] bg-white rounded-full text-gray-900 text-base mx-auto"><a href="index.html">Kembali
                     </button>
                 </a>
                  </div>
-                 <button class="w-[160px] h-[52px] bg-blue-500 rounded-full text-white text-base mx-auto"><a href="welcome.html">Masuk
+                 <button class="w-[160px] h-[52px] bg-blue-500 rounded-full text-white text-base mx-auto" onclick="validasi()"><a href="welcome.html">Masuk
                  </button>
                     </a>
+                 </div>
                  </div>
           
           

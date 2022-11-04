@@ -9,7 +9,8 @@
 h1,
 h2,
 li,
-span {
+span,
+p {
   font-family: monserat;
 }
 
@@ -204,6 +205,113 @@ span {
 }
 
 #snackbar2.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+#snackbar3 {
+  visibility: hidden;
+  min-width: 380px;
+  margin-left: -190px;
+  background-color: #3ec764;
+  color: #fff;
+  text-align: left;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+#snackbar3.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+#snackbar4 {
+  visibility: hidden;
+  min-width: 380px;
+  margin-left: -190px;
+  background-color: #3ec764;
+  color: #fff;
+  text-align: left;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+#snackbar4.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+#snackbar5 {
+  visibility: hidden;
+  min-width: 380px;
+  margin-left: -190px;
+  background-color: #3ec764;
+  color: #fff;
+  text-align: left;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+#snackbar5.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+#snackbar6 {
+  visibility: hidden;
+  min-width: 380px;
+  margin-left: -190px;
+  background-color: #3ec764;
+  color: #fff;
+  text-align: left;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+#snackbar6.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+#snackbar7 {
+  visibility: hidden;
+  min-width: 380px;
+  margin-left: -190px;
+  background-color: #3ec764;
+  color: #fff;
+  text-align: left;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+#snackbar7.show {
   visibility: visible;
   -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
   animation: fadein 0.5s, fadeout 0.5s 2.5s;
