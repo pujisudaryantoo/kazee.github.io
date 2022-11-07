@@ -440,3 +440,12 @@ var sideEdit = document.getElementById('side-edit');
             var x = document.getElementById("myDate").value;
             document.getElementById("demo").innerHTML = x;
           }
+
+          const dropdownButton = document.querySelector("#gas");
+          const dropdownList = document.querySelector("#gas + div.hidden");
+
+          dropdownButton.addEventListener("click", () => {
+            dropdownList.classList.toggle("hidden");
+          });
+
+          

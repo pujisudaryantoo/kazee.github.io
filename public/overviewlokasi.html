@@ -6,533 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../public/css/style.css" />
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>Overview konten</title>
+    <title>Overview Lokasi</title>
   </head>
   <body class="bg-slate-100">
-      <!-- navbar -->
-    <section>
-      <div class="fixed block shadow-top inset-x-0 bottom-0 bg-white">
-        <div class="flex flex-wrap">
-            <nav class="mx-auto m-5">
-              <ul class="flex">
-                <li>
-                  <img src="./img/linimasa biru png.png" alt="icon home" class="w-7 block mx-auto pt-2">
-                  <span class="m-5 text-sm text-blue-500 font-thin active:text-blue-500 hover:text-blue-500 active:font-extrabold hover:font-extrabold">Linimasa</span>
-                </li>
-                <li>
-                  <span class="absolute inline-flex items-center justify-center px-2 py-1 mx-[55px] text-xs font-bold leading-none text-red-100 bg-red-600 rounded-full">7</span>
-                  <img src="./img/notif 2.png" alt="icon notifikasis" class="w-7 block mx-auto pt-2">
-                  <span class="m-5 text-sm text-gray-400 font-thin  active:text-blue-500 hover:text-blue-500 active:font-extrabold hover:font-extrabold">Notifikasi</span>
-                </li>
-                <li>
-                  <img src="./img/laporan abu2 png.png" alt="icon laporan" class="w-7 block mx-auto pt-2">
-                  <span class="m-5 text-sm text-gray-400 font-thin  active:text-blue-500 hover:text-blue-500 active:font-extrabold hover:font-extrabold">Laporan</span>
-                </li>
-                <li>
-                  <img src="./img/profil abu2 png.png" alt="icon profil" class="w-6 block mx-auto pt-2 pb-[1px]">
-                  <span class="m-5 text-sm text-gray-400 font-thin  active:text-blue-500 hover:text-blue-500 active:font-extrabold hover:font-extrabold">Profil</span>
-                </li>
-              </ul>
-            </nav>
-        </div>
-      </div>
-    </section>
+      
 
-    <!-- sidebar -->
-    <header>
-      <div id="side-menu" class="fixed top-0 left-[-350px] w-[350px] h-screen z-50 bg-white px-4
-      flex flex-col space-y-5 text-gray-900 duration-300 shadow-3xl">
-      <div class="flex w-[320px] py-8 px-7 border-b-gray-300 border-b-2 shadow-none">
-          <h1 class="font-bold text-xl -mx-5 ">TOPIK</h1>
-          <img src="../public/img/topik png.png" alt="icon topik" class="w-[24px] h-full mx-56">
-        </div>
-        <div class="block">
-            <div class="flex border-b-2 w-full">
-                <h1 class="font-bold text-md mx-2 pb-4 w-screen text-slate-800 hover:text-[#4372EA] active:text-[#4372EA]" onclick="openSemua()">Semua <span class="absolute right-12">1.997</span></h1>
-            </div>
-            <div class="flex items-center border-b-2 w-full">
-                <h1 class="font-bold text-md mx-2 pb-4 pt-4 w-screen text-[#4372EA] hover:text-[#4372EA] active:text-[#4372EA]">PHK Startup Indonesia <span class="absolute right-12">1.997</span></h1>
-                <img src="../public/img/titik 3 png.png" alt="icon titik3" class="w-[4px] h-[20px] mx-2" onclick="openKeyword(), closeMenu()">
-            </div>
-            <h1 class="w-[230px] border-3 border-solid border-slate-600 m-9 ">
-            <a href="javascript:void(0)" class="text-right text-4xl text-white absolute right-1 w-full h-full" onclick="closeMenu()">&times;</a>
-              <div class="container absolute inset-x-8 bottom-8 -mx-4">
-                <a href="buatTopik.html">
-                    <button class="block bg-white h-[50px] w-[300px] rounded-md border-2 border-gray-200">
-                        <div class="flex translate-x-[70px]">
-                            <img src="./img/plus png.png" alt="icon plus" class="w-3 block my-auto mx-4"/>
-                            <span class="text-md font-extrabold">Topik Baru</span></button>
-                        </a>
-                        </div>
-                    </div>
-                </div>
+   
 
     <!-- header -->
-    <div class="container">
-      <div class="p-8 flex items-center w-full bg-white fixed top-0">
-        <span class="cursor-pointer text-3xl text-gray-400" onclick="openMenu()">&#9776;</span>
-        <h1 class="text-lg ml-3 font-bold text-slate-800 w-full">PUBG Indonesia </h1>
-        <div class="relative left-10">
-            <img src="../public/img/urutkan png.png" alt="icon filter" class="w-[19px] h-[20px] absolute mx-1" onclick="openUrutan()">
-            <img src="../public/img/filter png.png" alt="icon filter" class="w-[18px] h-[21px] mx-[45px]" onclick="openFilter()"> 
+    <div class="group">
+      <div class="container">
+        <div class="p-8 flex items-center w-full bg-white fixed top-0">
+        <div class="cursor-pointer text-3xl text-gray-400" onclick="openMenu()">
+          <img src="../public/img/back-icon.png" alt="back" class="w-28 -mx-5" onclick="history.back()">
         </div>
+        <h1 class="text-xl font-extrabold text-slate-800 w-full">Semua Lokasi</h1>
+        <button class="relative left-10" id="gas">
+          <svg aria-hidden="false" focusable="false" data-prefix="fas" data-icon="search" class="text-gray-400 w-[20px] h-[21px] mx-[35px]" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+          </svg>
+        </button>
       </div>
     </div>
     </header>
+    <!-- search bar -->
+    <main>
+      <div class="hidden fixed group-hover:block">
+        <input type="search" id="txt" class="input-group absolute pl-5 flex text-lg font-medium text-slate-500 flex-wrap items-stretch ml-16 mt-6 w-[335px] h-12 mb-1 rounded bg-clip-padding border border-solid border-gray-400"  placeholder="Ketik di sini">
+        <span class="fixed input-group-text flex items-center right-6 py-1.5 text-base font-normal pt-[13px] mt-2 text-center whitespace-nowrap rounded">
+          <svg aria-hidden="false" focusable="false" data-prefix="fas" data-icon="search" class="w-[20px] text-gray-400 relative pt-6 mr-2" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+          <path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+        </svg>
+      </span>
+    </div>
+  </main>
+</div>
 
-    <!-- navMenu -->
-    <menu class="fixed top-[90px]">
-      <div class="container">
-        <div class="flex items-center w-full bg-white ">
-          <a href="linimasa.html" class="relative mx-auto">
-            <h1 class="text-xl font-semibold text-slate-300 border-slate-300 border-b-4 w-52 text-center pb-2">Linimasa</h1>
-          </a>
-          <a href="#">
-            <h1 class="text-xl font-thin text-blue-500 border-blue-500 border-b-2 w-52 text-center pb-2">Overview</h1>
-          </a>
-        </div>
-      </div>
-    </menu>
-
-    <section class="bg-white shadow-sm h-[600px]">
-        <div class="container">
-                <!-- section -->
-                <div class="block mx-auto pt-7 bg-white">
-                  <div class="w-full h-12 bg-white rounded-lg">
-                    <div class="block pt-24 pb-6">
-                        <h1 class="mx-auto text-center text-slate-400 font-light pt-7">Total Percakapan</h1>
-                        <span class="mx-auto text-center block text-2xl font-bold pt-2">50.000</span>
-                    </div>
-                </div>
-            </div>
-              </div>
-              <!-- chart img sementara -->
-              <div class="block pt-[160px] pl-2">
-                <img class="w-[380px]" src="../public/img/chart.png" alt="chart">
-            </div>
-            
-            <!-- toogle menu -->
-            <ul class="flex pt-5 text-sm font-medium text-center text-gray-500 rounded-lg">
-                <li class="w-full ml-6 pl-1 h-[50px] bg-slate-100 pt-[4px] rounded-l-lg">
-                  <a href="#" class="h-10 text-center inline-block p-3 w-full font-medium text-gray-900 bg-white rounded-lg">Sumber Percakap...</a>
-                </li>
-                <li class="w-full h-[50px] mr-6 bg-slate-100 pt-[4px] rounded-r-lg">
-                    <a href="overviewsentimen.html" class="rounded-lg inline-block h-10 p-3 w-full bg-slate-100-50 hover:text-gray-700 hover:bg-gray-50 text-slate-400 font-semibold">Sentimen</a>
-                </li>
-            </ul>
-          </section>
-
-      <section class="bg-white h-[400px]">
-        <div class="container">
-          <div class="block pt-7">
-            <!-- bar 1 -->
-            <h1 class="pl-[330px] text-gray-400 font-medium">50.000</h1>
-            <span class="block h-5 w-5 -my-6 ml-6 font-medium rounded-full bg-gray-200"><p class="ml-8 block pb-1 text-gray-400">Semua</p></span>
-            <div class="pl-48 mt-2 items-center">
-              <div class="w-[115px] bg-gray-200 rounded-sm h-3 mb-8">
-                <div class="bg-gray-200 rounded-sm h-3" style="width: 25%"></div>
-              </div>
-            </div>
-            <!-- bar 2 -->
-            <h1 class="pl-[344px] text-slate-800 font-medium">7.777</h1>
-            <span class="block h-5 w-5 -my-6 ml-6 font-medium rounded-full bg-[#5266A8]"><p class="ml-8 block pb-1 text-slate-800">Berita</p></span>
-            <div class="pl-48 mt-2 items-center">
-              <div class="w-[115px] bg-gray-200 rounded-sm h-3 mb-8">
-                <div class="bg-[#5266A8] rounded-sm h-3" style="width: 100%"></div>
-              </div>
-            </div>
-            <!-- bar 3 -->
-            <h1 class="pl-[344px] text-slate-800 font-medium">6.666</h1>
-            <span class="block h-5 w-5 -my-6 ml-6 font-medium rounded-full bg-[#06D6A0]"><p class="ml-8 block pb-1 text-slate-800">Twitter</p></span>
-            <div class="pl-48 mt-2 items-center">
-              <div class="w-[115px] bg-gray-200 rounded-sm h-3 mb-8">
-                <div class="bg-[#06D6A0] rounded-sm h-3" style="width: 75%"></div>
-              </div>
-            </div>
-            <!-- bar 4 -->
-            <h1 class="pl-[345px] text-slate-800 font-medium">5.555</h1>
-            <span class="block h-5 w-5 -my-6 ml-6 font-medium rounded-full bg-[#F4AB87]"><p class="ml-8 block pb-1 text-slate-800">Facebook</p></span>
-            <div class="pl-48 mt-2 items-center">
-              <div class="w-[115px] bg-gray-200 rounded-sm h-3 mb-8">
-                <div class="bg-[#F4AB87] rounded-sm h-3" style="width: 66%"></div>
-              </div>
-            </div>
-            <!-- bar 5 -->
-            <h1 class="pl-[342px] text-slate-800 font-medium">4.444</h1>
-            <span class="block h-5 w-5 -my-6 ml-6 font-medium rounded-full bg-[#8168B1]"><p class="ml-8 block pb-1 text-slate-800">LinkedIn</p></span>
-            <div class="pl-48 mt-2 items-center">
-              <div class="w-[115px] bg-gray-200 rounded-sm h-3 mb-8">
-                <div class="bg-[#8168B1] rounded-sm h-3" style="width: 45%"></div>
-              </div>
-            </div>
-            <!-- bar 6 -->
-            <h1 class="pl-[347px] text-slate-800 font-medium">3.333</h1>
-            <span class="block h-5 w-5 -my-6 ml-6 font-medium rounded-full bg-[#F095B2]"><p class="ml-8 block pb-1 text-slate-800">Instagram</p></span>
-            <div class="pl-48 mt-2 items-center">
-              <div class="w-[115px] bg-gray-200 rounded-sm h-3 mb-8">
-                <div class="bg-[#F095B2] rounded-sm h-3" style="width: 45%"></div>
-              </div>
-            </div>
-            <!-- bar 7 -->
-            <h1 class="pl-[346px] text-slate-800 font-medium">2.222</h1>
-            <span class="block h-5 w-5 -my-6 ml-6 font-medium rounded-full bg-[#F8D06B]"><p class="ml-8 block pb-1 text-slate-800">TikTok</p></span>
-            <div class="pl-48 mt-2 items-center">
-              <div class="w-[115px] bg-gray-200 rounded-sm h-3 mb-8">
-                <div class="bg-[#F8D06B] rounded-sm h-3" style="width: 25%"></div>
-              </div>
-            </div>
-            <!-- bar 8 -->
-            <h1 class="pl-[356px] text-slate-800 font-medium">1.111</h1>
-            <span class="block h-5 w-5 -my-6 ml-6 font-medium rounded-full bg-[#94E189]"><p class="ml-8 block pb-1 text-slate-800">YouTube</p></span>
-            <div class="pl-48 mt-2 items-center">
-              <div class="w-[115px] bg-gray-200 rounded-sm h-3 mb-8">
-                <div class="bg-[#94E189] rounded-sm h-3" style="width: 15%"></div>
-              </div>
-            </div> 
-            </div>
-          </div>
-          </section>
-
-          <!-- konten tokoh -->
-          <section class="pt-3">
+          <!-- konten Hashtag -->
+          <section class="pt-[70px]">
             <div class="container">
-                <div class="h-[445px] bg-white shadow-sm">
+                <div class="max-h-max bg-white shadow-sm">
                   <div class="flex">
-                    <h1 class="font font-bold text-slate-800 p-6 text-xl">Top Tokoh</h1>
-                    <h2 class="pl-12 pt-7 text-sm text-gray-400">Sentimen</h2>
-                    <h2 class="pl-6 pt-7 text-sm text-gray-400">#percakapan</h2>
+                    <h1 class="font font-light text-slate-400 p-6  text-base">Lokasi</h1>
+                    <h2 class="pl-[79px] pt-7 text-sm text-gray-400">Sentimen</h2>
+                    <h2 class="pl-8 pt-7 text-sm text-gray-400">#percakapan</h2>
                   </div>
-              <!-- tokoh 1 -->
-            <div class="pb-16">
-            <h1 class="pl-[340px] text-slate-800 font-medium">9.999</h1>
-            <div class="pl-[202px] -my-4 items-center">
-              <div class="w-[100px] bg-gray-200 flex rounded-sm h-3 mb-8">
-                <div class="bg-[#E62864] rounded-sm h-3" style="width: 32%"></div>
-                <div class="bg-[#CECFDA] rounded-sm h-3" style="width: 32%"></div>
-                <div class="bg-[#3EC764] rounded-sm h-3" style="width: 34%"></div>
-              </div>
-            </div>
-            <div class="flex -my-[70px] items-center">
-              <span class="text-slate-800 font-extrabold text-xl pt-3 ml-4">1</span>
-              <img src="../public/img/dw.jpg" alt="display picture" class=" block w-11 ml-2 mt-3">
-              <div class="ml-2 grid gap-1 grid-cols-1 mt-2 items-center">
-                  <h1 class="w-max text-sm font-bold text-slate-800">BTR Ryzen</h1>
-                  <!-- titik 3 -->
-                  <div class="text-xs w-full text-slate-300 text-light">
-                      <span>Pro Player BTR</span>
-                  </div>
-              </div>
-          </div>
-        </div>
-              <!-- tokoh 2 -->
-            <div class="pb-16">
-            <h1 class="pl-[340px] text-slate-800 font-medium">8.888</h1>
-            <div class="pl-[202px] -my-4 items-center">
-              <div class="w-[85px] bg-gray-200 flex rounded-sm h-3 mb-8">
-                <div class="bg-[#E62864] rounded-sm h-3" style="width: 32%"></div>
-                <div class="bg-[#CECFDA] rounded-sm h-3" style="width: 32%"></div>
-                <div class="bg-[#3EC764] rounded-sm h-3" style="width: 34%"></div>
-              </div>
-            </div>
-            <div class="flex -my-[70px] items-center">
-              <span class="text-slate-800 font-extrabold text-xl pt-3 ml-4">2</span>
-              <img src="../public/img/Rectangle 662 (1).jpg" alt="display picture" class=" block w-11 ml-2 mt-3">
-              <div class="ml-2 grid gap-1 grid-cols-1 mt-2 items-center">
-                  <h1 class="w-max text-sm font-bold text-slate-800">Evos Microboy</h1>
-                  <!-- titik 3 -->
-                  <div class="text-xs w-full text-slate-300 text-light">
-                      <span>Pro Player Evos</span>
-                  </div>
-              </div>
-          </div>
-        </div>
-              <!-- tokoh 3 -->
-            <div class="pb-16">
-            <h1 class="pl-[343px] text-slate-800 font-medium">7.777</h1>
-            <div class="pl-[202px] -my-4 items-center">
-              <div class="w-[70px] bg-gray-200 flex rounded-sm h-3 mb-8">
-                <div class="bg-[#E62864] rounded-sm h-3" style="width: 32%"></div>
-                <div class="bg-[#CECFDA] rounded-sm h-3" style="width: 32%"></div>
-                <div class="bg-[#3EC764] rounded-sm h-3" style="width: 34%"></div>
-              </div>
-            </div>
-            <div class="flex -my-[70px] items-center">
-              <span class="text-slate-800 font-extrabold text-xl pt-3 ml-4">3</span>
-              <img src="../public/img/s.jpg" alt="display picture" class=" block w-11 ml-2 mt-3">
-              <div class="ml-2 grid gap-1 grid-cols-1 mt-2 items-center">
-                  <h1 class="w-max text-sm font-bold text-slate-800">BTR Zuxxy</h1>
-                  <!-- titik 3 -->
-                  <div class="text-xs w-full text-slate-300 text-light">
-                      <span>Pro Player BTR</span>
-                  </div>
-              </div>
-          </div>
-        </div>
-              <!-- tokoh 4 -->
-            <div class="pb-16">
-            <h1 class="pl-[342px] text-slate-800 font-medium">6.666</h1>
-            <div class="pl-[202px] -my-4 items-center">
-              <div class="w-[50px] bg-gray-200 flex rounded-sm h-3 mb-8">
-                <div class="bg-[#E62864] rounded-sm h-3" style="width: 32%"></div>
-                <div class="bg-[#CECFDA] rounded-sm h-3" style="width: 32%"></div>
-                <div class="bg-[#3EC764] rounded-sm h-3" style="width: 34%"></div>
-              </div>
-            </div>
-            <div class="flex -my-[70px] items-center">
-              <span class="text-slate-800 font-extrabold text-xl pt-3 ml-4">4</span>
-              <img src="../public/img/Rectangle 662 (2).jpg" alt="display picture" class=" block w-11 ml-2 mt-3">
-              <div class="ml-2 grid gap-1 grid-cols-1 mt-2 items-center">
-                  <h1 class="w-max text-sm font-bold text-slate-800">GPX Rosemary</h1>
-                  <!-- titik 3 -->
-                  <div class="text-xs w-full text-slate-300 text-light">
-                      <span>Pro Player GTX</span>
-                  </div>
-              </div>
-          </div>
-        </div>
-              <!-- tokoh 5 -->
-            <div class="pb-16">
-            <h1 class="pl-[344px] text-slate-800 font-medium">5.555</h1>
-            <div class="pl-[202px] -my-4 items-center">
-              <div class="w-[30px] bg-gray-200 flex rounded-sm h-3 mb-8">
-                <div class="bg-[#E62864] rounded-sm h-3" style="width: 32%"></div>
-                <div class="bg-[#CECFDA] rounded-sm h-3" style="width: 32%"></div>
-                <div class="bg-[#3EC764] rounded-sm h-3" style="width: 34%"></div>
-              </div>
-            </div>
-            <div class="flex -my-[70px] items-center">
-              <span class="text-slate-800 font-extrabold text-xl pt-3 ml-4">5</span>
-              <img src="../public/img/Rectangle 662.jpg" alt="display picture" class=" block w-11 ml-2 mt-3">
-              <div class="ml-2 grid gap-1 grid-cols-1 mt-2 items-center">
-                  <h1 class="w-max text-sm font-bold text-slate-800">Ibnu Riza</h1>
-                  <!-- titik 3 -->
-                  <div class="text-xs w-full text-slate-300 text-light">
-                      <span>Ketum IESPA</span>
-                  </div>
-              </div>
-            </div>
-            <a href="" class="text-[#4372EA] pt-24 font-medium block ml-40 text-lg">Lihat Semua</a>
-          </div>
-      </div>
-      </div>
-        </section>
-
-         <!-- konten Organisasi -->
-         <section class="pt-3">
-          <div class="container">
-              <div class="h-[455px] bg-white shadow-sm">
-                <div class="flex">
-                  <h1 class="font font-bold text-slate-800 p-4 pt-6 pb-6 text-lg max-w-max">Top Organisasi</h1>
-                  <h2 class="pl-9 pt-7 text-sm text-gray-400">Sentimen</h2>
-                  <h2 class="pl-6 pt-7 text-sm text-gray-400">#percakapan</h2>
-                </div>
-            <!-- organisasi 1 -->
-          <div class="pb-16">
-          <h1 class="pl-[340px] text-slate-800 font-medium">9.999</h1>
-          <div class="pl-[202px] -my-4 items-center">
-            <div class="w-[100px] bg-gray-200 flex rounded-sm h-3 mb-8">
-              <div class="bg-[#E62864] rounded-sm h-3" style="width: 32%"></div>
-              <div class="bg-[#CECFDA] rounded-sm h-3" style="width: 32%"></div>
-              <div class="bg-[#3EC764] rounded-sm h-3" style="width: 34%"></div>
-            </div>
-          </div>
-          <div class="flex -my-[70px] items-center">
-            <span class="text-slate-800 font-extrabold text-xl pt-3 ml-4">1</span>
-            <img src="../public/img/Rectangle 662(1).jpg" alt="display picture" class=" block w-11 ml-2 mt-3">
-            <div class="ml-2 grid gap-1 grid-cols-1 mt-2 items-center">
-                <h1 class="w-max text-sm font-bold text-slate-800">Bigetron</h1>
-                <div class="text-xs w-full text-slate-300 text-light">
-                    <span>Tim Esport</span>
-                </div>
-            </div>
-        </div>
-      </div>
-            <!-- organisasi 2 -->
-          <div class="pb-16">
-          <h1 class="pl-[340px] text-slate-800 font-medium">8.888</h1>
-          <div class="pl-[202px] -my-4 items-center">
-            <div class="w-[85px] bg-gray-200 flex rounded-sm h-3 mb-8">
-              <div class="bg-[#E62864] rounded-sm h-3" style="width: 32%"></div>
-              <div class="bg-[#CECFDA] rounded-sm h-3" style="width: 32%"></div>
-              <div class="bg-[#3EC764] rounded-sm h-3" style="width: 34%"></div>
-            </div>
-          </div>
-          <div class="flex -my-[70px] items-center">
-            <span class="text-slate-800 font-extrabold text-xl pt-3 ml-4">2</span>
-            <img src="../public/img/Rectangle 662 (1)(1).jpg" alt="display picture" class=" block w-11 ml-2 mt-3">
-            <div class="ml-2 grid gap-1 grid-cols-1 mt-2 items-center">
-                <h1 class="w-max text-sm font-bold text-slate-800">Evos Esport</h1>
-                <div class="text-xs w-full text-slate-300 text-light">
-                    <span>Tim Esport</span>
-                </div>
-            </div>
-        </div>
-      </div>
-            <!-- organisasi 3 -->
-          <div class="pb-16">
-          <h1 class="pl-[343px] text-slate-800 font-medium">7.777</h1>
-          <div class="pl-[202px] -my-4 items-center">
-            <div class="w-[70px] bg-gray-200 flex rounded-sm h-3 mb-8">
-              <div class="bg-[#E62864] rounded-sm h-3" style="width: 32%"></div>
-              <div class="bg-[#CECFDA] rounded-sm h-3" style="width: 32%"></div>
-              <div class="bg-[#3EC764] rounded-sm h-3" style="width: 34%"></div>
-            </div>
-          </div>
-          <div class="flex -my-[70px] items-center">
-            <span class="text-slate-800 font-extrabold text-xl pt-3 ml-4">3</span>
-            <img src="../public/img/ego.jpg" alt="display picture" class=" block w-11 ml-2 mt-3">
-            <div class="ml-2 grid gap-1 grid-cols-1 mt-2 items-center">
-                <h1 class="w-max text-sm font-bold text-slate-800">Alter Ego...</h1>
-                <div class="text-xs w-full text-slate-300 text-light">
-                    <span>Tim Esport</span>
-                </div>
-            </div>
-        </div>
-      </div>
-            <!-- organisasi 4 -->
-          <div class="pb-16">
-          <h1 class="pl-[342px] text-slate-800 font-medium">6.666</h1>
-          <div class="pl-[202px] -my-4 items-center">
-            <div class="w-[50px] bg-gray-200 flex rounded-sm h-3 mb-8">
-              <div class="bg-[#E62864] rounded-sm h-3" style="width: 32%"></div>
-              <div class="bg-[#CECFDA] rounded-sm h-3" style="width: 32%"></div>
-              <div class="bg-[#3EC764] rounded-sm h-3" style="width: 34%"></div>
-            </div>
-          </div>
-          <div class="flex -my-[70px] items-center">
-            <span class="text-slate-800 font-extrabold text-xl pt-3 ml-4">4</span>
-            <img src="../public/img/Rectangle 662 (3).jpg" alt="display picture" class=" block w-11 ml-2 mt-3">
-            <div class="ml-2 grid gap-1 grid-cols-1 mt-2 items-center">
-                <h1 class="w-max text-sm font-bold text-slate-800">PBESI</h1>
-                <div class="text-xs w-full text-slate-300 text-light">
-                    <span>Organisasi Esport...</span>
-                </div>
-            </div>
-        </div>
-      </div>
-            <!-- organisasi 5 -->
-          <div class="">
-          <h1 class="pl-[344px] text-slate-800 font-medium">5.555</h1>
-          <div class="pl-[202px] -my-4 items-center">
-            <div class="w-[30px] bg-gray-200 flex rounded-sm h-3 mb-8">
-              <div class="bg-[#E62864] rounded-sm h-3" style="width: 32%"></div>
-              <div class="bg-[#CECFDA] rounded-sm h-3" style="width: 32%"></div>
-              <div class="bg-[#3EC764] rounded-sm h-3" style="width: 34%"></div>
-            </div>
-          </div>
-          <div class="flex -my-[70px] items-center">
-            <span class="text-slate-800 font-extrabold text-xl pt-3 ml-4">5</span>
-            <img src="../public/img/Rectangle 662 (4).jpg" alt="display picture" class=" block w-11 ml-2 mt-3">
-            <div class="ml-2 grid gap-1 grid-cols-1 mt-2 items-center">
-                <h1 class="w-max text-sm font-bold text-slate-800">KOMINFO</h1>
-                <div class="text-xs w-full text-slate-300 text-light">
-                    <span>Kementrian...</span>
-                </div>
-            </div>
-          </div>
-          <a href="" class="text-[#4372EA] pt-24 font-medium block ml-40 text-lg">Lihat Semua</a>
-        </div>
-    </div>
-    </div>
-      </section>
-
-      
-         <!-- konten Keyword -->
-         <section class="pt-3">
-          <div class="container">
-              <div class="h-[600px] bg-white shadow-sm">
-                <div class="flex">
-                  <h1 class="font font-bold text-slate-800 p-6 text-xl">Top Keyword</h1>
-                
-               </div>
-               <div class="flex items-center pt-5 ml-10">
-                 <h1 class="w-32 text-[30px] font-extrabold text-yellow-400">Fatwa</h1>
-                 <h1 class="w-32 text-[25px] ml-5 font-extrabold text-[#06D6A0]">Aceh</h1>
-                 <h1 class="w-32 text-[30px] font-extrabold text-green-300">Zuxxy</h1>
-                </div>
-               <div class="flex items-center ml-10">
-                 <h1 class="w-32 text-[44px] font-extrabold text-[#5266A8]">Esport</h1>
-                 <h1 class="w-32 text-[37px] ml-10 font-extrabold text-[#F4AB87]">Bigetron</h1>
-                </div>
-               <div class="flex items-center ml-5">
-                 <h1 class="w-32 text-[38px] font-extrabold text-[#5266A8]">PUGB</h1>
-                 <h1 class="w-32 text-[55px] ml-10 font-extrabold text-[#039BE5]">PMGC</h1>
-                </div>
-                <div class="flex items-center ml-10">
-                  <h1 class="w-32 text-[25px] font-extrabold text-[#5266A8]">Kominfo</h1>
-                  <h1 class="w-32 text-[30px] ml-5 font-extrabold text-[#F095B2]">PMPL</h1>
-                  <h1 class="w-32 text-[25px] font-extrabold text-[#F4AB87]">Ryzen</h1>
-                 </div>
-                <div class="flex items-center ml-10">
-                  <h1 class="w-32 text-[20px] font-extrabold text-[#F8D06B]">RRQ</h1>
-                  <h1 class="w-32 text-[40px] mr-16 font-extrabold text-[#06D6A0]">PMPLSea</h1>
-                  <h1 class="w-32 text-[20px] ml-6 font-extrabold text-[#039BE5]">Evos</h1>
-                 </div>
-                 <div class="flex ml-20 ">
-                  <h1 class="w-32 text-[22px] font-extrabold text-[#5266A8]">Turnamen</h1>
-                  <h1 class="w-32 text-[24px] ml-5 font-extrabold text-[#F06A6A]">Haram</h1>
-                 </div>
-                 <div class="flex ml-32">
-                  <h1 class="w-32 text-[30px] font-extrabold text-[#5266A8]">BTR</h1>
-                  <h1 class="w-32 text-[22px] mr-28 font-extrabold text-[#F06A6A]">PBESI</h1>
-                 </div>
-                 <a href="" class="text-[#4372EA] pt-16 font-medium block ml-40 text-lg">Lihat Semua</a>
-            </div>
-           </div>
-      </section>
-
-
-       <!-- konten Hastag -->
-       <section class="pt-3">
-        <div class="container">
-            <div class="h-[590px] bg-white shadow-sm">
-              <div class="flex">
-                <h1 class="font font-bold text-slate-800 p-6 text-xl">Top Hashtag</h1>
-             </div>
-             <div class="flex items-end pt-5 ml-6">
-               <h1 class="w-32 text-[30px] font-extrabold text-yellow-400">#pmplsea</h1>
-               <h1 class="w-32 text-[22px] ml-12 font-extrabold text-[#06D6A0]">#fatwamui</h1>
-              </div>
-             <div class="flex items-center pt-2 ml-28">
-               <h1 class="w-32 text-[44px] font-extrabold text-[#5266A8]">#haram</h1>
-               <h1 class="w-32 text-[35px] ml-20 font-extrabold text-[#F4AB87]">#ae</h1>
-              </div>
-             <div class="flex ml-5 pt-2">
-               <h1 class="w-32 text-[55px] ml-10 font-extrabold text-[#039BE5]">#indopride</h1>
-              </div>
-              <div class="flex pt-2 items-center ml-6">
-                <h1 class="w-32 text-[25px] font-extrabold text-[#5266A8]">#juara</h1>
-                <h1 class="w-32 text-[30px] mr-5 font-extrabold text-[#F095B2]">#btrwin</h1>
-                <h1 class="w-32 text-[25px] mr-5 font-extrabold text-[#F4AB87]">#pubgid</h1>
-               </div>
-              <div class="flex pt-2 items-center ml-4">
-                <h1 class="w-32 text-[20px] font-extrabold text-[#F8D06B]">#vivarrq</h1>
-                <h1 class="w-32 text-[35px] mr-11 font-extrabold text-[#06D6A0]">#pmpls5</h1>
-                <h1 class="w-32 text-[20px] mr-5 font-extrabold text-[#039BE5]">#ppe2022</h1>
-               </div>
-               <div class="flex ml-20 pt-2">
-                <h1 class="w-32 text-[22px] pl-5 ml-12 font-extrabold text-[#5266A8]">#gdgids</h1>
-                <h1 class="w-32 text-[24px] font-extrabold text-[#F06A6A]">#evosroar</h1>
-               </div>
-               <a href="" class="text-[#4372EA] pt-16 font-medium block ml-40 text-lg">Lihat Semua</a>
-          </div>
-         </div>
-    </section>
-
-    <!-- konten Lokasi -->
-    <section class="pt-3 pb-28">
-      <div class="container">
-          <div class="h-[610px] bg-white shadow-sm">
-            <div class="flex">
-              <h1 class="font font-bold text-slate-800 p-6 pt-6 pb-6 text-xl max-w-max">Top Lokasi</h1>
-              <h2 class="pl-36 pt-7 text-sm text-gray-400">#percakapan</h2>
-            </div>
-            <div>
-              <div class="pb-5">
-                <img src="../public/img/peta png.png" class="w-[92%] m-5" alt="peta">
-              </div>
-              <!-- bar 1 -->
+            <!-- bar 1 -->
             <h1 class="pl-[330px] text-slate-800 font-medium text-lg">9.999</h1>
             <span class="block h-5 -my-6 ml-6 font-medium">1<p class="ml-8 max-w-max -my-6 block items-center font-bold text-slate-800">DKI Jakarta</p></span>
             <div class="pl-48 mt-2 items-center">
@@ -572,11 +94,253 @@
                 <div class="bg-[#4372EA] rounded-sm h-3" style="width: 40%"></div>
               </div>
             </div>
-            <a href="" class="text-[#4372EA] pt-3 font-medium block ml-40 text-lg">Lihat Semua</a>
+              <!-- bar 6 -->
+            <h1 class="pl-[330px] text-slate-800 font-medium text-lg">5.555</h1>
+            <span class="block h-5 -my-6 ml-6 font-medium">6<p class="ml-8 max-w-max -my-6 block items-center font-bold text-slate-800">Bali</p></span>
+            <div class="pl-48 mt-2 items-center">
+              <div class="w-[115px] bg-gray-200 rounded-sm h-3 mb-8">
+                <div class="bg-[#4372EA] rounded-sm h-3" style="width: 40%"></div>
+              </div>
             </div>
-          </div>
-        </div>
-    </section>
+              <!-- bar 7 -->
+            <h1 class="pl-[330px] text-slate-800 font-medium text-lg">5.555</h1>
+            <span class="block h-5 -my-6 ml-6 font-medium">7<p class="ml-8 max-w-max -my-6 block items-center font-bold text-slate-800">Sumatera Utara</p></span>
+            <div class="pl-48 mt-2 items-center">
+              <div class="w-[115px] bg-gray-200 rounded-sm h-3 mb-8">
+                <div class="bg-[#4372EA] rounded-sm h-3" style="width: 40%"></div>
+              </div>
+            </div>
+              <!-- bar 8 -->
+            <h1 class="pl-[330px] text-slate-800 font-medium text-lg">5.555</h1>
+            <span class="block h-5 -my-6 ml-6 font-medium">8<p class="ml-8 max-w-max -my-6 block items-center font-bold text-slate-800">Sumatera Selatan</p></span>
+            <div class="pl-48 mt-2 items-center">
+              <div class="w-[115px] bg-gray-200 rounded-sm h-3 mb-8">
+                <div class="bg-[#4372EA] rounded-sm h-3" style="width: 40%"></div>
+              </div>
+            </div>
+              <!-- bar 9 -->
+            <h1 class="pl-[330px] text-slate-800 font-medium text-lg">5.555</h1>
+            <span class="block h-5 -my-6 ml-6 font-medium">9<p class="ml-8 max-w-max -my-6 block items-center font-bold text-slate-800">Sumatera Barat</p></span>
+            <div class="pl-48 mt-2 items-center">
+              <div class="w-[115px] bg-gray-200 rounded-sm h-3 mb-8">
+                <div class="bg-[#4372EA] rounded-sm h-3" style="width: 40%"></div>
+              </div>
+            </div>
+              <!-- bar 10 -->
+            <h1 class="pl-[330px] text-slate-800 font-medium text-lg">5.555</h1>
+            <span class="block h-5 -my-6 ml-6 font-medium">10<p class="ml-8 max-w-max -my-6 block items-center font-bold text-slate-800">Bengkulu</p></span>
+            <div class="pl-48 mt-2 items-center">
+              <div class="w-[115px] bg-gray-200 rounded-sm h-3 mb-8">
+                <div class="bg-[#4372EA] rounded-sm h-3" style="width: 40%"></div>
+              </div>
+            </div>
+              <!-- bar 11 -->
+            <h1 class="pl-[330px] text-slate-800 font-medium text-lg">5.555</h1>
+            <span class="block h-5 -my-6 ml-6 font-medium">11<p class="ml-8 max-w-max -my-6 block items-center font-bold text-slate-800">Riau</p></span>
+            <div class="pl-48 mt-2 items-center">
+              <div class="w-[115px] bg-gray-200 rounded-sm h-3 mb-8">
+                <div class="bg-[#4372EA] rounded-sm h-3" style="width: 40%"></div>
+              </div>
+            </div>
+              <!-- bar 12 -->
+            <h1 class="pl-[330px] text-slate-800 font-medium text-lg">5.555</h1>
+            <span class="block h-5 -my-6 ml-6 font-medium">12<p class="ml-8 max-w-max -my-6 block items-center font-bold text-slate-800">Kepulauan Riau</p></span>
+            <div class="pl-48 mt-2 items-center">
+              <div class="w-[115px] bg-gray-200 rounded-sm h-3 mb-8">
+                <div class="bg-[#4372EA] rounded-sm h-3" style="width: 40%"></div>
+              </div>
+            </div>
+              <!-- bar 13 -->
+            <h1 class="pl-[330px] text-slate-800 font-medium text-lg">5.555</h1>
+            <span class="block h-5 -my-6 ml-6 font-medium">13<p class="ml-8 max-w-max -my-6 block items-center font-bold text-slate-800">Kalimantan Barat</p></span>
+            <div class="pl-48 mt-2 items-center">
+              <div class="w-[115px] bg-gray-200 rounded-sm h-3 mb-8">
+                <div class="bg-[#4372EA] rounded-sm h-3" style="width: 40%"></div>
+              </div>
+            </div>
+              <!-- bar 14 -->
+            <h1 class="pl-[330px] text-slate-800 font-medium text-lg">5.555</h1>
+            <span class="block h-5 -my-6 ml-6 font-medium">14<p class="ml-8 max-w-max -my-6 block items-center font-bold text-slate-800">Kalimantan Timur</p></span>
+            <div class="pl-48 mt-2 items-center">
+              <div class="w-[115px] bg-gray-200 rounded-sm h-3 mb-8">
+                <div class="bg-[#4372EA] rounded-sm h-3" style="width: 40%"></div>
+              </div>
+            </div>
+              <!-- bar 15 -->
+            <h1 class="pl-[330px] text-slate-800 font-medium text-lg">5.555</h1>
+            <span class="block h-5 -my-6 ml-6 font-medium">15<p class="ml-8 max-w-max -my-6 block items-center font-bold text-slate-800">Kalimantan Tengah</p></span>
+            <div class="pl-48 mt-2 items-center">
+              <div class="w-[115px] bg-gray-200 rounded-sm h-3 mb-8">
+                <div class="bg-[#4372EA] rounded-sm h-3" style="width: 40%"></div>
+              </div>
+            </div>
+              <!-- bar 16 -->
+            <h1 class="pl-[330px] text-slate-800 font-medium text-lg">5.555</h1>
+            <span class="block h-5 -my-6 ml-6 font-medium">16<p class="ml-8 max-w-max -my-6 block items-center font-bold text-slate-800">Kalimantan Selatan</p></span>
+            <div class="pl-48 mt-2 items-center">
+              <div class="w-[115px] bg-gray-200 rounded-sm h-3 mb-8">
+                <div class="bg-[#4372EA] rounded-sm h-3" style="width: 40%"></div>
+              </div>
+            </div>
+              <!-- bar 17-->
+            <h1 class="pl-[330px] text-slate-800 font-medium text-lg">5.555</h1>
+            <span class="block h-5 -my-6 ml-6 font-medium">17<p class="ml-8 max-w-max -my-6 block items-center font-bold text-slate-800">Kalimantan Utara</p></span>
+            <div class="pl-48 mt-2 items-center">
+              <div class="w-[115px] bg-gray-200 rounded-sm h-3 mb-8">
+                <div class="bg-[#4372EA] rounded-sm h-3" style="width: 40%"></div>
+              </div>
+            </div>
+              <!-- bar 18 -->
+            <h1 class="pl-[330px] text-slate-800 font-medium text-lg">5.555</h1>
+            <span class="block h-5 -my-6 ml-6 font-medium">18<p class="ml-8 max-w-max -my-6 block items-center font-bold text-slate-800">Banten</p></span>
+            <div class="pl-48 mt-2 items-center">
+              <div class="w-[115px] bg-gray-200 rounded-sm h-3 mb-8">
+                <div class="bg-[#4372EA] rounded-sm h-3" style="width: 40%"></div>
+              </div>
+            </div>
+              <!-- bar 19 -->
+            <h1 class="pl-[330px] text-slate-800 font-medium text-lg">5.555</h1>
+            <span class="block h-5 -my-6 ml-6 font-medium">19<p class="ml-8 max-w-max -my-6 block items-center font-bold text-slate-800">DIY Yogyakarta</p></span>
+            <div class="pl-48 mt-2 items-center">
+              <div class="w-[115px] bg-gray-200 rounded-sm h-3 mb-8">
+                <div class="bg-[#4372EA] rounded-sm h-3" style="width: 40%"></div>
+              </div>
+            </div>
+              <!-- bar 20 -->
+            <h1 class="pl-[330px] text-slate-800 font-medium text-lg">5.555</h1>
+            <span class="block h-5 -my-6 ml-6 font-medium">20<p class="ml-8 max-w-max -my-6 block items-center font-bold text-slate-800">NTT</p></span>
+            <div class="pl-48 mt-2 items-center">
+              <div class="w-[115px] bg-gray-200 rounded-sm h-3 mb-8">
+                <div class="bg-[#4372EA] rounded-sm h-3" style="width: 40%"></div>
+              </div>
+            </div>
+              <!-- bar 21 -->
+            <h1 class="pl-[330px] text-slate-800 font-medium text-lg">5.555</h1>
+            <span class="block h-5 -my-6 ml-6 font-medium">21<p class="ml-8 max-w-max -my-6 block items-center font-bold text-slate-800">NTB</p></span>
+            <div class="pl-48 mt-2 items-center">
+              <div class="w-[115px] bg-gray-200 rounded-sm h-3 mb-8">
+                <div class="bg-[#4372EA] rounded-sm h-3" style="width: 40%"></div>
+              </div>
+            </div>
+              <!-- bar 22 -->
+            <h1 class="pl-[330px] text-slate-800 font-medium text-lg">5.555</h1>
+            <span class="block h-5 -my-6 ml-6 font-medium">22<p class="ml-8 max-w-max -my-6 block items-center font-bold text-slate-800">Gorontalo</p></span>
+            <div class="pl-48 mt-2 items-center">
+              <div class="w-[115px] bg-gray-200 rounded-sm h-3 mb-8">
+                <div class="bg-[#4372EA] rounded-sm h-3" style="width: 40%"></div>
+              </div>
+            </div>
+              <!-- bar 23 -->
+            <h1 class="pl-[330px] text-slate-800 font-medium text-lg">5.555</h1>
+            <span class="block h-5 -my-6 ml-6 font-medium">23<p class="ml-8 max-w-max -my-6 block items-center font-bold text-slate-800">Sulawesi Barat</p></span>
+            <div class="pl-48 mt-2 items-center">
+              <div class="w-[115px] bg-gray-200 rounded-sm h-3 mb-8">
+                <div class="bg-[#4372EA] rounded-sm h-3" style="width: 40%"></div>
+              </div>
+            </div>
+              <!-- bar 24 -->
+            <h1 class="pl-[330px] text-slate-800 font-medium text-lg">5.555</h1>
+            <span class="block h-5 -my-6 ml-6 font-medium">24<p class="ml-8 max-w-max -my-6 block items-center font-bold text-slate-800">Sulawesi Tengah</p></span>
+            <div class="pl-48 mt-2 items-center">
+              <div class="w-[115px] bg-gray-200 rounded-sm h-3 mb-8">
+                <div class="bg-[#4372EA] rounded-sm h-3" style="width: 40%"></div>
+              </div>
+            </div>
+              <!-- bar 26 -->
+            <h1 class="pl-[330px] text-slate-800 font-medium text-lg">5.555</h1>
+            <span class="block h-5 -my-6 ml-6 font-medium">25<p class="ml-8 max-w-max -my-6 block items-center font-bold text-slate-800">Sulawesi Utara</p></span>
+            <div class="pl-48 mt-2 items-center">
+              <div class="w-[115px] bg-gray-200 rounded-sm h-3 mb-8">
+                <div class="bg-[#4372EA] rounded-sm h-3" style="width: 40%"></div>
+              </div>
+            </div>
+              <!-- bar 27 -->
+            <h1 class="pl-[330px] text-slate-800 font-medium text-lg">5.555</h1>
+            <span class="block h-5 -my-6 ml-6 font-medium">26<p class="ml-8 max-w-max -my-6 block items-center font-bold text-slate-800">Sulawesi Tenggara</p></span>
+            <div class="pl-48 mt-2 items-center">
+              <div class="w-[115px] bg-gray-200 rounded-sm h-3 mb-8">
+                <div class="bg-[#4372EA] rounded-sm h-3" style="width: 40%"></div>
+              </div>
+            </div>
+              <!-- bar 28 -->
+            <h1 class="pl-[330px] text-slate-800 font-medium text-lg">5.555</h1>
+            <span class="block h-5 -my-6 ml-6 font-medium">27<p class="ml-8 max-w-max -my-6 block items-center font-bold text-slate-800">Sulawesi Selatan</p></span>
+            <div class="pl-48 mt-2 items-center">
+              <div class="w-[115px] bg-gray-200 rounded-sm h-3 mb-8">
+                <div class="bg-[#4372EA] rounded-sm h-3" style="width: 40%"></div>
+              </div>
+            </div>
+              <!-- bar 29 -->
+            <h1 class="pl-[330px] text-slate-800 font-medium text-lg">5.555</h1>
+            <span class="block h-5 -my-6 ml-6 font-medium">28<p class="ml-8 max-w-max -my-6 block items-center font-bold text-slate-800">Maluku Utara</p></span>
+            <div class="pl-48 mt-2 items-center">
+              <div class="w-[115px] bg-gray-200 rounded-sm h-3 mb-8">
+                <div class="bg-[#4372EA] rounded-sm h-3" style="width: 40%"></div>
+              </div>
+            </div>
+              <!-- bar 30 -->
+            <h1 class="pl-[330px] text-slate-800 font-medium text-lg">5.555</h1>
+            <span class="block h-5 -my-6 ml-6 font-medium">29<p class="ml-8 max-w-max -my-6 block items-center font-bold text-slate-800">Papua Barat</p></span>
+            <div class="pl-48 mt-2 items-center">
+              <div class="w-[115px] bg-gray-200 rounded-sm h-3 mb-8">
+                <div class="bg-[#4372EA] rounded-sm h-3" style="width: 40%"></div>
+              </div>
+            </div>
+              <!-- bar 31 -->
+            <h1 class="pl-[330px] text-slate-800 font-medium text-lg">5.555</h1>
+            <span class="block h-5 -my-6 ml-6 font-medium">30<p class="ml-8 max-w-max -my-6 block items-center font-bold text-slate-800">Papua Selatan</p></span>
+            <div class="pl-48 mt-2 items-center">
+              <div class="w-[115px] bg-gray-200 rounded-sm h-3 mb-8">
+                <div class="bg-[#4372EA] rounded-sm h-3" style="width: 40%"></div>
+              </div>
+            </div>
+              <!-- bar 32 -->
+            <h1 class="pl-[330px] text-slate-800 font-medium text-lg">5.555</h1>
+            <span class="block h-5 -my-6 ml-6 font-medium">31<p class="ml-8 max-w-max -my-6 block items-center font-bold text-slate-800">papua Tengah</p></span>
+            <div class="pl-48 mt-2 items-center">
+              <div class="w-[115px] bg-gray-200 rounded-sm h-3 mb-8">
+                <div class="bg-[#4372EA] rounded-sm h-3" style="width: 40%"></div>
+              </div>
+            </div>
+              <!-- bar 33 -->
+            <h1 class="pl-[330px] text-slate-800 font-medium text-lg">5.555</h1>
+            <span class="block h-5 -my-6 ml-6 font-medium">32<p class="ml-8 max-w-max -my-6 block items-center font-bold text-slate-800">Papua Pegunungan</p></span>
+            <div class="pl-48 mt-2 items-center">
+              <div class="w-[115px] bg-gray-200 rounded-sm h-3 mb-8">
+                <div class="bg-[#4372EA] rounded-sm h-3" style="width: 40%"></div>
+              </div>
+            </div>
+              <!-- bar 34-->
+            <h1 class="pl-[330px] text-slate-800 font-medium text-lg">5.555</h1>
+            <span class="block h-5 -my-6 ml-6 font-medium">33<p class="ml-8 max-w-max -my-6 block items-center font-bold text-slate-800">Jambi</p></span>
+            <div class="pl-48 mt-2 items-center">
+              <div class="w-[115px] bg-gray-200 rounded-sm h-3 mb-8">
+                <div class="bg-[#4372EA] rounded-sm h-3" style="width: 40%"></div>
+              </div>
+            </div>
+              <!-- bar 35 -->
+            <h1 class="pl-[330px] text-slate-800 font-medium text-lg">5.555</h1>
+            <span class="block h-5 -my-6 ml-6 font-medium">34<p class="ml-8 max-w-max -my-6 block items-center font-bold text-slate-800">Lampung</p></span>
+            <div class="pl-48 mt-2 items-center">
+              <div class="w-[115px] bg-gray-200 rounded-sm h-3 mb-8">
+                <div class="bg-[#4372EA] rounded-sm h-3" style="width: 40%"></div>
+              </div>
+            </div>
+              <!-- bar 35 -->
+            <h1 class="pl-[330px] text-slate-800 font-medium text-lg">5.555</h1>
+            <span class="block h-5 -my-6 ml-6 font-medium">35<p class="ml-8 max-w-max -my-6 block items-center font-bold text-slate-800">Bangka Belitung</p></span>
+            <div class="pl-48 mt-2 items-center">
+              <div class="w-[115px] bg-gray-200 rounded-sm h-3 mb-8">
+                <div class="bg-[#4372EA] rounded-sm h-3" style="width: 40%"></div>
+              </div>
+            </div>
+
+      </div>
+      </div>
+        </section>
+
+      
+
     
 
     

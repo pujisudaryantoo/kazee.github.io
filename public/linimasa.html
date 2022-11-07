@@ -7,13 +7,44 @@
     <link rel="stylesheet" href="../public/css/style.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Linimasa</title>
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://repo.rachmat.id/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="https://repo.rachmat.id/jquery-ui-1.12.1/jquery-ui.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://repo.rachmat.id/jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+          }
+        }
+      }
+    </script>
     <script>
     $(document).ready(function(){
       $("button").click(function(){
         $("<h2>Berapapun!</h2>").replaceWith("p");
       });
     });
+    </script>
+    <script type="text/javascript">
+      $(function(){
+        $("#datepicker").datepicker();
+      });
+    </script>
+    <script type="text/javascript">
+      $(function(){
+        $("#datepicker1").datepicker();
+      });
     </script>
   </head>
   <body class="bg-slate-200">
@@ -484,47 +515,47 @@
       </a>
       <div class="flex items-center mx-8 pt-14">     
         <form id="tanggal" date-rangepicker class="flex items-center">
-          <div class="relative">
+          <div class="relative ui-widget">
             <label for="date" class="block text-lg font-light mb-2 text-slate-400">Mulai</label>
             <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
             <img src="../public/img/9 png.png" alt="" class="w-5 pt-[34px]">
           </div>
           <a href="javascript:void(0)" class="text-right text-[30px] text-slate-400 mx-3 w-5 absolute right-0" onclick="hapusTgl()" value="reset form">&times;</a>
-            <input name="start" type="text" class="bg-white border border-gray-300 text-gray-900 sm:text-sm rounded-l-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 datepicker-input" placeholder="30/05/2022">
+            <input name="start" type="text" id="datepicker" class="bg-white border border-gray-300 text-gray-900 sm:text-sm rounded-l-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 datepicker-input" placeholder="dd/mm/yy">
           </div>
           </form>
-          <form id="jam" timepicker class="flex items-center" data-mdb-with-icon="false">
+          <form class="timepicker relative form-floating xl:w-96" data-mdb-with-icon="false" id="input-toggle-timepicker">
           <div class="relative">
             <label for="date" class="block text-lg font-semibold mb-2 text-white">M</label>
             <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
             <img src="../public/img/7 png.png" alt="" class="w-5 pt-[34px]">
             </div>
             <a href="javascript:void(0)" class="text-right text-[30px] text-slate-400 mx-3 w-5 absolute right-0" onclick="hapusJam()" value="reset form">&times;</a>
-            <input name="start" type="text" class="bg-white border border-gray-300 text-gray-900 sm:text-sm rounded-r-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 datepicker-input" placeholder="12.00" data-mdb-toggle="input-toggle-timepicker">
+            <input name="start" type="text" data-mdb-toggle="input-toggle-timepicker"  class="bg-white border form-control border-gray-300 text-gray-900 sm:text-sm rounded-r-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 datepicker-input" placeholder="12.00" data-mdb-toggle="input-toggle-timepicker">
           </div>
         </form>
       </div>
         <div class="flex items-center mx-8">     
           <form id="tanggal1" date-rangepicker class="flex items-center">
-            <div class="relative">
+            <div class="relative ui-widget">
               <label for="date" class="block text-lg font-light mb-2 text-slate-400">Sampai</label>
               <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
                 <img src="../public/img/9 png.png" alt="" class="w-5 pt-[34px]">
               </div>
               <a href="javascript:void(0)" class="text-right text-[30px] text-slate-400 mx-3 w-5 absolute right-0" onclick="hapusTgl1()" value="reset form">&times;</a>
-              <input name="start" type="text" class="bg-white border border-gray-300 text-gray-900 sm:text-sm rounded-l-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 datepicker-input" placeholder="30/05/2022">
+              <input name="start" type="text" id="datepicker1" class="bg-white border border-gray-300 text-gray-900 sm:text-sm rounded-l-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 datepicker-input" placeholder="dd/mm/yy">
             </div>
           </form>
-          <form id="jam1" timepicker class="flex items-center" data-mdb-with-icon="false">
+          <form class="timepicker relative form-floating xl:w-96" data-mdb-with-icon="false" id="input-toggle-timepicker">
             <div class="relative">
               <label for="date" class="block text-lg font-semibold mb-2 text-white">M</label>
-            <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-            <img src="../public/img/7 png.png" alt="" class="w-5 pt-[34px]">
-          </div>
-          <a href="javascript:void(0)" class="text-right text-[30px] text-slate-400 mx-3 w-5 absolute right-0" onclick="hapusJam1()" value="reset form">&times;</a>
-          <input name="start" type="text" class="bg-white border border-gray-300 text-gray-900 sm:text-sm rounded-r-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 datepicker-input" placeholder="12.00" data-mdb-toggle="input-toggle-timepicker">
-        </div>
-      </form>
+              <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+              <img src="../public/img/7 png.png" alt="" class="w-5 pt-[34px]">
+              </div>
+              <a href="javascript:void(0)" class="text-right text-[30px] text-slate-400 mx-3 w-5 absolute right-0" onclick="hapusJam()" value="reset form">&times;</a>
+              <input name="start" type="text" data-mdb-toggle="input-toggle-timepicker"  class="bg-white border form-control border-gray-300 text-gray-900 sm:text-sm rounded-r-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 datepicker-input" placeholder="12.00" data-mdb-toggle="input-toggle-timepicker">
+            </div>
+          </form>
     </div>
       <!-- button filter atur waktu -->
       <div class="container">
@@ -926,5 +957,6 @@
 
     <script src="../public/js/sideMenu.js">
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
 </body>
 </html>
