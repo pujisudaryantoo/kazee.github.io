@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../public/css/style.css" />
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Overview konten</title>
   </head>
@@ -71,8 +73,8 @@
     <!-- header -->
     <div class="container">
       <div class="p-8 flex items-center w-full bg-white fixed top-0">
-        <span class="cursor-pointer text-3xl text-gray-400" onclick="openMenu()">&#9776;</span>
-        <h1 class="text-lg ml-3 font-bold text-slate-800 w-full">PUBG Indonesia </h1>
+        <span class="cursor-pointer text-3xl absolute left-4 text-gray-400" onclick="openMenu()">&#9776;</span>
+        <h1 class="text-lg ml-7 font-bold text-slate-800 w-full">PUBG Indonesia </h1>
         <div class="relative left-10">
             <img src="../public/img/urutkan png.png" alt="icon filter" class="w-[19px] h-[20px] absolute mx-1" onclick="openUrutan()">
             <img src="../public/img/filter png.png" alt="icon filter" class="w-[18px] h-[21px] mx-[45px]" onclick="openFilter()"> 
@@ -110,15 +112,21 @@
               <!-- chart img sementara -->
               <div class="block pt-[160px] pl-2">
                 <img class="w-[380px]" src="../public/img/chart.png" alt="chart">
+                <button data-popover-target="popover-click9" data-popover-trigger="click" class="bg-transparent -top-[210px] w-20 mt-[50px] ml-[160px] relative rounded-sm h-20"></button>
+                <div data-popover id="popover-click9" role="tooltip" class="inline-block absolute invisible z-10 w-44 text-sm font-extralight opacity-0 transition-opacity duration-300">
+                  <div class="py-2 text-left px-3">
+                      <img src="../public/img/Group 68.png" alt="hover">
+                  </div>
+              </div>
             </div>
             
             <!-- toogle menu -->
-            <ul class="flex pt-5 text-sm font-medium text-center text-gray-500 rounded-lg">
+            <ul class="flex -mt-28 text-sm font-medium text-center text-gray-500 rounded-lg">
                 <li class="w-full ml-6 pl-1 h-[50px] bg-slate-100 pt-[4px] rounded-l-lg">
                   <a href="#" class="h-10 text-center inline-block p-3 w-full font-medium text-gray-900 bg-white rounded-lg">Sumber Percakap...</a>
                 </li>
                 <li class="w-full h-[50px] mr-6 bg-slate-100 pt-[4px] rounded-r-lg">
-                    <a href="overviewsentimen.html" class="rounded-lg inline-block h-10 p-3 w-full bg-slate-100-50 hover:text-gray-700 hover:bg-gray-50 text-slate-400 font-semibold">Sentimen</a>
+                    <a href="overviewkontensentimen.html" class="rounded-lg inline-block h-10 p-3 w-full bg-slate-100-50 hover:text-gray-700 hover:bg-gray-50 text-slate-400 font-semibold">Sentimen</a>
                 </li>
             </ul>
           </section>
@@ -131,7 +139,13 @@
             <span class="block h-5 w-5 -my-6 ml-6 font-medium rounded-full bg-gray-200"><p class="ml-8 block pb-1 text-gray-400">Semua</p></span>
             <div class="pl-48 mt-2 items-center">
               <div class="w-[115px] bg-gray-200 rounded-sm h-3 mb-8">
-                <div class="bg-gray-200 rounded-sm h-3" style="width: 25%"></div>
+                <button data-popover-target="popover-click11" data-popover-trigger="click" class="bg-gra -top-[5px] block rounded-sm h-3" style="width: 100%"></button>
+                <div data-popover id="popover-click11" role="tooltip" class="inline-block absolute invisible z-10 w-14 text-sm font-extralight text-white bg-black opacity-0 transition-opacity duration-300">
+                  <div class="py-2 px-3">
+                      <p>100%</p>
+                  </div>
+                  <div data-popper-arrow></div>
+              </div>
               </div>
             </div>
             <!-- bar 2 -->
@@ -139,7 +153,13 @@
             <span class="block h-5 w-5 -my-6 ml-6 font-medium rounded-full bg-[#5266A8]"><p class="ml-8 block pb-1 text-slate-800">Berita</p></span>
             <div class="pl-48 mt-2 items-center">
               <div class="w-[115px] bg-gray-200 rounded-sm h-3 mb-8">
-                <div class="bg-[#5266A8] rounded-sm h-3" style="width: 100%"></div>
+                <button data-popover-target="popover-click13" data-popover-trigger="click" class="bg-[#5266A8] -top-[5px] block rounded-sm h-3" style="width: 90%"></button>
+                <div data-popover id="popover-click13" role="tooltip" class="inline-block absolute invisible z-10 w-14 text-sm font-extralight text-white bg-black opacity-0 transition-opacity duration-300">
+                  <div class="py-2 px-3">
+                      <p>75,2%</p>
+                  </div>
+                  <div data-popper-arrow></div>
+              </div>
               </div>
             </div>
             <!-- bar 3 -->
@@ -147,7 +167,15 @@
             <span class="block h-5 w-5 -my-6 ml-6 font-medium rounded-full bg-[#06D6A0]"><p class="ml-8 block pb-1 text-slate-800">Twitter</p></span>
             <div class="pl-48 mt-2 items-center">
               <div class="w-[115px] bg-gray-200 rounded-sm h-3 mb-8">
-                <div class="bg-[#06D6A0] rounded-sm h-3" style="width: 75%"></div>
+                <div class="w-[115px] bg-gray-200 rounded-sm h-3 mb-8">
+                  <button data-popover-target="popover-click14" data-popover-trigger="click" class="bg-[#06D6A0] -top-[5px] block rounded-sm h-3" style="width: 70%"></button>
+                  <div data-popover id="popover-click14" role="tooltip" class="inline-block absolute invisible z-10 w-14 text-sm font-extralight text-white bg-black opacity-0 transition-opacity duration-300">
+                    <div class="py-2 px-3">
+                        <p>55%</p>
+                    </div>
+                    <div data-popper-arrow></div>
+                </div>
+                </div>
               </div>
             </div>
             <!-- bar 4 -->
@@ -208,9 +236,27 @@
             <h1 class="pl-[340px] text-slate-800 font-medium">9.999</h1>
             <div class="pl-[202px] -my-4 items-center">
               <div class="w-[100px] bg-gray-200 flex rounded-sm h-3 mb-8">
-                <div class="bg-[#E62864] rounded-sm h-3" style="width: 32%"></div>
-                <div class="bg-[#CECFDA] rounded-sm h-3" style="width: 32%"></div>
-                <div class="bg-[#3EC764] rounded-sm h-3" style="width: 34%"></div>
+                <button data-popover-target="popover-click2" data-popover-trigger="click" class="bg-[#E62864] rounded-sm h-3" style="width: 32%"></button>
+                    <div data-popover id="popover-click2" role="tooltip" class="inline-block absolute invisible z-10 w-42 text-sm font-extralight text-white bg-black opacity-0 transition-opacity duration-300">
+                        <div class="py-2 px-3">
+                            <p>Negatif: 33,33% (7.694)</p>
+                        </div>
+                        <div data-popper-arrow></div>
+                    </div>
+                    <button data-popover-target="popover-click1" data-popover-trigger="click" class="bg-[#CECFDA] rounded-sm h-3" style="width: 32%"></button>
+                    <div data-popover id="popover-click1" role="tooltip" class="inline-block absolute invisible z-10 w-42 text-sm font-extralight text-white bg-black opacity-0 transition-opacity duration-300">
+                      <div class="py-2 px-3">
+                          <p>Netral: 33,33% (7.694)</p>
+                      </div>
+                      <div data-popper-arrow></div>
+                  </div>
+                    <button data-popover-target="popover-click" data-popover-trigger="click" class="bg-[#3EC764] rounded-sm h-3" style="width: 34%"></button>
+                    <div data-popover id="popover-click" role="tooltip" class="inline-block absolute invisible z-10 w-42 text-sm font-extralight text-white bg-black opacity-0 transition-opacity duration-300">
+                      <div class="py-2 px-3">
+                          <p>Positif: 33,33% (7.694)</p>
+                      </div>
+                      <div data-popper-arrow></div>
+                  </div>
               </div>
             </div>
             <div class="flex -my-[70px] items-center">
@@ -230,9 +276,27 @@
             <h1 class="pl-[340px] text-slate-800 font-medium">8.888</h1>
             <div class="pl-[202px] -my-4 items-center">
               <div class="w-[85px] bg-gray-200 flex rounded-sm h-3 mb-8">
-                <div class="bg-[#E62864] rounded-sm h-3" style="width: 32%"></div>
-                <div class="bg-[#CECFDA] rounded-sm h-3" style="width: 32%"></div>
-                <div class="bg-[#3EC764] rounded-sm h-3" style="width: 34%"></div>
+                <button data-popover-target="popover-click2" data-popover-trigger="click" class="bg-[#E62864] rounded-sm h-3" style="width: 32%"></button>
+                    <div data-popover id="popover-click2" role="tooltip" class="inline-block absolute invisible z-10 w-42 text-sm font-extralight text-white bg-black opacity-0 transition-opacity duration-300">
+                        <div class="py-2 px-3">
+                            <p>Negatif: 33,33% (7.694)</p>
+                        </div>
+                        <div data-popper-arrow></div>
+                    </div>
+                    <button data-popover-target="popover-click1" data-popover-trigger="click" class="bg-[#CECFDA] rounded-sm h-3" style="width: 32%"></button>
+                    <div data-popover id="popover-click1" role="tooltip" class="inline-block absolute invisible z-10 w-42 text-sm font-extralight text-white bg-black opacity-0 transition-opacity duration-300">
+                      <div class="py-2 px-3">
+                          <p>Netral: 33,33% (7.694)</p>
+                      </div>
+                      <div data-popper-arrow></div>
+                  </div>
+                    <button data-popover-target="popover-click" data-popover-trigger="click" class="bg-[#3EC764] rounded-sm h-3" style="width: 34%"></button>
+                    <div data-popover id="popover-click" role="tooltip" class="inline-block absolute invisible z-10 w-42 text-sm font-extralight text-white bg-black opacity-0 transition-opacity duration-300">
+                      <div class="py-2 px-3">
+                          <p>Positif: 33,33% (7.694)</p>
+                      </div>
+                      <div data-popper-arrow></div>
+                  </div>
               </div>
             </div>
             <div class="flex -my-[70px] items-center">
@@ -252,9 +316,27 @@
             <h1 class="pl-[343px] text-slate-800 font-medium">7.777</h1>
             <div class="pl-[202px] -my-4 items-center">
               <div class="w-[70px] bg-gray-200 flex rounded-sm h-3 mb-8">
-                <div class="bg-[#E62864] rounded-sm h-3" style="width: 32%"></div>
-                <div class="bg-[#CECFDA] rounded-sm h-3" style="width: 32%"></div>
-                <div class="bg-[#3EC764] rounded-sm h-3" style="width: 34%"></div>
+                <button data-popover-target="popover-click2" data-popover-trigger="click" class="bg-[#E62864] rounded-sm h-3" style="width: 32%"></button>
+                    <div data-popover id="popover-click2" role="tooltip" class="inline-block absolute invisible z-10 w-42 text-sm font-extralight text-white bg-black opacity-0 transition-opacity duration-300">
+                        <div class="py-2 px-3">
+                            <p>Negatif: 33,33% (7.694)</p>
+                        </div>
+                        <div data-popper-arrow></div>
+                    </div>
+                    <button data-popover-target="popover-click1" data-popover-trigger="click" class="bg-[#CECFDA] rounded-sm h-3" style="width: 32%"></button>
+                    <div data-popover id="popover-click1" role="tooltip" class="inline-block absolute invisible z-10 w-42 text-sm font-extralight text-white bg-black opacity-0 transition-opacity duration-300">
+                      <div class="py-2 px-3">
+                          <p>Netral: 33,33% (7.694)</p>
+                      </div>
+                      <div data-popper-arrow></div>
+                  </div>
+                    <button data-popover-target="popover-click" data-popover-trigger="click" class="bg-[#3EC764] rounded-sm h-3" style="width: 34%"></button>
+                    <div data-popover id="popover-click" role="tooltip" class="inline-block absolute invisible z-10 w-42 text-sm font-extralight text-white bg-black opacity-0 transition-opacity duration-300">
+                      <div class="py-2 px-3">
+                          <p>Positif: 33,33% (7.694)</p>
+                      </div>
+                      <div data-popper-arrow></div>
+                  </div>
               </div>
             </div>
             <div class="flex -my-[70px] items-center">
@@ -312,7 +394,7 @@
                   </div>
               </div>
             </div>
-            <a href="" class="text-[#4372EA] pt-24 font-medium block ml-40 text-lg">Lihat Semua</a>
+            <a href="overviewtokoh.html" class="text-[#4372EA] mt-24 font-medium block ml-40 text-lg">Lihat Semua</a>
           </div>
       </div>
       </div>
@@ -332,15 +414,33 @@
           <h1 class="pl-[340px] text-slate-800 font-medium">9.999</h1>
           <div class="pl-[202px] -my-4 items-center">
             <div class="w-[100px] bg-gray-200 flex rounded-sm h-3 mb-8">
-              <div class="bg-[#E62864] rounded-sm h-3" style="width: 32%"></div>
-              <div class="bg-[#CECFDA] rounded-sm h-3" style="width: 32%"></div>
-              <div class="bg-[#3EC764] rounded-sm h-3" style="width: 34%"></div>
+              <button data-popover-target="popover-click2" data-popover-trigger="click" class="bg-[#E62864] rounded-sm h-3" style="width: 32%"></button>
+              <div data-popover id="popover-click2" role="tooltip" class="inline-block absolute invisible z-10 w-42 text-sm font-extralight text-white bg-black opacity-0 transition-opacity duration-300">
+                  <div class="py-2 px-3">
+                      <p>Negatif: 33,33% (7.694)</p>
+                  </div>
+                  <div data-popper-arrow></div>
+              </div>
+              <button data-popover-target="popover-click1" data-popover-trigger="click" class="bg-[#CECFDA] rounded-sm h-3" style="width: 32%"></button>
+              <div data-popover id="popover-click1" role="tooltip" class="inline-block absolute invisible z-10 w-42 text-sm font-extralight text-white bg-black opacity-0 transition-opacity duration-300">
+                <div class="py-2 px-3">
+                    <p>Netral: 33,33% (7.694)</p>
+                </div>
+                <div data-popper-arrow></div>
+            </div>
+              <button data-popover-target="popover-click" data-popover-trigger="click" class="bg-[#3EC764] rounded-sm h-3" style="width: 34%"></button>
+              <div data-popover id="popover-click" role="tooltip" class="inline-block absolute invisible z-10 w-42 text-sm font-extralight text-white bg-black opacity-0 transition-opacity duration-300">
+                <div class="py-2 px-3">
+                    <p>Positif: 33,33% (7.694)</p>
+                </div>
+                <div data-popper-arrow></div>
+            </div>
             </div>
           </div>
           <div class="flex -my-[70px] items-center">
             <span class="text-slate-800 font-extrabold text-xl pt-3 ml-4">1</span>
-            <img src="../public/img/Rectangle 662(1).jpg" alt="display picture" class=" block w-11 ml-2 mt-3">
-            <div class="ml-2 grid gap-1 grid-cols-1 mt-2 items-center">
+            <img src="../public/img/Rectangle 662(1).jpg" alt="display picture" class=" block w-11 ml-3 mt-3">
+            <div class="ml-3 grid gap-1 grid-cols-1 mt-2 items-center">
                 <h1 class="w-max text-sm font-bold text-slate-800">Bigetron</h1>
                 <div class="text-xs w-full text-slate-300 text-light">
                     <span>Tim Esport</span>
@@ -353,9 +453,27 @@
           <h1 class="pl-[340px] text-slate-800 font-medium">8.888</h1>
           <div class="pl-[202px] -my-4 items-center">
             <div class="w-[85px] bg-gray-200 flex rounded-sm h-3 mb-8">
-              <div class="bg-[#E62864] rounded-sm h-3" style="width: 32%"></div>
-              <div class="bg-[#CECFDA] rounded-sm h-3" style="width: 32%"></div>
-              <div class="bg-[#3EC764] rounded-sm h-3" style="width: 34%"></div>
+              <button data-popover-target="popover-click2" data-popover-trigger="click" class="bg-[#E62864] rounded-sm h-3" style="width: 32%"></button>
+                    <div data-popover id="popover-click2" role="tooltip" class="inline-block absolute invisible z-10 w-42 text-sm font-extralight text-white bg-black opacity-0 transition-opacity duration-300">
+                        <div class="py-2 px-3">
+                            <p>Negatif: 33,33% (7.694)</p>
+                        </div>
+                        <div data-popper-arrow></div>
+                    </div>
+                    <button data-popover-target="popover-click1" data-popover-trigger="click" class="bg-[#CECFDA] rounded-sm h-3" style="width: 32%"></button>
+                    <div data-popover id="popover-click1" role="tooltip" class="inline-block absolute invisible z-10 w-42 text-sm font-extralight text-white bg-black opacity-0 transition-opacity duration-300">
+                      <div class="py-2 px-3">
+                          <p>Netral: 33,33% (7.694)</p>
+                      </div>
+                      <div data-popper-arrow></div>
+                  </div>
+                    <button data-popover-target="popover-click" data-popover-trigger="click" class="bg-[#3EC764] rounded-sm h-3" style="width: 34%"></button>
+                    <div data-popover id="popover-click" role="tooltip" class="inline-block absolute invisible z-10 w-42 text-sm font-extralight text-white bg-black opacity-0 transition-opacity duration-300">
+                      <div class="py-2 px-3">
+                          <p>Positif: 33,33% (7.694)</p>
+                      </div>
+                      <div data-popper-arrow></div>
+                  </div>
             </div>
           </div>
           <div class="flex -my-[70px] items-center">
@@ -374,9 +492,27 @@
           <h1 class="pl-[343px] text-slate-800 font-medium">7.777</h1>
           <div class="pl-[202px] -my-4 items-center">
             <div class="w-[70px] bg-gray-200 flex rounded-sm h-3 mb-8">
-              <div class="bg-[#E62864] rounded-sm h-3" style="width: 32%"></div>
-              <div class="bg-[#CECFDA] rounded-sm h-3" style="width: 32%"></div>
-              <div class="bg-[#3EC764] rounded-sm h-3" style="width: 34%"></div>
+              <button data-popover-target="popover-click2" data-popover-trigger="click" class="bg-[#E62864] rounded-sm h-3" style="width: 32%"></button>
+              <div data-popover id="popover-click2" role="tooltip" class="inline-block absolute invisible z-10 w-42 text-sm font-extralight text-white bg-black opacity-0 transition-opacity duration-300">
+                  <div class="py-2 px-3">
+                      <p>Negatif: 33,33% (7.694)</p>
+                  </div>
+                  <div data-popper-arrow></div>
+              </div>
+              <button data-popover-target="popover-click1" data-popover-trigger="click" class="bg-[#CECFDA] rounded-sm h-3" style="width: 32%"></button>
+              <div data-popover id="popover-click1" role="tooltip" class="inline-block absolute invisible z-10 w-42 text-sm font-extralight text-white bg-black opacity-0 transition-opacity duration-300">
+                <div class="py-2 px-3">
+                    <p>Netral: 33,33% (7.694)</p>
+                </div>
+                <div data-popper-arrow></div>
+            </div>
+              <button data-popover-target="popover-click" data-popover-trigger="click" class="bg-[#3EC764] rounded-sm h-3" style="width: 34%"></button>
+              <div data-popover id="popover-click" role="tooltip" class="inline-block absolute invisible z-10 w-42 text-sm font-extralight text-white bg-black opacity-0 transition-opacity duration-300">
+                <div class="py-2 px-3">
+                    <p>Positif: 33,33% (7.694)</p>
+                </div>
+                <div data-popper-arrow></div>
+            </div>
             </div>
           </div>
           <div class="flex -my-[70px] items-center">
@@ -431,7 +567,7 @@
                 </div>
             </div>
           </div>
-          <a href="" class="text-[#4372EA] pt-24 font-medium block ml-40 text-lg">Lihat Semua</a>
+          <a href="overvieworganisasi.html" class="text-[#4372EA] mt-24 font-medium block ml-40 text-lg">Lihat Semua</a>
         </div>
     </div>
     </div>
@@ -457,11 +593,23 @@
                 </div>
                <div class="flex items-center ml-5">
                  <h1 class="w-32 text-[38px] font-extrabold text-[#5266A8]">PUGB</h1>
-                 <h1 class="w-32 text-[55px] ml-10 font-extrabold text-[#039BE5]">PMGC</h1>
+                 <button data-popover-target="popover-click8" data-popover-trigger="click" class="w-32 text-[55px] ml-10 font-medium text-[#039BE5]">PMGC</button>
+                    <div data-popover id="popover-click8" role="tooltip" class="inline-block absolute invisible z-10 w-36 text-sm font-extralight text-white bg-black opacity-0 transition-opacity duration-300">
+                        <div class="py-2 px-3">
+                            <p>Dimention: 9.999</p>
+                        </div>
+                        <div data-popper-arrow></div>
+                    </div>
                 </div>
                 <div class="flex items-center ml-10">
                   <h1 class="w-32 text-[25px] font-extrabold text-[#5266A8]">Kominfo</h1>
-                  <h1 class="w-32 text-[30px] ml-5 font-extrabold text-[#F095B2]">PMPL</h1>
+                  <button data-popover-target="popover-click7" data-popover-trigger="click" class="w-32 text-[30px] ml-5 font-medium text-[#F095B2]">PMPL</button>
+                    <div data-popover id="popover-click7" role="tooltip" class="inline-block absolute invisible z-10 w-36 text-sm font-extralight text-white bg-black opacity-0 transition-opacity duration-300">
+                        <div class="py-2 px-3">
+                            <p>Dimention: 5.555</p>
+                        </div>
+                        <div data-popper-arrow></div>
+                    </div>
                   <h1 class="w-32 text-[25px] font-extrabold text-[#F4AB87]">Ryzen</h1>
                  </div>
                 <div class="flex items-center ml-10">
@@ -477,7 +625,7 @@
                   <h1 class="w-32 text-[30px] font-extrabold text-[#5266A8]">BTR</h1>
                   <h1 class="w-32 text-[22px] mr-28 font-extrabold text-[#F06A6A]">PBESI</h1>
                  </div>
-                 <a href="" class="text-[#4372EA] pt-16 font-medium block ml-40 text-lg">Lihat Semua</a>
+                 <a href="overviewkeyword.html" class="text-[#4372EA] mt-16 font-medium block ml-40 text-lg">Lihat Semua</a>
             </div>
            </div>
       </section>
@@ -499,7 +647,13 @@
                <h1 class="w-32 text-[35px] ml-20 font-extrabold text-[#F4AB87]">#ae</h1>
               </div>
              <div class="flex ml-5 pt-2">
-               <h1 class="w-32 text-[55px] ml-10 font-extrabold text-[#039BE5]">#indopride</h1>
+              <button data-popover-target="popover-click5" data-popover-trigger="click" class="w-32 text-[55px] ml-10 font-medium text-[#039BE5]">#indopride</button>
+              <div data-popover id="popover-click5" role="tooltip" class="inline-block absolute invisible z-10 w-36 text-sm font-extralight text-white bg-black opacity-0 transition-opacity duration-300">
+                  <div class="py-2 px-3">
+                      <p>Dimention: 9.999</p>
+                  </div>
+                  <div data-popper-arrow></div>
+              </div>
               </div>
               <div class="flex pt-2 items-center ml-6">
                 <h1 class="w-32 text-[25px] font-extrabold text-[#5266A8]">#juara</h1>
@@ -508,14 +662,20 @@
                </div>
               <div class="flex pt-2 items-center ml-4">
                 <h1 class="w-32 text-[20px] font-extrabold text-[#F8D06B]">#vivarrq</h1>
-                <h1 class="w-32 text-[35px] mr-11 font-extrabold text-[#06D6A0]">#pmpls5</h1>
+                <button data-popover-target="popover-click4" data-popover-trigger="click" class="w-32 text-[35px] mr-11 font-medium text-[#06D6A0]">#pmplsS5</button>
+                <div data-popover id="popover-click4" role="tooltip" class="inline-block absolute invisible z-10 w-38 ml-32 text-sm font-extralight text-white bg-black opacity-0 transition-opacity duration-300">
+                    <div class="py-2 px-3">
+                        <p>Dimention: 8.888</p>
+                    </div>
+                    <div data-popper-arrow></div>
+                </div>
                 <h1 class="w-32 text-[20px] mr-5 font-extrabold text-[#039BE5]">#ppe2022</h1>
                </div>
                <div class="flex ml-20 pt-2">
                 <h1 class="w-32 text-[22px] pl-5 ml-12 font-extrabold text-[#5266A8]">#gdgids</h1>
                 <h1 class="w-32 text-[24px] font-extrabold text-[#F06A6A]">#evosroar</h1>
                </div>
-               <a href="" class="text-[#4372EA] pt-16 font-medium block ml-40 text-lg">Lihat Semua</a>
+               <a href="overviewhashtag.html" class="text-[#4372EA] mt-16 font-medium block ml-40 text-lg">Lihat Semua</a>
           </div>
          </div>
     </section>
@@ -529,15 +689,30 @@
               <h2 class="pl-36 pt-7 text-sm text-gray-400">#percakapan</h2>
             </div>
             <div>
-              <div class="pb-5">
+              <div class="-mb-10">
                 <img src="../public/img/peta png.png" class="w-[92%] m-5" alt="peta">
+                <button data-popover-target="popover-click20" data-popover-trigger="click" class="bg-transparent -top-[100px] w-10 mt-[50px] ml-[100px] relative rounded-sm h-1"></button>
+                <div data-popover id="popover-click20" role="tooltip" class="inline-block absolute invisible z-10 w-44 text-sm font-extralight text-black border-2 border-blue-900 bg-white opacity-0 transition-opacity duration-300">
+                  <div class="py-2 text-center px-3">
+                    <p>DKI Jakarta</p>
+                    <p>Dimention: 9.999</p>
+                  </div>
+                  <div data-popper-arrow></div>
+              </div>
               </div>
               <!-- bar 1 -->
             <h1 class="pl-[330px] text-slate-800 font-medium text-lg">9.999</h1>
             <span class="block h-5 -my-6 ml-6 font-medium">1<p class="ml-8 max-w-max -my-6 block items-center font-bold text-slate-800">DKI Jakarta</p></span>
             <div class="pl-48 mt-2 items-center">
               <div class="w-[115px] bg-gray-200 rounded-sm h-3 mb-8">
-                <div class="bg-[#4372EA] rounded-sm h-3" style="width: 100%"></div>
+                <button data-popover-target="popover-click11" data-popover-trigger="click" class="bg-[#4372EA] -top-[5px]  rounded-sm h-3" style="width: 100%"></button>
+                <div data-popover id="popover-click11" role="tooltip" class="inline-block absolute invisible z-10 w-14 text-sm font-extralight text-white bg-black opacity-0 transition-opacity duration-300">
+                  <div class="py-2 px-3">
+                      <p>55%</p>
+                  </div>
+                  <div data-popper-arrow></div>
+              </div>
+              </div>
               </div>
             </div>
               <!-- bar 2 -->
@@ -545,7 +720,13 @@
             <span class="block h-5 -my-6 ml-6 font-medium">2<p class="ml-8 max-w-max -my-6 block items-center font-bold text-slate-800">Jawa Barat</p></span>
             <div class="pl-48 mt-2 items-center">
               <div class="w-[115px] bg-gray-200 rounded-sm h-3 mb-8">
-                <div class="bg-[#4372EA] rounded-sm h-3" style="width: 75%"></div>
+                <button data-popover-target="popover-click12" data-popover-trigger="click" class="bg-[#4372EA] -top-[5px]  rounded-sm h-3" style="width: 75%"></button>
+                <div data-popover id="popover-click12" role="tooltip" class="inline-block absolute invisible z-10 w-14 text-sm font-extralight text-white bg-black opacity-0 transition-opacity duration-300">
+                  <div class="py-2 px-3">
+                      <p>36%</p>
+                  </div>
+                  <div data-popper-arrow></div>
+              </div>
               </div>
             </div>
               <!-- bar 3 -->
@@ -553,7 +734,13 @@
             <span class="block h-5 -my-6 ml-6 font-medium">3<p class="ml-8 max-w-max -my-6 block items-center font-bold text-slate-800">Jawa Tengah</p></span>
             <div class="pl-48 mt-2 items-center">
               <div class="w-[115px] bg-gray-200 rounded-sm h-3 mb-8">
-                <div class="bg-[#4372EA] rounded-sm h-3" style="width: 60%"></div>
+                <button data-popover-target="popover-click82" data-popover-trigger="click" class="bg-[#4372EA] -top-[5px]  rounded-sm h-3" style="width: 60%"></button>
+                <div data-popover id="popover-click82" role="tooltip" class="inline-block absolute invisible z-10 w-14 text-sm font-extralight text-white bg-black opacity-0 transition-opacity duration-300">
+                  <div class="py-2 px-3">
+                      <p>27%</p>
+                  </div>
+                  <div data-popper-arrow></div>
+              </div>
               </div>
             </div>
               <!-- bar 4 -->
@@ -568,11 +755,11 @@
             <h1 class="pl-[330px] text-slate-800 font-medium text-lg">5.555</h1>
             <span class="block h-5 -my-6 ml-6 font-medium">5<p class="ml-8 max-w-max -my-6 block items-center font-bold text-slate-800">Jawa Timur</p></span>
             <div class="pl-48 mt-2 items-center">
-              <div class="w-[115px] bg-gray-200 rounded-sm h-3 mb-8">
+              <div class="w-[115px] bg-gray-200 rounded-sm h-3 mb-12">
                 <div class="bg-[#4372EA] rounded-sm h-3" style="width: 40%"></div>
               </div>
             </div>
-            <a href="" class="text-[#4372EA] pt-3 font-medium block ml-40 text-lg">Lihat Semua</a>
+            <a href="overviewlokasi.html" class="text-[#4372EA] mt-3 font-medium block ml-40 text-lg">Lihat Semua</a>
             </div>
           </div>
         </div>
@@ -580,7 +767,28 @@
     
 
     
-
+ <!-- component tombol urutan -->
+ <section>
+  <div class="container">
+    <div id="side-urutan" class="w-full bg-white shadow-top rounded-t-2xl fixed bottom-[-300px] h-72 z-50 flex flex-col space-y-5 text-gray-900 duration-300 shadow-3xl">
+      <span class="block self-center border-2 border-solid border-slate-300 w-12 rounded-full my-4"></span>
+      <a href="javascript:void(0)" class="text-right text-[40px] text-slate-400 mx-6 w-5 absolute right-3" onclick="closeUrutan()">&times;</a>
+      <h1 class="mx-7 absolute pt-6 text-2xl text-gray-900 font-extrabold">Urutkan</h1>
+      <div class="flex items-center px-7 pt-11 pb-3 border-solid border-b-2 w-full">
+        <input type="radio" name="radio terbaru" id="radio-terbaru" class="w-6 h-6 right-8 absolute" onclick="toast(), closeUrutan()">
+        <label for="radio-terbaru" class=" text-xl text-slate-400">Terbaru</label>
+      </div>
+      <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-2 w-full">
+        <input type="radio" name="radio terbaru" id="radio-terbaru" class="w-6 h-6 right-8 absolute" onclick="toast(), closeUrutan()">
+        <label for="radio-terbaru" class=" text-xl text-slate-400">Terlama</label>
+      </div>
+      <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-2 w-full">
+        <input type="radio" name="radio terbaru" id="radio-terbaru" class="w-6 h-6 right-8 absolute" onclick="toast(), closeUrutan()">
+        <label for="radio-terbaru" class=" text-xl text-slate-400">Relevansi</label>
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- components tombol filter -->
     <section>

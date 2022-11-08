@@ -246,6 +246,86 @@ var sideEdit = document.getElementById('side-edit');
             window.location="welcome.html"
          }, 1500);
         }
+        function openBackKonten(){
+            setTimeout(function(){ 
+            window.location="overviewkonten.html"
+         }, 0);
+        }
+        function openLokasi(){
+            setTimeout(function(){ 
+            window.location="overviewlokasibalinot.html"
+         }, 0);
+        }
+        function openBali(){
+            setTimeout(function(){ 
+            window.location="overviewlokasibali.html"
+         }, 0);
+        }
+        function openBackLokasi(){
+          setTimeout(function(){ 
+          window.location="overviewlokasi.html"
+       }, 0);
+      }
+        function openHastag(){
+            setTimeout(function(){ 
+            window.location="overviewhastagpmpnot.html"
+         }, 0);
+        }
+        function openPmp(){
+            setTimeout(function(){ 
+            window.location="overviewhastagpmp.html"
+         }, 0);
+        }
+        function openBackHastag(){
+          setTimeout(function(){ 
+          window.location="overviewhashtag.html"
+       }, 0);
+      }
+        function openKeyword(){
+            setTimeout(function(){ 
+            window.location="overviewkeywordnot.html"
+         }, 0);
+        }
+        function openTurnamen(){
+            setTimeout(function(){ 
+            window.location="overviewkeywordturnamen.html"
+         }, 0);
+        }
+        function openBackKeyword(){
+            setTimeout(function(){ 
+            window.location="overviewkeyword.html"
+         }, 0);
+        }
+        function openOrganisasi(){
+            setTimeout(function(){ 
+            window.location="overvieworganisasinot.html"
+         }, 0);
+        }
+        function openAura(){
+            setTimeout(function(){ 
+            window.location="overvieworganisasiaura.html"
+         }, 0);
+        }
+        function openBackOrganisasi(){
+            setTimeout(function(){ 
+            window.location="overvieworganisasi.html"
+         }, 0);
+        }
+        function openTokoh(){
+            setTimeout(function(){ 
+            window.location="overviewtokohnot.html"
+         }, 0);
+        }
+        function openGD(){
+            setTimeout(function(){ 
+            window.location="overviewotokohgd.html"
+         }, 0);
+        }
+        function openBackTokoh(){
+            setTimeout(function(){ 
+            window.location="overviewtokoh.html"
+         }, 0);
+        }
         function openWelcome1(){
             setTimeout(function(){ 
             window.location="welcome.html"
@@ -446,6 +526,20 @@ var sideEdit = document.getElementById('side-edit');
 
           dropdownButton.addEventListener("click", () => {
             dropdownList.classList.toggle("hidden");
+          });
+
+
+          const hide = document.querySelector("#hilang");
+          hide.addEventListener('click', function() {
+            hide.style.display = "none";
+          });
+
+          var input = document.getElementById("input");
+          input.addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+              event.preventDefault();
+              document.getElementById("gaskan").click();
+            }
           });
 
           
