@@ -47,7 +47,7 @@
       });
     </script>
   </head>
-  <body class="bg-slate-200">
+  <body class="bg-slate-200" onload="toast8()">
 
       <!-- navbar -->
     <section>
@@ -91,7 +91,7 @@
                 <h1 class="font-bold text-md mx-2 pb-4 w-screen text-slate-800 hover:text-[#4372EA] active:text-[#4372EA]" onclick="openSemua()">Semua <span class="absolute right-12">50.000</span></h1>
             </div>
             <div class="flex items-center border-b-2 w-full">
-                <h1 class="font-bold text-md mx-2 pb-4 pt-4 w-screen text-[#4372EA] hover:text-[#4372EA] active:text-[#4372EA]">PUBG Esport Indonesia <span class="absolute right-12">50.000</span></h1>
+                <h1 class="font-bold text-md mx-2 pb-4 pt-4 w-screen text-[#4372EA] hover:text-[#4372EA] active:text-[#4372EA]">PUBG Indonesia <span class="absolute right-12">50.000</span></h1>
                 <img src="../public/img/titik 3 png.png" alt="icon titik3" class="w-[4px] h-[20px] mx-2" onclick="openKeyword(), closeMenu()">
             </div>
             <h1 class="w-[230px] border-3 border-solid border-slate-600 m-9 ">
@@ -111,7 +111,7 @@
     <div class="container">
       <div class="p-8 flex items-center w-full bg-white fixed top-0">
         <span class="cursor-pointer text-3xl absolute left-4 text-gray-400" onclick="openMenu()">&#9776;</span>
-        <h1 class="text-lg ml-7 font-bold text-slate-800 w-full">PUBG Esport Indonesia </h1>
+        <h1 class="text-lg ml-7 font-bold text-slate-800 w-full">PUBG Indonesia </h1>
         <div class="relative left-10">
             <img src="../public/img/urutkan png.png" alt="icon filter" class="w-[19px] h-[20px] absolute mx-1" onclick="openUrutan()">
             <img src="../public/img/filter png.png" alt="icon filter" class="w-[18px] h-[21px] mx-[45px]" onclick="openFilter()"> 
@@ -127,7 +127,7 @@
           <a href="#" class="relative mx-auto">
             <h1 class="text-xl font-semibold text-blue-400 border-blue-500 border-b-4 w-52 text-center pb-2">Linimasa</h1>
           </a>
-          <a href="overviewkonten.html">
+          <a href="overviewkontenpubg.html">
             <h1 class="text-xl font-thin text-slate-300 border-slate-300 border-b-2 w-52 text-center pb-2">Overview</h1>
           </a>
         </div>
@@ -277,6 +277,16 @@
         </div>
       </section>
 
+      <div id="snackbar7">
+        <div class="flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white " viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd"
+            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+            clip-rule="evenodd" />
+          </svg> 
+          <span class="font-thin text-[16px] mx-3">Judul topik berhasil diganti</span>
+        </div>
+      </div>
 
       <div id="snackbar">
         <div class="flex items-center">
@@ -289,6 +299,17 @@
         </div>
       </div>
 
+      <div id="snackbar8">
+        <div class="flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white " viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd"
+            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+            clip-rule="evenodd" />
+          </svg> 
+          <span class="font-thin text-[16px] mx-3">Keyword pencarian berhasil diganti</span>
+        </div>
+      </div>
+
       <div id="snackbar2">
         <div class="flex items-center">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white " viewBox="0 0 20 20" fill="currentColor">
@@ -296,7 +317,7 @@
             d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
             clip-rule="evenodd" />
           </svg> 
-          <span class="font-thin text-[16px] mx-3">Topik berhasil dibuat</span>
+          <span class="font-thin text-[16px] mx-3">Topik Berhasil dibuat</span>
         </div>
       </div>
     
@@ -307,7 +328,7 @@
             d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
             clip-rule="evenodd" />
           </svg> 
-          <span class="font-thin text-[16px] mx-3">Notifikasi berhasil diaktifkan</span>
+          <span class="font-thin text-[16px] mx-3">Notifikasi Berhasil diaktifkan</span>
         </div>
       </div>
     
@@ -318,18 +339,7 @@
             d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
             clip-rule="evenodd" />
           </svg> 
-          <span class="font-thin text-[16px] mx-3">Sentimen berhasil diganti</span>
-        </div>
-      </div>
-    
-      <div id="snackbar6">
-        <div class="flex items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white " viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd"
-            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-            clip-rule="evenodd" />
-          </svg> 
-          <span class="font-thin text-[16px] mx-3">Judul topik berhasil diganti</span>
+          <span class="font-thin text-[16px] mx-3">Sentimen Berhasil diganti</span>
         </div>
       </div>
     
@@ -363,7 +373,7 @@
         <div id="side-keyword" class="w-full bg-white shadow-top rounded-t-2xl fixed bottom-[-420px] h-[410px] z-50 flex flex-col space-y-5 text-gray-900 duration-300 shadow-3xl">
           <span class="block self-center border-2 border-solid border-slate-300 w-12 rounded-full my-4"></span>
           <div onclick="closeKeyword()">
-            <h1 class="px-7 absolute text-xl text-gray-900 font-extrabold border-b-[1px] pb-5 w-screen">PUBG Esport Indonesia</h1>
+            <h1 class="px-7 absolute text-xl text-gray-900 font-extrabold border-b-[1px] pb-5 w-screen">PUBG Indonesia</h1>
             <a class="text-right text-[40px] text-slate-400 mx-6 w-5 absolute right-3 top-9">&times;</a>
           </div>
           <div class="grid grid-rows-2 grid-flow-col items-center px-8 pt-11 border-b-[1px] w-screen" onclick="openEdit(), closeKeyword()">
@@ -374,7 +384,7 @@
               <h1 class="text-sm font-normal text-slate-700 -mx-[90px]">Judul topik</h1>
             </div>
             <div class="row-span-2">
-              <h1 class="text-sm font-light text-slate-300 pb-3 -mx-[90px]">PUBG Esport Indonesia</h1>
+              <h1 class="text-sm font-light text-slate-300 pb-3 -mx-[90px]">PUBG Indonesia</h1>
             </div>
           </div>
 
@@ -388,7 +398,7 @@
               <h1 class="text-sm font-normal text-slate-700 -mx-[90px]"  onclick="openUbahKeyword()">Keyword pencarian</h1>
             </div>
             <div class="row-span-2">
-              <h1 class="text-sm font-light text-slate-300 -mx-[90px]">PUBG Esport</h1>
+              <h1 class="text-sm font-light text-slate-300 -mx-[90px]">PUBG</h1>
             </div>
             <div class="row-span-3 absolute right-8">
               <img src="../public/img/copy png.png" alt="pensil" class="w-5" onclick="toast4(), closeKeyword()">
@@ -616,7 +626,7 @@
           <div class="flex mx-auto">
             <button class="w-[180px] h-[52px] bg-white border-2 rounded-lg mr-3 text-gray-900 text-base" onclick="openKeyword(), closeEdit()">Batal
             </button>
-            <button href="javascript:void" onclick="openLinimasaKeyword(), closeEdit()" class="w-[180px] h-[52px] bg-blue-500 rounded-lg text-white text-base hover:bg-[#BFBFBF]">Simpan
+            <button href="javascript:void" onclick="openKeyword(), closeEdit()" class="w-[180px] h-[52px] bg-blue-500 rounded-lg text-white text-base hover:bg-[#BFBFBF]">Simpan
             </button>
           </div>
       </a>
@@ -639,7 +649,7 @@
           </div>
       </div>
       <div class="block mx-auto text-center px-11">
-        <h1 class="font-semibold text-slate-800">Anda yakin ingin menghapus topik "PHK Startup Indonesia"?</h1>
+        <h1 class="font-semibold text-slate-800">Anda yakin ingin menghapus topik "PUBG Indonesia"?</h1>
       </div>
       
       <!-- button filter hapus -->
@@ -674,7 +684,7 @@
         <div class="container">
           <div id="side-notifikasi" class="overflow-auto fixed w-full bg-white bottom-[-920px] h-screen z-50 flex flex-col space-y-5 text-gray-900 duration-300 shadow-3xl pb-20">
             <div class="mb-10">
-              <span class="pl-[70px] absolute pt-6 text-lg text-gray-900 font-extrabold my-auto w-full">Notifikasi "PHK Startup Indonesia"</span>
+              <span class="pl-[70px] absolute pt-6 text-lg text-gray-900 font-extrabold my-auto w-full">Notifikasi "PUBG Indonesia"</span>
               <a href="javascript:void(0)" class="text-right text-slate-400 absolute left-1 flex" onclick="closeNotifikasi(), openLinimasanotif()">
                 <img src="../public/img/back-icon.png" alt="icon back" class="w-9 h-7 m-6 flex">
               </a>

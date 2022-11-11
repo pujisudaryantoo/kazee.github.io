@@ -7,13 +7,44 @@
     <link rel="stylesheet" href="../public/css/style.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Linimasa</title>
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://repo.rachmat.id/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="https://repo.rachmat.id/jquery-ui-1.12.1/jquery-ui.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://repo.rachmat.id/jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+          }
+        }
+      }
+    </script>
     <script>
     $(document).ready(function(){
       $("button").click(function(){
         $("<h2>Berapapun!</h2>").replaceWith("p");
       });
     });
+    </script>
+    <script type="text/javascript">
+      $(function(){
+        $("#datepicker").datepicker();
+      });
+    </script>
+    <script type="text/javascript">
+      $(function(){
+        $("#datepicker1").datepicker();
+      });
     </script>
   </head>
   <body class="bg-slate-200" onload="toast7()">
@@ -57,10 +88,10 @@
         </div>
         <div class="block">
             <div class="flex border-b-2 w-full">
-                <h1 class="font-bold text-md mx-2 pb-4 w-screen text-slate-800 hover:text-[#4372EA] active:text-[#4372EA]" onclick="openSemua()">Semua <span class="absolute right-12">1.997</span></h1>
+                <h1 class="font-bold text-md mx-2 pb-4 w-screen text-slate-800 hover:text-[#4372EA] active:text-[#4372EA]" onclick="openSemua()">Semua <span class="absolute right-12">50.000</span></h1>
             </div>
             <div class="flex items-center border-b-2 w-full">
-                <h1 class="font-bold text-md mx-2 pb-4 pt-4 w-screen text-[#4372EA] hover:text-[#4372EA] active:text-[#4372EA]">PHK Startup Indonesia <span class="absolute right-12">1.997</span></h1>
+                <h1 class="font-bold text-md mx-2 pb-4 pt-4 w-screen text-[#4372EA] hover:text-[#4372EA] active:text-[#4372EA]">PUBG Indonesia <span class="absolute right-12">50.000</span></h1>
                 <img src="../public/img/titik 3 png.png" alt="icon titik3" class="w-[4px] h-[20px] mx-2" onclick="openKeyword(), closeMenu()">
             </div>
             <h1 class="w-[230px] border-3 border-solid border-slate-600 m-9 ">
@@ -80,7 +111,7 @@
     <div class="container">
       <div class="p-8 flex items-center w-full bg-white fixed top-0">
         <span class="cursor-pointer text-3xl absolute left-4 text-gray-400" onclick="openMenu()">&#9776;</span>
-        <h1 class="text-lg ml-7 font-bold text-slate-800 w-full">PHK Startup Indonesia </h1>
+        <h1 class="text-lg ml-7 font-bold text-slate-800 w-full">PUBG Indonesia </h1>
         <div class="relative left-10">
             <img src="../public/img/urutkan png.png" alt="icon filter" class="w-[19px] h-[20px] absolute mx-1" onclick="openUrutan()">
             <img src="../public/img/filter png.png" alt="icon filter" class="w-[18px] h-[21px] mx-[45px]" onclick="openFilter()"> 
@@ -96,7 +127,7 @@
           <a href="#" class="relative mx-auto">
             <h1 class="text-xl font-semibold text-blue-400 border-blue-500 border-b-4 w-52 text-center pb-2">Linimasa</h1>
           </a>
-          <a href="overviewkonten.html">
+          <a href="overviewkontenpubg.html">
             <h1 class="text-xl font-thin text-slate-300 border-slate-300 border-b-2 w-52 text-center pb-2">Overview</h1>
           </a>
         </div>
@@ -105,14 +136,14 @@
 
     <!-- konten linimasa 1 -->
     <section class="mt-[138px]">
-        <h1 class="mx-4 my-2 text-sm text-slate-600 font-semibold">1.997 <span class="text-slate-400 font-light">percakapan</span></h1>
+        <h1 class="mx-4 my-2 text-sm text-slate-600 font-semibold">50.000 <span class="text-slate-400 font-light">percakapan</span></h1>
       <div class="container">
-        <div class="h-[487px] w-screen  px-4 py-2 bg-white">
+        <div class="h-[527px] w-screen  px-4 py-2 bg-white">
             <div class="flex items-center">
-                <img src="../public/img/dp.png" alt="display picture" class=" block w-16 mt-3">
+                <img src="../public/img/Rectangle 663.jpg" alt="display picture" class=" block w-16 mt-3">
                 <div class="ml-2 grid gap-1 grid-cols-4 mt-2 items-center">
-                    <h1 class="w-max text-lg font-bold text-slate-800">Arjuna Sky Kok</h1>
-                    <img src="../public/img/ctg biru png.png" alt="centang biru" class="w-[18px] ml-16">
+                    <h1 class="w-max text-lg font-bold text-slate-800">Selular.id</h1>
+                    <img src="../public/img/ctg biru png.png" alt="centang biru" class="w-[18px] ml-2">
                     <div class="w-[72px] font-thin text-white text-center rounded-full bg-[#3EC764] mx-[53px]">
                         <span>Positif</span>
                     </div>
@@ -121,30 +152,31 @@
                         <img src="../public/img/titik 3 png.png" alt="icon titik" onclick="openLainnya()"> 
                     </div>
                     <div class="w-5">
-                        <img src="../public/img/twitter png.png" alt="twitter">
+                        <img src="../public/img/2 png.png" alt="twitter">
                     </div>
-                    <div class="text-sm w-full -mx-14 text-slate-300 text-light">
-                        <span>5 jam lalu</span>
+                    <div class="text-sm max-w-max -mx-14 text-slate-300 text-light">
+                        <span>12 Agustus 2022, 18.30</span>
                     </div>
                 </div>
             </div>
             <div class="grid grid-rows-2 gap-1 mt-4 justify-center">
                 <div>
-                    <h2 class="font-semibold text-md text-left">Universitas swasta dalam negeri terbaik untuk kerja di dunia <span class="bg-yellow-300">startup</span> indonesia adalah Binus. <span class="block pt-5">Nomor dua Anda Tentukan sendiri...</span></h2>
+                  <a href="https://selular.id/2022/08/pmgc-kejuaraan-dunia-pubg-mobel-berlangsung-di-indonesia-tahun-depan/amp/">
+                    <h2 class="font-semibold text-base text-left"> PMGC, Kejuaraan Dunia
+                      <span class="bg-yellow-300">PUBG</span> Mobile <span class="bg-yellow-300">Esport</span>  Berlangsung di Indonesia Tahun Depan <span class="block pt-5">
+                        Artikel ini telah tayang di Selular.id PMGC, Kejuaraan... </span></h2>
+                      </a>
                 </div>
-                <div class="-my-11">
-                    <img src="../public/img/thumbnail.png" alt="thumbail" class="rounded-lg">
+                <div class="-my-9">
+                    <img src="../public/img/Rectangle 677.jpg" alt="thumbail" class="rounded-lg">
                 </div>
             </div>
             <div class="grid grid-cols-3 mt-14">
                 <div class="text-sm font-light text-slate-400">
-                    <span>15,7rb Suka</span>
+                    <span>5,7rb Suka</span>
                 </div>
                 <div class="text-sm font-light text-slate-400 -mx-8 w-full">
                     <span>501 Komentar</span>
-                </div>
-                <div class="text-sm font-light text-slate-400 w-full -mx-11">
-                    <span>4,411 Retweet</span>
                 </div>
             </div>
         </div>
@@ -154,14 +186,14 @@
     <!-- konten linimasa 2 -->
     <section>
       <div class="container py-4">
-        <div class="h-[400px] w-screen  px-4 py-2 bg-white">
+        <div class="h-[270px] w-screen  px-4 py-2 bg-white">
             <div class="flex items-center">
-                <img src="../public/img/dp3.png" alt="display picture" class=" block w-16 mt-3">
+                <img src="../public/img/Rectangle 663 (1).jpg" alt="display picture" class=" block w-16 mt-3">
                 <div class="ml-2 grid gap-1 grid-cols-4 mt-2 items-center">
-                    <h1 class="w-max text-lg font-bold text-slate-800">Hesa Mahesa</h1>
+                    <h1 class="w-max text-lg font-bold text-slate-800">Andy Rasyid</h1>
                     <div></div>
-                    <div class="w-[73px] font-thin text-white text-center rounded-full bg-[#F92B60] mx-[53px]">
-                        <span>Negatif</span>
+                    <div class="w-[73px] font-thin text-white text-center rounded-full bg-[#A2A5B9] mx-[53px]">
+                        <span>Netral</span>
                     </div>
                     <!-- titik 3 -->
                     <div class="w-[5px] ml-[65px]">
@@ -177,13 +209,12 @@
             </div>
             <div class="grid grid-rows-2 gap-1 mt-4 justify-center">
                 <div>
-                    <h2 class="font-semibold text-md text-left">Nah, biar lebih paham dan matang soal perencanaan uang, StepNesian bisa langsung konsultasi masalah pajak <span class="bg-yellow-300">PHK</span> dan laporan keuangan dengan StepNesia lho!</h2>
-                </div>
-                <div>
-                    <h2 class="font-semibold text-md text-left">#Startup #StartupIndonesia #StepNesia #StartupBusiness #DigitalStartup #StartupCulture #akunting #laporanpajak #laporankeuangan #keuanganstartup #pajakstartup</h2>
+                  <a href="https://twitter.com/watzittoyya/status/1314600188971941889?t=-unc6NeFv_wgsb-WEoAPew&s=19">
+                    <h2 class="font-semibold text-md text-left">Bung dik, kira kira turnamen nya online apa offline? Kalo online siap siap antisipasi cheat, soalnya lagi rawan cheat suntik di <span class="bg-yellow-300">pubg</span>  yg masih susah ke dettect 🙏. Semoga sportivitas tetep dijaga</h2>
+                  </a>
                 </div>
             </div>
-            <div class="grid grid-cols-3 mt-4">
+            <div class="grid grid-cols-3 -mb-20 -mt-28">
                 <div class="text-sm font-light text-slate-400">
                     <span>15,7rb Suka</span>
                 </div>
@@ -202,11 +233,11 @@
         <div class="container h-min pb-28">
           <div class="h-[505px] w-screen  px-4 py-2 bg-white">
               <div class="flex items-center">
-                  <img src="../public/img/dp2.png" alt="display picture" class=" block w-16 mt-3">
+                  <img src="../public/img/Rectangle 663 (2).jpg" alt="display picture" class=" block w-16 mt-3">
                   <div class="ml-2 grid gap-1 grid-cols-4 mt-2 items-center">
-                      <h1 class="w-max text-lg font-bold text-slate-800">step.nesia</h1>
+                      <h1 class="w-max text-lg font-bold text-slate-800">Detik.com</h1>
                       <div>
-                        <img src="../public/img/ctg biru png.png" alt="centang biru" class="w-[18px] ml-4">
+                        <!-- <img src="../public/img/ctg biru png.png" alt="centang biru" class="w-[18px] ml-4"> -->
                       </div>
                       <div class="w-[73px] font-thin text-white text-center rounded-full bg-[#F92B60] mx-[53px]">
                           <span>Negatif</span>
@@ -216,36 +247,57 @@
                           <img src="../public/img/titik 3 png.png" alt="icon titik" onclick="openLainnya()"> 
                       </div>
                       <div class="w-5">
-                          <img src="../public/img/twitter png.png" alt="twitter">
+                          <img src="../public/img/2 png.png" alt="twitter">
                       </div>
                       <div class="text-sm -mx-14 text-slate-300 text-light">
-                          <span>12 Jul 2022, 10.44</span>
+                          <span>08 Maret 2022, 10.44</span>
                       </div>
                   </div>
               </div>
               <div class="grid grid-rows-2 gap-1 mt-4 justify-center">
                   <div>
-                      <h2 class="font-semibold text-md text-left">Nah, biar lebih paham dan matang soal perencanaan uang, StepNesian bisa langsung konsultasi masalah pajak <span class="bg-yellow-300">PHK</span> dan laporan keuangan dengan StepNesia lho! <br> ...</h2>
+                    <a href="https://news.detik.com/berita/d-5973567/gubernur-aceh-heran-masih-banyak-yang-main-pubg-padahal-diharamkan-ulama">
+                      <h2 class="font-semibold text-md text-left">Gubernur Aceh Heran Masih Banyak yang Main
+                        <span class="bg-yellow-300">PUBG</span> Padahal diharmkan Ulama <span class="block pt-5"> Baca artikel detiknews, "Gubernur Aceh Heran Masih  ... </span></h2>
+                      </a>
                   </div>
                   <div class="-my-9">
-                    <img src="../public/img/thumnail2.png" alt="thumbail" class="rounded-lg">
+                    <img src="../public/img/Rectangle 677 (1).jpg" alt="thumbail" class="rounded-lg">
                   </div>
               </div>
               <div class="grid grid-cols-3 mt-12">
                   <div class="text-sm font-light text-slate-400">
-                      <span>15,7rb Suka</span>
+                      <span>145 Suka</span>
                   </div>
                   <div class="text-sm font-light text-slate-400 -mx-8 w-full">
-                      <span>501 Komentar</span>
-                  </div>
-                  <div class="text-sm font-light text-slate-400 w-full -mx-11">
-                      <span>4,411 Retweet</span>
+                      <span>27 Komentar</span>
                   </div>
               </div>
           </div>
         </div>
       </section>
 
+      <div id="snackbar7">
+        <div class="flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white " viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd"
+            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+            clip-rule="evenodd" />
+          </svg> 
+          <span class="font-thin text-[16px] mx-3">Judul topik berhasil diganti</span>
+        </div>
+      </div>
+
+      <div id="snackbar">
+        <div class="flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white " viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd"
+            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+            clip-rule="evenodd" />
+          </svg> 
+          <span class="font-thin text-[16px] mx-3">Filter Berhasil diterapkan</span>
+        </div>
+      </div>
 
       <div id="snackbar2">
         <div class="flex items-center">
@@ -279,16 +331,6 @@
           <span class="font-thin text-[16px] mx-3">Sentimen Berhasil diganti</span>
         </div>
       </div>
-      <div id="snackbar7">
-        <div class="flex items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white " viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd"
-            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-            clip-rule="evenodd" />
-          </svg> 
-          <span class="font-thin text-[16px] mx-3">Keyword Topik Berhasil diganti</span>
-        </div>
-      </div>
     
 
     <!-- component tombol urutan -->
@@ -299,15 +341,15 @@
           <a href="javascript:void(0)" class="text-right text-[40px] text-slate-400 mx-6 w-5 absolute right-3" onclick="closeUrutan()">&times;</a>
           <h1 class="mx-7 absolute pt-6 text-2xl text-gray-900 font-extrabold">Urutkan</h1>
           <div class="flex items-center px-7 pt-11 pb-3 border-solid border-b-2 w-full">
-            <input type="radio" name="radio terbaru" id="radio-terbaru" class="w-6 h-6 right-8 absolute" onclick="toast(), closeUrutan()">
+            <input type="radio" name="radioterbaru" id="radio-terbaru" class="w-6 h-6 right-8 absolute" onclick="toast(), closeUrutan()">
             <label for="radio-terbaru" class=" text-xl text-slate-400">Terbaru</label>
           </div>
           <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-2 w-full">
-            <input type="radio" name="radio terbaru" id="radio-terbaru" class="w-6 h-6 right-8 absolute" onclick="toast(), closeUrutan()">
+            <input type="radio" name="radioterbaru" id="radio-terbaru" class="w-6 h-6 right-8 absolute" onclick="toast(), closeUrutan()">
             <label for="radio-terbaru" class=" text-xl text-slate-400">Terlama</label>
           </div>
           <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-2 w-full">
-            <input type="radio" name="radio terbaru" id="radio-terbaru" class="w-6 h-6 right-8 absolute" onclick="toast(), closeUrutan()">
+            <input type="radio" name="radioterbaru" id="radio-terbaru" class="w-6 h-6 right-8 absolute" onclick="toast(), closeUrutan()">
             <label for="radio-terbaru" class=" text-xl text-slate-400">Relevansi</label>
           </div>
         </div>
@@ -320,7 +362,7 @@
         <div id="side-keyword" class="w-full bg-white shadow-top rounded-t-2xl fixed bottom-[-420px] h-[410px] z-50 flex flex-col space-y-5 text-gray-900 duration-300 shadow-3xl">
           <span class="block self-center border-2 border-solid border-slate-300 w-12 rounded-full my-4"></span>
           <div onclick="closeKeyword()">
-            <h1 class="px-7 absolute text-xl text-gray-900 font-extrabold border-b-[1px] pb-5 w-screen">PHK Startup Indonesia</h1>
+            <h1 class="px-7 absolute text-xl text-gray-900 font-extrabold border-b-[1px] pb-5 w-screen">PUBG Indonesia</h1>
             <a class="text-right text-[40px] text-slate-400 mx-6 w-5 absolute right-3 top-9">&times;</a>
           </div>
           <div class="grid grid-rows-2 grid-flow-col items-center px-8 pt-11 border-b-[1px] w-screen" onclick="openEdit(), closeKeyword()">
@@ -331,7 +373,7 @@
               <h1 class="text-sm font-normal text-slate-700 -mx-[90px]">Judul topik</h1>
             </div>
             <div class="row-span-2">
-              <h1 class="text-sm font-light text-slate-300 pb-3 -mx-[90px]">PHK Startup Indonesia</h1>
+              <h1 class="text-sm font-light text-slate-300 pb-3 -mx-[90px]">PUBG Indonesia</h1>
             </div>
           </div>
 
@@ -345,14 +387,14 @@
               <h1 class="text-sm font-normal text-slate-700 -mx-[90px]"  onclick="openUbahKeyword()">Keyword pencarian</h1>
             </div>
             <div class="row-span-2">
-              <h1 class="text-sm font-light text-slate-300 -mx-[90px]">PHK Startup</h1>
+              <h1 class="text-sm font-light text-slate-300 -mx-[90px]">PUBG Esport</h1>
             </div>
             <div class="row-span-3 absolute right-8">
-              <img src="../public/img/copy png.png" alt="pensil" class="w-5" onclick="toast3()">
+              <img src="../public/img/copy png.png" alt="pensil" class="w-5" onclick="toast4(), closeKeyword()">
             </div>
           </div>
           <!-- toast berhasil disalin -->
-           <div id="snackbar3">
+           <div id="snackbar4">
             <div class="flex items-center">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white " viewBox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd"
@@ -363,6 +405,7 @@
             </div>
           </div>
 
+
           <div class="grid grid-rows-2 grid-flow-col items-center px-8 pt-4 border-t-[1px] w-screen" onclick="openNotifikasi(), closeFilter()">
             <div class="row-span-3">
               <img src="../public/img/notif png.png" alt="pensil" class="w-4">
@@ -371,7 +414,7 @@
               <h1 class="text-sm font-normal text-slate-700 -mx-[90px]">Notifikasi</h1>
             </div>
             <div class="row-span-2">
-              <h1 class="text-sm font-light text-slate-300 -mx-[90px]">nonaktif</h1>
+              <h1 class="text-sm font-light text-slate-300 -mx-[90px]">Tidak Aktif</h1>
             </div>
           </div>
           <div class="flex items-center mx-8 border-t-[1px] pt-5" onclick="openHapus(), closeKeyword()">
@@ -395,7 +438,7 @@
           <h2 class="mx-7 block text-lg font-bold pt-24 text-black">Rentang Waktu</h2>
           <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-2 w-full">
             <label for="radio-sehari" class="text-xl text-slate-400 font-normal">1 hari terakhir</label>
-            <input type="radio" name="radio sehari" id="radio-sehari" class="w-6 h-6 right-8 absolute ">
+            <input type="radio" name="radiorentan" id="radio-sehari" class="w-6 h-6 right-8 absolute">
           </div>
           <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-2 w-full">
             <label for="radio-7hari" class="text-xl text-slate-400 font-normal">7 hari terakhir</label>
@@ -488,62 +531,63 @@
   <div class="container">
     <div id="side-kustom" class="w-full bg-white shadow-top rounded-t-2xl fixed bottom-[-450px] h-[400px] z-50 flex flex-col space-y-5 text-gray-900 duration-300 shadow-3xl">
       <span class="block self-center border-2 border-solid border-slate-300 w-12 rounded-full my-4"></span>
-      <span class="mx-20 absolute pt-6 text-2xl text-gray-900 font-extrabold my-auto">Atur Waktu</span>
+      <a href="javascript:void(0)" class="text-right text-[40px] text-slate-400 mx-6 w-5 absolute right-3" onclick="closeKustom()">&times;</a>
+      <span class="mx-8 absolute pt-6 text-2xl text-gray-900 font-extrabold my-auto">Atur Waktu</span>
       <a href="javascript:void(0)" class="text-right text-slate-400 absolute left-1 flex" onclick="closeKustom(), openFilter()">
-        <img src="../public/img/back-icon.png" alt="icon back" class="w-11 h-9 m-6 flex">
+        <!-- <img src="../public/img/back-icon.png" alt="icon back" class="w-11 h-9 m-6 flex"> -->
       </a>
       <div class="flex items-center mx-8 pt-14">     
         <form id="tanggal" date-rangepicker class="flex items-center">
-          <div class="relative">
+          <div class="relative ui-widget">
             <label for="date" class="block text-lg font-light mb-2 text-slate-400">Mulai</label>
             <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
             <img src="../public/img/9 png.png" alt="" class="w-5 pt-[34px]">
           </div>
           <a href="javascript:void(0)" class="text-right text-[30px] text-slate-400 mx-3 w-5 absolute right-0" onclick="hapusTgl()" value="reset form">&times;</a>
-            <input name="start" type="text" class="bg-white border border-gray-300 text-gray-900 sm:text-sm rounded-l-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 datepicker-input" placeholder="30/05/2022">
+            <input name="start" type="text" id="datepicker" class="bg-white border border-gray-300 text-gray-900 sm:text-sm rounded-l-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 datepicker-input" placeholder="dd/mm/yyyy">
           </div>
           </form>
-          <form id="jam" timepicker class="flex items-center" data-mdb-with-icon="false">
+          <form class="timepicker relative form-floating xl:w-96" data-mdb-with-icon="false" id="input-toggle-timepicker">
           <div class="relative">
             <label for="date" class="block text-lg font-semibold mb-2 text-white">M</label>
             <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
             <img src="../public/img/7 png.png" alt="" class="w-5 pt-[34px]">
             </div>
             <a href="javascript:void(0)" class="text-right text-[30px] text-slate-400 mx-3 w-5 absolute right-0" onclick="hapusJam()" value="reset form">&times;</a>
-            <input name="start" type="text" class="bg-white border border-gray-300 text-gray-900 sm:text-sm rounded-r-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 datepicker-input" placeholder="12.00" data-mdb-toggle="input-toggle-timepicker">
+            <input name="start" type="text" data-mdb-toggle="input-toggle-timepicker"  class="bg-white border form-control border-gray-300 text-gray-900 sm:text-sm rounded-r-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 datepicker-input" placeholder="12.00" data-mdb-toggle="input-toggle-timepicker">
           </div>
         </form>
       </div>
         <div class="flex items-center mx-8">     
           <form id="tanggal1" date-rangepicker class="flex items-center">
-            <div class="relative">
+            <div class="relative ui-widget">
               <label for="date" class="block text-lg font-light mb-2 text-slate-400">Sampai</label>
               <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
                 <img src="../public/img/9 png.png" alt="" class="w-5 pt-[34px]">
               </div>
               <a href="javascript:void(0)" class="text-right text-[30px] text-slate-400 mx-3 w-5 absolute right-0" onclick="hapusTgl1()" value="reset form">&times;</a>
-              <input name="start" type="text" class="bg-white border border-gray-300 text-gray-900 sm:text-sm rounded-l-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 datepicker-input" placeholder="30/05/2022">
+              <input name="start" type="text" id="datepicker1" class="bg-white border border-gray-300 text-gray-900 sm:text-sm rounded-l-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 datepicker-input" placeholder="dd/mm/yyyy">
             </div>
           </form>
-          <form id="jam1" timepicker class="flex items-center" data-mdb-with-icon="false">
+          <form class="timepicker relative form-floating xl:w-96" data-mdb-with-icon="false" id="input-toggle-timepicker">
             <div class="relative">
               <label for="date" class="block text-lg font-semibold mb-2 text-white">M</label>
-            <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-            <img src="../public/img/7 png.png" alt="" class="w-5 pt-[34px]">
-          </div>
-          <a href="javascript:void(0)" class="text-right text-[30px] text-slate-400 mx-3 w-5 absolute right-0" onclick="hapusJam1()" value="reset form">&times;</a>
-          <input name="start" type="text" class="bg-white border border-gray-300 text-gray-900 sm:text-sm rounded-r-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 datepicker-input" placeholder="12.00" data-mdb-toggle="input-toggle-timepicker">
-        </div>
-      </form>
+              <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+              <img src="../public/img/7 png.png" alt="" class="w-5 pt-[34px]">
+              </div>
+              <a href="javascript:void(0)" class="text-right text-[30px] text-slate-400 mx-3 w-5 absolute right-0" onclick="hapusJam()" value="reset form">&times;</a>
+              <input name="start" type="text" data-mdb-toggle="input-toggle-timepicker"  class="bg-white border form-control border-gray-300 text-gray-900 sm:text-sm rounded-r-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 datepicker-input" placeholder="12.00" data-mdb-toggle="input-toggle-timepicker">
+            </div>
+          </form>
     </div>
       <!-- button filter atur waktu -->
       <div class="container">
         <div class="absolute w-full bg-white h-20 flex items-center mt-14 pb-6 top-[260px]">
           <div class="flex mx-auto">
-            <button class="w-[160px] h-[52px] bg-white border-2 rounded-lg text-gray-900 text-base ml-10" onclick="aturUlang()">Atur ulang
+            <button class="w-[160px] h-[52px] bg-white border-2 rounded-lg text-gray-900 text-base ml-10" onclick="openFilter(), closeKustom()">Batal
             </button>
         </div>
-        <button class="w-[160px] h-[52px] bg-blue-500 rounded-lg text-white text-base mx-4 mr-10"><a href="welcome.html" class="font-light">Simpan
+        <button class="w-[160px] h-[52px] bg-blue-500 rounded-lg text-white text-base mx-4 mr-10"><span class="font-light" onclick="closeKustom(), openFilter(), toast2()">Simpan</span>
         </button>
       </a>
     </div>
@@ -560,8 +604,8 @@
           <form id="hapusteks" date-rangepicker class="flex items-center">
             <div class="relative">
               <label for="text" class="block text-lg font-light mb-2 text-slate-400">Silahkan masukan judul topik Anda</label>
-                <input name="start" type="text" class=" bg-white border border-gray-300 font-medium text-gray-900 sm:text-sm rounded-l-lg focus:ring-blue-500 focus:border-blue-500 block w-[370px] pl-5 p-2.5 datepicker-input" value="PHK Startup indonesia">
-                <a href="javascript:void(0)" class="text-right top-8 text-[30px] text-slate-400 mx-3 w-5 absolute right-0" onclick="hapusTeks()" value="">&times;</a>
+                <input name="start" type="search" class=" bg-white border border-gray-300 font-medium text-gray-900 sm:text-sm rounded-l-lg focus:ring-blue-500 focus:border-blue-500 block w-[370px] pl-5 p-2.5 datepicker-input" value="PUBG Esport Indenesia">
+                <!-- <a href="javascript:void(0)" class="text-right top-8 text-[30px] text-slate-400 mx-3 w-5 absolute right-0" onclick="hapusTeks()" value="">&times;</a> -->
             </div>
           </form>
     </div>
@@ -852,9 +896,9 @@
         <h1 class="mx-7 absolute pt-6 text-xl text-gray-900 font-extrabold">Aksi</h1>
         <div class="flex items-center px-7 pt-11 pb-3 border-solid border-b-2 w-full" onclick="openSentimen(), closeLainnya()">
           <img src="../public/img/sentimen png.png"  class="w-6 h-6 left-7 absolute">
-          <h1 class=" text-base font-bold pl-11 text-slate-900">Koreksi sentimen "Positif"</h1>
+          <h1 class=" text-base font-bold pl-11 text-slate-900">Koreksi sentimen <span id="ganti">"Positif"</span></h1>
         </div>
-        <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-2 w-full" onclick="toast(), closeLainnya()">
+        <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-2 w-full" onclick="closeLainnya()">
           <img src="../public/img/share png.png"  class="w-5 h-5 left-7 absolute">
           <h1 class=" text-base font-bold pl-11 text-slate-900">Bagikan</h1>
         </div>
@@ -873,15 +917,15 @@
         <a href="javascript:void(0)" class="text-right text-[40px] text-slate-400 mx-6 w-5 absolute right-3" onclick="closeSentimen(), openLainnya()">&times;</a>
         <h1 class="mx-7 absolute pt-6 text-2xl text-gray-900 font-extrabold">pilih Sentimen</h1>
         <div class="flex items-center px-7 pt-11 pb-3 border-solid border-b-2 w-full">
-          <input type="radio" name="radioterbaru" id="radioterbaru" class="w-6 h-6 right-8 absolute" onclick="toast5(), closeSentimen()">
+          <input type="radio" name="radioterbaru" onchange="ubahSentimen()" id="ubahsentimen" value="Positif" class="w-6 h-6 right-8 absolute" onclick="toast5(), closeSentimen()">
           <label for="radio-terbaru" class=" text-xl text-slate-400">Positif</label>
         </div>
         <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-2 w-full">
-          <input type="radio" name="radioterbaru" id="radioterbaru" class="w-6 h-6 right-8 absolute" onclick="toast5(), closeSentimen()">
+          <input type="radio" name="radioterbaru" onchange="ubahSentimen1()" id="ubahsentimen1" value="Negatif" class="w-6 h-6 right-8 absolute" onclick="toast5(), closeSentimen()">
           <label for="radio-terbaru" class=" text-xl text-slate-400">Negatif</label>
         </div>
         <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-2 w-full">
-          <input type="radio" name="radioterbaru" id="radioterbaru" class="w-6 h-6 right-8 absolute" onclick="toast5(), closeSentimen()">
+          <input type="radio" name="radioterbaru" onchange="ubahSentimen2()" id="ubahsentimen2" value="Netral" class="w-6 h-6 right-8 absolute" onclick="toast5(), closeSentimen()">
           <label for="radio-terbaru" class=" text-xl text-slate-400">Netral</label>
         </div>
       </div>
@@ -892,7 +936,7 @@
 <section>
   <div class="container">
     <div id="side-sembunyi" class="w-full bg-white shadow-top rounded-t-2xl fixed bottom-[-490px] h-[480px] z-50 flex flex-col space-y-5 text-gray-900 duration-300 shadow-3xl">
-      <a href="javascript:void(0)" class="text-right text-[40px] text-slate-400 mx-6 w-5 absolute right-3" onclick="closeSembunyi(), openKeyword()">&times;</a>
+      <a href="javascript:void(0)" class="text-right text-[40px] text-slate-400 mx-6 w-5 absolute right-3" onclick="closeSembunyi()">&times;</a>
       <span class="block self-center border-2 border-solid border-slate-300 w-12 rounded-full my-4"></span>
       <div class="flex items-center mx-8">     
           <div class="block mx-auto">
@@ -936,5 +980,6 @@
 
     <script src="../public/js/sideMenu.js">
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
 </body>
 </html>

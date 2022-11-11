@@ -10,8 +10,47 @@
     <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://repo.rachmat.id/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="https://repo.rachmat.id/jquery-ui-1.12.1/jquery-ui.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://repo.rachmat.id/jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+          }
+        }
+      }
+    </script>
+    <script>
+    $(document).ready(function(){
+      $("button").click(function(){
+        $("<h2>Berapapun!</h2>").replaceWith("p");
+      });
+    });
+    </script>
+    <script type="text/javascript">
+      $(function(){
+        $("#datepicker").datepicker();
+      });
+    </script>
+    <script type="text/javascript">
+      $(function(){
+        $("#datepicker1").datepicker();
+      });
+    </script>
+   
 
     <title>Overview konten</title>
   </head>
@@ -57,10 +96,10 @@
         </div>
         <div class="block">
             <div class="flex border-b-2 w-full">
-                <h1 class="font-bold text-md mx-2 pb-4 w-screen text-slate-800 hover:text-[#4372EA] active:text-[#4372EA]" onclick="openSemua()">Semua <span class="absolute right-12">1.997</span></h1>
+                <h1 class="font-bold text-md mx-2 pb-4 w-screen text-slate-800 hover:text-[#4372EA] active:text-[#4372EA]" onclick="openSemua()">Semua <span class="absolute right-12">50.000</span></h1>
             </div>
             <div class="flex items-center border-b-2 w-full">
-                <h1 class="font-bold text-md mx-2 pb-4 pt-4 w-screen text-[#4372EA] hover:text-[#4372EA] active:text-[#4372EA]">PHK Startup Indonesia <span class="absolute right-12">1.997</span></h1>
+                <h1 class="font-bold text-md mx-2 pb-4 pt-4 w-screen text-[#4372EA] hover:text-[#4372EA] active:text-[#4372EA]">PUBG Esport Indonesia<span class="absolute right-12">50.000</span></h1>
                 <img src="../public/img/titik 3 png.png" alt="icon titik3" class="w-[4px] h-[20px] mx-2" onclick="openKeyword(), closeMenu()">
             </div>
             <h1 class="w-[230px] border-3 border-solid border-slate-600 m-9 ">
@@ -80,7 +119,7 @@
     <div class="container">
       <div class="p-8 flex items-center w-full bg-white fixed top-0">
         <span class="cursor-pointer text-3xl absolute left-4 text-gray-400" onclick="openMenu()">&#9776;</span>
-        <h1 class="text-lg ml-7 font-bold text-slate-800 w-full">PUBG Indonesia </h1>
+        <h1 class="text-lg ml-7 font-bold text-slate-800 w-full">PUBG Esport Indonesia </h1>
         <div class="relative left-10">
             <img src="../public/img/urutkan png.png" alt="icon filter" class="w-[19px] h-[20px] absolute mx-1" onclick="openUrutan()">
             <img src="../public/img/filter png.png" alt="icon filter" class="w-[18px] h-[21px] mx-[45px]" onclick="openFilter()"> 
@@ -714,7 +753,28 @@
         </div>
     </section>
     
-
+<!-- component tombol urutan -->
+<section>
+  <div class="container">
+    <div id="side-urutan" class="w-full bg-white shadow-top rounded-t-2xl fixed bottom-[-300px] h-72 z-50 flex flex-col space-y-5 text-gray-900 duration-300 shadow-3xl">
+      <span class="block self-center border-2 border-solid border-slate-300 w-12 rounded-full my-4"></span>
+      <a href="javascript:void(0)" class="text-right text-[40px] text-slate-400 mx-6 w-5 absolute right-3" onclick="closeUrutan()">&times;</a>
+      <h1 class="mx-7 absolute pt-6 text-2xl text-gray-900 font-extrabold">Urutkan</h1>
+      <div class="flex items-center px-7 pt-11 pb-3 border-solid border-b-2 w-full">
+        <input type="radio" name="radio terbaru" id="radio-terbaru" class="w-6 h-6 right-8 absolute" onclick="toast2(), closeUrutan()">
+        <label for="radio-terbaru" class=" text-xl text-slate-400">Terbaru</label>
+      </div>
+      <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-2 w-full">
+        <input type="radio" name="radio terbaru" id="radio-terbaru" class="w-6 h-6 right-8 absolute" onclick="toast2(), closeUrutan()">
+        <label for="radio-terbaru" class=" text-xl text-slate-400">Terlama</label>
+      </div>
+      <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-2 w-full">
+        <input type="radio" name="radio terbaru" id="radio-terbaru" class="w-6 h-6 right-8 absolute" onclick="toast2(), closeUrutan()">
+        <label for="radio-terbaru" class=" text-xl text-slate-400">Relevansi</label>
+      </div>
+    </div>
+  </div>
+</section>
     
 
 
@@ -728,75 +788,75 @@
           <h2 class="mx-7 block text-lg font-bold pt-24 text-black">Rentang Waktu</h2>
           <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-2 w-full">
             <label for="radio-sehari" class="text-xl text-slate-400 font-normal">1 hari terakhir</label>
-            <input type="radio" name="radio sehari" id="radio-sehari" class="w-6 h-6 right-8 absolute ">
+            <input type="radio" name="radiorentan" id="radio-sehari" class="w-6 h-6 right-8 absolute ">
           </div>
           <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-2 w-full">
             <label for="radio-7hari" class="text-xl text-slate-400 font-normal">7 hari terakhir</label>
-            <input type="radio" name="radio 7hari" id="radio-7hari" class="w-6 h-6 right-8 absolute ">
+            <input type="radio" name="radiorentan" id="radio-7hari" class="w-6 h-6 right-8 absolute ">
           </div>
           <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-2 w-full">
             <label for="radio-1bulan" class="text-xl text-slate-400 font-normal">1 bulan terakhir</label>
-            <input type="radio" name="radio 1bulan" id="radio-1bulan" class="w-6 h-6 right-8 absolute ">
+            <input type="radio" name="radiorentan" id="radio-1bulan" class="w-6 h-6 right-8 absolute ">
           </div>
           <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-2 w-full">
             <label for="radio-kustom" class="text-xl text-slate-400 font-normal">Atur waktu</label>
-            <input type="radio" name="radio kustom" id="radio-kustom" class="w-6 h-6 right-8 absolute" onclick="openKustom(), closeFilter()">
+            <input type="radio" name="radiorentan" id="radio-kustom" class="w-6 h-6 right-8 absolute" onclick="openKustom(), closeFilter()">
           </div>
 
           <h2 class="mx-7 block text-lg font-bold pt-7 text-black">Sentimen</h2>
           <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-2 w-full">
             <label for="radio-semua" class="text-xl text-slate-400 font-normal">Semua</label>
-            <input type="radio" name="radio semua" id="radio-semua" class="w-6 h-6 right-8 absolute ">
+            <input type="radio" name="radiorentan" id="radio-semua" class="w-6 h-6 right-8 absolute ">
           </div>
           <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-2 w-full">
             <label for="radio-positif" class="text-xl text-slate-400 font-normal">Positif</label>
-            <input type="radio" name="radio positif" id="radio-positif" class="w-6 h-6 right-8 absolute ">
+            <input type="radio" name="radiorentan" id="radio-positif" class="w-6 h-6 right-8 absolute ">
           </div>
           <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-2 w-full">
             <label for="radio-netral" class="text-xl text-slate-400 font-normal">Netral</label>
-            <input type="radio" name="radio netral" id="radio-netral" class="w-6 h-6 right-8 absolute ">
+            <input type="radio" name="radiorentan" id="radio-netral" class="w-6 h-6 right-8 absolute ">
           </div>
           <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-2 w-full">
             <label for="radio-negatif" class="text-xl text-slate-400 font-normal">Negatif</label>
-            <input type="radio" name="radio negatif" id="radio-negatif" class="w-6 h-6 right-8 absolute ">
+            <input type="radio" name="radiorentan" id="radio-negatif" class="w-6 h-6 right-8 absolute ">
           </div>
 
           <h2 class="mx-7 block text-lg font-bold pt-7 text-black">Sumber Data</h2>
           <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-2 w-full">
             <label for="checkbox-semua" class="text-xl text-slate-400 font-normal">Pilih Semua</label>
-            <input type="checkbox" name="checkbox semua" id="radio-semua" class="w-6 h-6 right-8 absolute check">
+            <input type="checkbox" name="checkboxsumber" id="radio-semua" class="w-6 h-6 right-8 absolute check" onclick="aktif(this)">
           </div>
           <div class="flex items-center px-7 pt-1 pb-3  w-full border-solid border-b-2">
             <label for="checkbox-berita" class="text-xl text-slate-400 font-normal">Berita</label>
-            <input type="checkbox" name="checkbox berita" id="radio-berita" class="w-6 h-6 right-8 absolute check">
+            <input type="checkbox" name="checkboxsumber" id="radio-berita" class="w-6 h-6 right-8 absolute check">
           </div>
           <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-2 w-full">
             <label for="checkbox-twitter" class="text-xl text-slate-400 font-normal">Twiter</label>
-            <input type="checkbox" name="checkbox twitter" id="radio-twitter" class="w-6 h-6 right-8 absolute check">
+            <input type="checkbox" name="checkboxsumber" id="radio-twitter" class="w-6 h-6 right-8 absolute check">
           </div>
           <div class="flex items-center px-7 pt-1 pb-3  w-full border-solid border-b-2">
             <label for="checkbox-fb" class="text-xl text-slate-400 font-normal">facebook</label>
-            <input type="checkbox" name="checkbox facebook" id="radio-fb" class="w-6 h-6 right-8 absolute check">
+            <input type="checkbox" name="checkboxsumber" id="radio-fb" class="w-6 h-6 right-8 absolute check">
           </div>
           <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-2 w-full">
             <label for="checkbox-ig" class="text-xl text-slate-400 font-normal">Instagram</label>
-            <input type="checkbox" name="checkbox instagram" id="radio-ig" class="w-6 h-6 right-8 absolute check">
+            <input type="checkbox" name="checkboxsumber" id="radio-ig" class="w-6 h-6 right-8 absolute check">
           </div>
           <div class="flex items-center px-7 pt-1 pb-3  w-full border-solid border-b-2">
             <label for="checkbox-yt" class="text-xl text-slate-400 font-normal">Youtube</label>
-            <input type="checkbox" name="checkbox youtube" id="radio-yt" class="w-6 h-6 right-8 absolute check">
+            <input type="checkbox" name="checkboxsumber" id="radio-yt" class="w-6 h-6 right-8 absolute check">
           </div>
           <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-2 w-full">
             <label for="checkbox-tiktok" class="text-xl text-slate-400 font-normal">TikTok</label>
-            <input type="checkbox" name="checkbox tiktok" id="radio-tiktok" class="w-6 h-6 right-8 absolute check">
+            <input type="checkbox" name="checkboxsumber" id="radio-tiktok" class="w-6 h-6 right-8 absolute check">
           </div>
           <div class="flex items-center px-7 pt-1 pb-3  w-full border-solid border-b-2">
             <label for="checkbox-likedin" class="text-xl text-slate-400 font-normal">Linkedln</label>
-            <input type="checkbox" name="checkbox likedin" id="radio-likedin" class="w-6 h-6 right-8 absolute check">
+            <input type="checkbox" name="checkboxsumber" id="radio-likedin" class="w-6 h-6 right-8 absolute check">
           </div>
           <div class="flex items-center px-7 pt-3 pb-24  w-full border-solid border-b-2">
             <label for="checkbox-sembunyi" class="text-xl text-slate-900 font-semibold">Tampilkan konten tersembunyi</label>
-            <input type="checkbox" name="checkbox sembunyi" id="radio-sembunyi" class="w-6 h-6 right-8 absolute check">
+            <input type="checkbox" name="checkbox" id="radio-sembunyi" class="w-6 h-6 right-8 absolute check">
           </div>
           <!-- button filter -->
           <div class="container fixed">
@@ -806,7 +866,7 @@
                 </button>
               </a>
             </div>
-            <button class="w-[160px] h-[52px] bg-blue-500 rounded-lg text-white text-base mx-4 mr-10"><a href="welcome.html" class="font-light">Terapkan
+            <button class="w-[160px] h-[52px] bg-blue-500 rounded-lg text-white text-base mx-4 mr-10" onclick="closeFilter(), toast2()"><a class="font-light">Terapkan
             </button>
           </a>
         </div>
@@ -821,62 +881,63 @@
   <div class="container">
     <div id="side-kustom" class="w-full bg-white shadow-top rounded-t-2xl fixed bottom-[-450px] h-[400px] z-50 flex flex-col space-y-5 text-gray-900 duration-300 shadow-3xl">
       <span class="block self-center border-2 border-solid border-slate-300 w-12 rounded-full my-4"></span>
-      <span class="mx-20 absolute pt-6 text-2xl text-gray-900 font-extrabold my-auto">Atur Waktu</span>
+      <a href="javascript:void(0)" class="text-right text-[40px] text-slate-400 mx-6 w-5 absolute right-3" onclick="closeKustom()">&times;</a>
+      <span class="mx-8 absolute pt-6 text-2xl text-gray-900 font-extrabold my-auto">Atur Waktu</span>
       <a href="javascript:void(0)" class="text-right text-slate-400 absolute left-1 flex" onclick="closeKustom(), openFilter()">
-        <img src="../public/img/back-icon.png" alt="icon back" class="w-11 h-9 m-6 flex">
+        <!-- <img src="../public/img/back-icon.png" alt="icon back" class="w-11 h-9 m-6 flex"> -->
       </a>
       <div class="flex items-center mx-8 pt-14">     
         <form id="tanggal" date-rangepicker class="flex items-center">
-          <div class="relative">
+          <div class="relative ui-widget">
             <label for="date" class="block text-lg font-light mb-2 text-slate-400">Mulai</label>
             <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
             <img src="../public/img/9 png.png" alt="" class="w-5 pt-[34px]">
           </div>
           <a href="javascript:void(0)" class="text-right text-[30px] text-slate-400 mx-3 w-5 absolute right-0" onclick="hapusTgl()" value="reset form">&times;</a>
-            <input name="start" type="text" class="bg-white border border-gray-300 text-gray-900 sm:text-sm rounded-l-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 datepicker-input" placeholder="30/05/2022">
+            <input name="start" type="text" id="datepicker" class="bg-white border border-gray-300 text-gray-900 sm:text-sm rounded-l-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 datepicker-input" placeholder="dd/mm/yyyy">
           </div>
           </form>
-          <form id="jam" timepicker class="flex items-center" data-mdb-with-icon="false">
+          <form class="timepicker relative form-floating xl:w-96" data-mdb-with-icon="false" id="input-toggle-timepicker">
           <div class="relative">
             <label for="date" class="block text-lg font-semibold mb-2 text-white">M</label>
             <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
             <img src="../public/img/7 png.png" alt="" class="w-5 pt-[34px]">
             </div>
             <a href="javascript:void(0)" class="text-right text-[30px] text-slate-400 mx-3 w-5 absolute right-0" onclick="hapusJam()" value="reset form">&times;</a>
-            <input name="start" type="text" class="bg-white border border-gray-300 text-gray-900 sm:text-sm rounded-r-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 datepicker-input" placeholder="12.00" data-mdb-toggle="input-toggle-timepicker">
+            <input name="start" type="text" data-mdb-toggle="input-toggle-timepicker"  class="bg-white border form-control border-gray-300 text-gray-900 sm:text-sm rounded-r-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 datepicker-input" placeholder="12.00" data-mdb-toggle="input-toggle-timepicker">
           </div>
         </form>
       </div>
         <div class="flex items-center mx-8">     
           <form id="tanggal1" date-rangepicker class="flex items-center">
-            <div class="relative">
+            <div class="relative ui-widget">
               <label for="date" class="block text-lg font-light mb-2 text-slate-400">Sampai</label>
               <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
                 <img src="../public/img/9 png.png" alt="" class="w-5 pt-[34px]">
               </div>
               <a href="javascript:void(0)" class="text-right text-[30px] text-slate-400 mx-3 w-5 absolute right-0" onclick="hapusTgl1()" value="reset form">&times;</a>
-              <input name="start" type="text" class="bg-white border border-gray-300 text-gray-900 sm:text-sm rounded-l-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 datepicker-input" placeholder="30/05/2022">
+              <input name="start" type="text" id="datepicker1" class="bg-white border border-gray-300 text-gray-900 sm:text-sm rounded-l-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 datepicker-input" placeholder="dd/mm/yyyy">
             </div>
           </form>
-          <form id="jam1" timepicker class="flex items-center" data-mdb-with-icon="false">
+          <form class="timepicker relative form-floating xl:w-96" data-mdb-with-icon="false" id="input-toggle-timepicker">
             <div class="relative">
               <label for="date" class="block text-lg font-semibold mb-2 text-white">M</label>
-            <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-            <img src="../public/img/7 png.png" alt="" class="w-5 pt-[34px]">
-          </div>
-          <a href="javascript:void(0)" class="text-right text-[30px] text-slate-400 mx-3 w-5 absolute right-0" onclick="hapusJam1()" value="reset form">&times;</a>
-          <input name="start" type="text" class="bg-white border border-gray-300 text-gray-900 sm:text-sm rounded-r-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 datepicker-input" placeholder="12.00" data-mdb-toggle="input-toggle-timepicker">
-        </div>
-      </form>
+              <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+              <img src="../public/img/7 png.png" alt="" class="w-5 pt-[34px]">
+              </div>
+              <a href="javascript:void(0)" class="text-right text-[30px] text-slate-400 mx-3 w-5 absolute right-0" onclick="hapusJam()" value="reset form">&times;</a>
+              <input name="start" type="text" data-mdb-toggle="input-toggle-timepicker"  class="bg-white border form-control border-gray-300 text-gray-900 sm:text-sm rounded-r-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 datepicker-input" placeholder="12.00" data-mdb-toggle="input-toggle-timepicker">
+            </div>
+          </form>
     </div>
       <!-- button filter atur waktu -->
       <div class="container">
         <div class="absolute w-full bg-white h-20 flex items-center mt-14 pb-6 top-[260px]">
           <div class="flex mx-auto">
-            <button class="w-[160px] h-[52px] bg-white border-2 rounded-lg text-gray-900 text-base ml-10" onclick="aturUlang()">Atur ulang
+            <button class="w-[160px] h-[52px] bg-white border-2 rounded-lg text-gray-900 text-base ml-10" onclick="closeKustom(), openFilter()">Batal
             </button>
         </div>
-        <button class="w-[160px] h-[52px] bg-blue-500 rounded-lg text-white text-base mx-4 mr-10"><a href="welcome.html" class="font-light">Simpan
+        <button class="w-[160px] h-[52px] bg-blue-500 rounded-lg text-white text-base mx-4 mr-10" onclick="closeKustom()"><span class="font-light">Simpan</span>
         </button>
       </a>
     </div>
@@ -912,6 +973,17 @@
   </div>
   </div>
   </section>
+
+  <div id="snackbar2">
+    <div class="flex items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white " viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd"
+        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+        clip-rule="evenodd" />
+      </svg> 
+      <span class="font-thin text-[16px] mx-3">filter berhasil diterapkan</span>
+    </div>
+  </div>
 
   <!-- side hapus -->
 <section>
@@ -1180,5 +1252,6 @@
     <script src="../public/js/sideMenu.js">
     </script>
     <script src="../public/js/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
 </body>
 </html>

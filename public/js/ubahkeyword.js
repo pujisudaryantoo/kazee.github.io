@@ -1,6 +1,6 @@
 var txt = document.getElementById('txt');
 var list = document.getElementById('list');
-var items = ['PHK', 'Startup'];
+var items = ['PUBG', 'Esport'];
 
 txt.addEventListener('keypress', function(e) {
   if (e.key === 'Enter') {

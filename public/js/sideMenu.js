@@ -190,7 +190,7 @@ var sideEdit = document.getElementById('side-edit');
             document.getElementById("jam1").reset();
         }
         function aturUlang() {
-            document.getElementById("form").reset();
+            document.getElementsByName("form").reset();
         }
         function aturUlang1() {
             document.getElementById("form1").reset();
@@ -216,7 +216,7 @@ var sideEdit = document.getElementById('side-edit');
             window.location="linimasa.html"
          }, 0);
         }
-        function openLinimasa(){
+        function openLinimasaside(){
             setTimeout(function(){ 
             window.location="linimasaside.html"
          }, 0);
@@ -241,10 +241,20 @@ var sideEdit = document.getElementById('side-edit');
             window.location="buattopikkembali.html"
          }, 0);
         }
+        function openUbahKeyword(){
+            setTimeout(function(){ 
+            window.location="UbahKeyword.html"
+         }, 0);
+        }
         function openWelcome(){
             setTimeout(function(){ 
             window.location="welcome.html"
          }, 1500);
+        }
+        function openWelcome1(){
+            setTimeout(function(){ 
+            window.location="welcome.html"
+         }, 0);
         }
         function openBackKonten(){
             setTimeout(function(){ 
@@ -281,7 +291,7 @@ var sideEdit = document.getElementById('side-edit');
           window.location="overviewhashtag.html"
        }, 0);
       }
-        function openKeyword(){
+        function openTurna(){
             setTimeout(function(){ 
             window.location="overviewkeywordnot.html"
          }, 0);
@@ -331,9 +341,34 @@ var sideEdit = document.getElementById('side-edit');
             window.location="welcome.html"
          }, 0);
         }
+        function openLinimasaKeyword2(){
+            setTimeout(function(){ 
+            window.location="linimasakeywordnottoast.html"
+         }, 0);
+        }
+        function openLinimasaKeyword3(){
+            setTimeout(function(){ 
+            window.location="linimasakeyword2.html"
+         }, 0);
+        }
+        function openLinimasaKeyword4(){
+            setTimeout(function(){ 
+            window.location="linimasakeyword3.html"
+         }, 0);
+        }
         function openReview(){
             setTimeout(function(){ 
             window.location="reviewContentKeyword.html"
+         }, 0);
+        }
+        function openReview(){
+            setTimeout(function(){ 
+            window.location="reviewContentKeyword.html"
+         }, 0);
+        }
+        function openOverviewPubg(){
+            setTimeout(function(){ 
+            window.location="overviewkontenpubg.html"
          }, 0);
         }
         // tombol loading
@@ -469,6 +504,11 @@ var sideEdit = document.getElementById('side-edit');
           }
           function toast7() {
             var x = document.getElementById("snackbar7");
+            x.className = "show";
+            setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+          }
+          function toast8() {
+            var x = document.getElementById("snackbar8");
             x.className = "show";
             setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
           }
