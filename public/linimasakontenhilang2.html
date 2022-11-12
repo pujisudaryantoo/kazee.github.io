@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
@@ -46,8 +45,9 @@
         $("#datepicker1").datepicker();
       });
     </script>
+           <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="bg-slate-200" onload="toast7()">
+  <body class="bg-slate-200" onload="toast8()">
 
       <!-- navbar -->
     <section>
@@ -91,7 +91,7 @@
                 <h1 class="font-bold text-md mx-2 pb-4 w-screen text-slate-800 hover:text-[#4372EA] active:text-[#4372EA]" onclick="openSemua()">Semua <span class="absolute right-12">50.000</span></h1>
             </div>
             <div class="flex items-center border-b-2 w-full">
-                <h1 class="font-bold text-md mx-2 pb-4 pt-4 w-screen text-[#4372EA] hover:text-[#4372EA] active:text-[#4372EA]">PUBG Indonesia <span class="absolute right-12">50.000</span></h1>
+                <h1 class="font-bold text-md mx-2 pb-4 pt-4 w-screen text-[#4372EA] hover:text-[#4372EA] active:text-[#4372EA]">PUBG Esport Indonesia <span class="absolute right-12">50.000</span></h1>
                 <img src="../public/img/titik 3 png.png" alt="icon titik3" class="w-[4px] h-[20px] mx-2" onclick="openKeyword(), closeMenu()">
             </div>
             <h1 class="w-[230px] border-3 border-solid border-slate-600 m-9 ">
@@ -127,7 +127,7 @@
           <a href="#" class="relative mx-auto">
             <h1 class="text-xl font-semibold text-blue-400 border-blue-500 border-b-4 w-52 text-center pb-2">Linimasa</h1>
           </a>
-          <a href="overviewkontenpubg.html">
+          <a href="overviewkontenpubg2.html">
             <h1 class="text-xl font-thin text-slate-300 border-slate-300 border-b-2 w-52 text-center pb-2">Overview</h1>
           </a>
         </div>
@@ -135,7 +135,7 @@
     </menu>
 
     <!-- konten linimasa 1 -->
-    <section class="mt-[138px]">
+    <section class="mt-[138px] pb-5">
         <h1 class="mx-4 my-2 text-sm text-slate-600 font-semibold">50.000 <span class="text-slate-400 font-light">percakapan</span></h1>
       <div class="container">
         <div class="h-[527px] w-screen  px-4 py-2 bg-white">
@@ -149,7 +149,7 @@
                     </div>
                     <!-- titik 3 -->
                     <div class="w-[5px] ml-[65px]">
-                        <img src="../public/img/titik 3 png.png" alt="icon titik" onclick="openLainnya()"> 
+                        <img src="../public/img/titik 3 png.png" alt="icon titik"> 
                     </div>
                     <div class="w-5">
                         <img src="../public/img/2 png.png" alt="twitter">
@@ -184,50 +184,7 @@
     </section>
 
     <!-- konten linimasa 2 -->
-    <section>
-      <div class="container py-4" id="hilang">
-        <div class="h-[270px] w-screen  px-4 py-2 bg-white">
-            <div class="flex items-center">
-                <img src="../public/img/Rectangle 663 (1).jpg" alt="display picture" class=" block w-16 mt-3">
-                <div class="ml-2 grid gap-1 grid-cols-4 mt-2 items-center">
-                    <h1 class="w-max text-lg font-bold text-slate-800">Andy Rasyid</h1>
-                    <div></div>
-                    <div class="w-[73px] font-thin text-white text-center rounded-full bg-[#A2A5B9] mx-[53px]" id="warna">
-                        <span id="pop">Netral</span>
-                    </div>
-                    <!-- titik 3 -->
-                    <div class="w-[5px] ml-[65px]">
-                        <img src="../public/img/titik 3 png.png" alt="icon titik" onclick="openAksi()"> 
-                    </div>
-                    <div class="w-5">
-                        <img src="../public/img/twitter png.png" alt="twitter">
-                    </div>
-                    <div class="text-sm -mx-14 text-slate-300 text-light">
-                        <span>12 Jul 2022, 10.44</span>
-                    </div>
-                </div>
-            </div>
-            <div class="grid grid-rows-2 gap-1 mt-4 justify-center">
-                <div>
-                  <a href="https://twitter.com/watzittoyya/status/1314600188971941889?t=-unc6NeFv_wgsb-WEoAPew&s=19">
-                    <h2 class="font-semibold text-md text-left">Bung dik, kira kira turnamen nya online apa offline? Kalo online siap siap antisipasi cheat, soalnya lagi rawan cheat suntik di <span class="bg-yellow-300">pubg</span>  yg masih susah ke dettect 🙏. Semoga sportivitas tetep dijaga</h2>
-                  </a>
-                </div>
-            </div>
-            <div class="grid grid-cols-3 -mb-20 -mt-28">
-                <div class="text-sm font-light text-slate-400">
-                    <span>15,7rb Suka</span>
-                </div>
-                <div class="text-sm font-light text-slate-400 -mx-8 w-full">
-                    <span>501 Komentar</span>
-                </div>
-                <div class="text-sm font-light text-slate-400 w-full -mx-11">
-                    <span>4,411 Retweet</span>
-                </div>
-            </div>
-        </div>
-      </div>
-    </section>
+
     <!-- konten linimasa 3 -->
     <section>
         <div class="container h-min pb-28">
@@ -244,7 +201,7 @@
                       </div>
                       <!-- titik 3 -->
                       <div class="w-[5px] ml-[65px]">
-                          <img src="../public/img/titik 3 png.png" alt="icon titik" onclick="openLainnya()"> 
+                          <img src="../public/img/titik 3 png.png" alt="icon titik"> 
                       </div>
                       <div class="w-5">
                           <img src="../public/img/2 png.png" alt="twitter">
@@ -277,16 +234,6 @@
         </div>
       </section>
 
-      <div id="snackbar7">
-        <div class="flex items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white " viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd"
-            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-            clip-rule="evenodd" />
-          </svg> 
-          <span class="font-thin text-[16px] mx-3">Judul topik berhasil diganti</span>
-        </div>
-      </div>
 
       <div id="snackbar">
         <div class="flex items-center">
@@ -295,7 +242,7 @@
             d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
             clip-rule="evenodd" />
           </svg> 
-          <span class="font-thin text-[16px] mx-3">Filter Berhasil diterapkan</span>
+          <span class="font-thin text-[16px] mx-3">Filter berhasil diterapkan</span>
         </div>
       </div>
 
@@ -306,7 +253,7 @@
             d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
             clip-rule="evenodd" />
           </svg> 
-          <span class="font-thin text-[16px] mx-3">Topik Berhasil dibuat</span>
+          <span class="font-thin text-[16px] mx-3">Topik berhasil dibuat</span>
         </div>
       </div>
     
@@ -317,7 +264,7 @@
             d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
             clip-rule="evenodd" />
           </svg> 
-          <span class="font-thin text-[16px] mx-3">Notifikasi Berhasil diaktifkan</span>
+          <span class="font-thin text-[16px] mx-3">Notifikasi berhasil diaktifkan</span>
         </div>
       </div>
     
@@ -328,7 +275,18 @@
             d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
             clip-rule="evenodd" />
           </svg> 
-          <span class="font-thin text-[16px] mx-3">Sentimen Berhasil diganti</span>
+          <span class="font-thin text-[16px] mx-3">Sentimen berhasil diganti</span>
+        </div>
+      </div>
+    
+      <div id="snackbar6">
+        <div class="flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white " viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd"
+            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+            clip-rule="evenodd" />
+          </svg> 
+          <span class="font-thin text-[16px] mx-3">Judul topik berhasil diganti</span>
         </div>
       </div>
     
@@ -516,7 +474,7 @@
                 </button>
               </a>
             </div>
-            <button class="w-[160px] h-[52px] bg-blue-500 rounded-lg text-white text-base mx-4 mr-10" onclick="closeFilter(), toast()"><a class="font-light">Terapkan
+            <button class="w-[160px] h-[52px] bg-blue-500 rounded-lg text-white text-base mx-4 mr-10" onclick="closeFilter(), toast(), openTampil2()"><a class="font-light">Terapkan
             </button>
           </a>
         </div>
@@ -615,7 +573,7 @@
           <div class="flex mx-auto">
             <button class="w-[180px] h-[52px] bg-white border-2 rounded-lg mr-3 text-gray-900 text-base" onclick="openKeyword(), closeEdit()">Batal
             </button>
-            <button href="javascript:void" onclick="openKeyword(), closeEdit()" class="w-[180px] h-[52px] bg-blue-500 rounded-lg text-white text-base hover:bg-[#BFBFBF]">Simpan
+            <button href="javascript:void" onclick="openLinimasaKeyword(), closeEdit()" class="w-[180px] h-[52px] bg-blue-500 rounded-lg text-white text-base hover:bg-[#BFBFBF]">Simpan
             </button>
           </div>
       </a>
@@ -887,8 +845,8 @@
     </div>
   </section>
 
-   <!-- aksi konten linimasa -->
-   <section>
+  <!-- aksi konten linimasa -->
+  <section>
     <div class="container">
       <div id="side-aksi" class="w-full bg-white shadow-top rounded-t-2xl fixed bottom-[-300px] h-72 z-50 flex flex-col space-y-5 text-gray-900 duration-300 shadow-3xl">
         <span class="block self-center border-2 border-solid border-slate-300 w-12 rounded-full my-4"></span>
@@ -956,12 +914,12 @@
             <button class="w-[170px] h-[52px] bg-white border-2 rounded-lg text-gray-900 text-base ml-5" onclick="closeSembunyi(), openAksi()"><span>Batalkan</span> 
             </button>
         </div>
-        <button class="w-[170px] h-[52px] bg-[#E62864] rounded-lg text-white text-base mr-8" onclick="toast6(), closeSembunyi(), openHilang()"><span>Ya. Sembunyikan</span> 
+        <button class="w-[170px] h-[52px] bg-[#E62864] rounded-lg text-white text-base mr-8" onclick="toast6(), closeSembunyi(), hilang()"><span>Ya. Sembunyikan</span> 
         </button>
     </div>
   </div> 
    <!-- toast berhasil disalin -->
-   <div id="snackbar6">
+   <div id="snackbar8">
     <div class="flex items-center">
       <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white " viewBox="0 0 20 20" fill="currentColor">
         <path fill-rule="evenodd"
@@ -978,8 +936,9 @@
 
 
 
-    <script src="../public/js/sideMenu.js">
-    </script>
+  <script src="../public/js/sideMenu.js">
+  </script>
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
-</body>
+   
+  </body>
 </html>

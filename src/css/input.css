@@ -338,6 +338,11 @@ p {
   animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
 
+#hilang {
+  display: block;
+  margin-bottom: 1px;
+}
+
 @-webkit-keyframes fadein {
   from {
     bottom: 0;

@@ -2782,6 +2782,10 @@ video {
   color: rgb(31 41 55 / var(--tw-text-opacity));
 }
 
+.opacity-40 {
+  opacity: 0.4;
+}
+
 .opacity-0 {
   opacity: 0;
 }
@@ -3205,6 +3209,11 @@ p {
   visibility: visible;
   -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
   animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+#hilang {
+  display: block;
+  margin-bottom: 1px;
 }
 
 @-webkit-keyframes fadein {

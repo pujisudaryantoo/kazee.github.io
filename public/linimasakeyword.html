@@ -185,19 +185,19 @@
 
     <!-- konten linimasa 2 -->
     <section>
-      <div class="container py-4">
+      <div class="container py-4" id="hilang">
         <div class="h-[270px] w-screen  px-4 py-2 bg-white">
             <div class="flex items-center">
                 <img src="../public/img/Rectangle 663 (1).jpg" alt="display picture" class=" block w-16 mt-3">
                 <div class="ml-2 grid gap-1 grid-cols-4 mt-2 items-center">
                     <h1 class="w-max text-lg font-bold text-slate-800">Andy Rasyid</h1>
                     <div></div>
-                    <div class="w-[73px] font-thin text-white text-center rounded-full bg-[#A2A5B9] mx-[53px]">
-                        <span>Netral</span>
+                    <div class="w-[73px] font-thin text-white text-center rounded-full bg-[#A2A5B9] mx-[53px]" id="warna">
+                        <span id="pop">Netral</span>
                     </div>
                     <!-- titik 3 -->
                     <div class="w-[5px] ml-[65px]">
-                        <img src="../public/img/titik 3 png.png" alt="icon titik" onclick="openLainnya()"> 
+                        <img src="../public/img/titik 3 png.png" alt="icon titik" onclick="openAksi()"> 
                     </div>
                     <div class="w-5">
                         <img src="../public/img/twitter png.png" alt="twitter">
@@ -890,19 +890,19 @@
   <!-- aksi konten linimasa -->
   <section>
     <div class="container">
-      <div id="side-lainnya" class="w-full bg-white shadow-top rounded-t-2xl fixed bottom-[-350px] h-72 z-50 flex flex-col space-y-5 text-gray-900 duration-300 shadow-3xl">
+      <div id="side-aksi" class="w-full bg-white shadow-top rounded-t-2xl fixed bottom-[-300px] h-72 z-50 flex flex-col space-y-5 text-gray-900 duration-300 shadow-3xl">
         <span class="block self-center border-2 border-solid border-slate-300 w-12 rounded-full my-4"></span>
-        <a href="javascript:void(0)" class="text-right text-[40px] text-slate-400 mx-6 w-5 absolute right-3" onclick="closeLainnya()">&times;</a>
+        <a href="javascript:void(0)" class="text-right text-[40px] text-slate-400 mx-6 w-5 absolute right-3" onclick="closeAksi()">&times;</a>
         <h1 class="mx-7 absolute pt-6 text-xl text-gray-900 font-extrabold">Aksi</h1>
-        <div class="flex items-center px-7 pt-11 pb-3 border-solid border-b-2 w-full" onclick="openSentimen(), closeLainnya()">
+        <div class="flex items-center px-7 pt-11 pb-3 border-solid border-b-2 w-full" onclick="openSentimen(), closeAksi()">
           <img src="../public/img/sentimen png.png"  class="w-6 h-6 left-7 absolute">
-          <h1 class=" text-base font-bold pl-11 text-slate-900">Koreksi sentimen <span id="ganti">"Positif"</span></h1>
+          <h1 class=" text-base font-bold pl-11 text-slate-900">Koreksi sentimen <span id="ganti">"Netral"</span></h1>
         </div>
-        <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-2 w-full" onclick="closeLainnya()">
+        <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-2 w-full" onclick="closeAksi()">
           <img src="../public/img/share png.png"  class="w-5 h-5 left-7 absolute">
           <h1 class=" text-base font-bold pl-11 text-slate-900">Bagikan</h1>
         </div>
-        <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-1 w-full" onclick="openSembunyi(),closeLainnya()">
+        <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-1 w-full" onclick="openSembunyi(),closeAksi()">
           <img src="../public/img/hide png.png"  class="w-5 h-5 left-7 absolute">
           <h1 class=" text-base font-bold pl-11 text-slate-900">Sembunyikan, konten tidak relevan</h1>
         </div>
@@ -914,18 +914,18 @@
     <div class="container">
       <div id="side-sentimen" class="w-full bg-white shadow-top rounded-t-2xl fixed bottom-[-300px] h-72 z-50 flex flex-col space-y-5 text-gray-900 duration-300 shadow-3xl">
         <span class="block self-center border-2 border-solid border-slate-300 w-12 rounded-full my-4"></span>
-        <a href="javascript:void(0)" class="text-right text-[40px] text-slate-400 mx-6 w-5 absolute right-3" onclick="closeSentimen(), openLainnya()">&times;</a>
+        <a href="javascript:void(0)" class="text-right text-[40px] text-slate-400 mx-6 w-5 absolute right-3" onclick="closeSentimen(), openAksi()">&times;</a>
         <h1 class="mx-7 absolute pt-6 text-2xl text-gray-900 font-extrabold">pilih Sentimen</h1>
         <div class="flex items-center px-7 pt-11 pb-3 border-solid border-b-2 w-full">
-          <input type="radio" name="radioterbaru" onchange="ubahSentimen()" id="ubahsentimen" value="Positif" class="w-6 h-6 right-8 absolute" onclick="toast5(), closeSentimen()">
+          <input type="radio" name="radiosentimen" onchange="ubahSentimen(), positif()" id="ubahsentimen" value="Positif" class="w-6 h-6 right-8 absolute" onclick="toast5(), closeSentimen()">
           <label for="radio-terbaru" class=" text-xl text-slate-400">Positif</label>
         </div>
         <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-2 w-full">
-          <input type="radio" name="radioterbaru" onchange="ubahSentimen1()" id="ubahsentimen1" value="Negatif" class="w-6 h-6 right-8 absolute" onclick="toast5(), closeSentimen()">
+          <input type="radio" name="radiosentimen" onchange="ubahSentimen1(), negatif()" id="ubahsentimen1" value="Negatif" class="w-6 h-6 right-8 absolute" onclick="toast5(), closeSentimen()">
           <label for="radio-terbaru" class=" text-xl text-slate-400">Negatif</label>
         </div>
         <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-2 w-full">
-          <input type="radio" name="radioterbaru" onchange="ubahSentimen2()" id="ubahsentimen2" value="Netral" class="w-6 h-6 right-8 absolute" onclick="toast5(), closeSentimen()">
+          <input type="radio" name="radiosentimen" onchange="ubahSentimen2(), netral()" id="ubahsentimen2" value="Netral" class="w-6 h-6 right-8 absolute" onclick="toast5(), closeSentimen()">
           <label for="radio-terbaru" class=" text-xl text-slate-400">Netral</label>
         </div>
       </div>
@@ -953,10 +953,10 @@
       <div class="container">
         <div class="absolute w-full bg-white h-20 flex items-center mt-14 pb-6 top-[350px]">
           <div class="flex mx-auto">
-            <button class="w-[170px] h-[52px] bg-white border-2 rounded-lg text-gray-900 text-base ml-5" onclick="closeSembunyi(), openLainnya()"><span>Batalkan</span> 
+            <button class="w-[170px] h-[52px] bg-white border-2 rounded-lg text-gray-900 text-base ml-5" onclick="closeSembunyi(), openAksi()"><span>Batalkan</span> 
             </button>
         </div>
-        <button class="w-[170px] h-[52px] bg-[#E62864] rounded-lg text-white text-base mr-8" onclick="toast6(), closeSembunyi()"><span>Ya. Sembunyikan</span> 
+        <button class="w-[170px] h-[52px] bg-[#E62864] rounded-lg text-white text-base mr-8" onclick="toast6(), closeSembunyi(), openHilang2()"><span>Ya. Sembunyikan</span> 
         </button>
     </div>
   </div> 

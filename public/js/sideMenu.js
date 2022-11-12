@@ -19,15 +19,15 @@ var sideUrutan = document.getElementById('side-urutan');
             sideUrutan.classList.remove('bottom-0');
             sideUrutan.classList.add('bottom-[-300px]');
         }
-var sideLainnya = document.getElementById('side-lainnya');
-        function openLainnya(){
-            sideLainnya.classList.remove('bottom-[-300px]');
-            sideLainnya.classList.add('bottom-0');
+var sideAksi = document.getElementById('side-aksi');
+        function openAksi(){
+            sideAksi.classList.remove('bottom-[-300px]');
+            sideAksi.classList.add('bottom-0');
         }
 
-        function closeLainnya(){
-            sideLainnya.classList.remove('bottom-0');
-            sideLainnya.classList.add('bottom-[-300px]');
+        function closeAksi(){
+            sideAksi.classList.remove('bottom-0');
+            sideAksi.classList.add('bottom-[-300px]');
         }
 var sideSentimen = document.getElementById('side-sentimen');
         function openSentimen(){
@@ -356,6 +356,31 @@ var sideEdit = document.getElementById('side-edit');
             window.location="linimasakeyword3.html"
          }, 0);
         }
+        function openHilang(){
+            setTimeout(function(){ 
+            window.location="linimasakontenhilang.html"
+         }, 0);
+        }
+        function openHilang2(){
+            setTimeout(function(){ 
+            window.location="linimasakontenhilang2.html"
+         }, 0);
+        }
+        function openTampil(){
+            setTimeout(function(){ 
+            window.location="linimasakontentampilnormal.html"
+         }, 0);
+        }
+        function openTampil2(){
+            setTimeout(function(){ 
+            window.location="linimasakontentampil2.html"
+         }, 0);
+        }
+        function openTampilnormal(){
+            setTimeout(function(){ 
+            window.location="linimasakontentampilnormal2.html"
+         }, 0);
+        }
         function openReview(){
             setTimeout(function(){ 
             window.location="reviewContentKeyword.html"
@@ -382,6 +407,7 @@ var sideEdit = document.getElementById('side-edit');
             berapapun.textContent = 'Berapapun...';
         });
 
+        
         
         function gantiMin1() {
             var x = document.getElementById("pilih").value;
@@ -456,6 +482,27 @@ var sideEdit = document.getElementById('side-edit');
             var x = document.getElementById("ubahsentimen2").value;
             document.getElementById("ganti").innerHTML = "" +x;
           }
+
+          function positif() {
+            var x = document.getElementById("ubahsentimen").value;
+            document.getElementById("pop").innerHTML = "" + x;
+            document.getElementById("warna").style.backgroundColor = "#3EC764";
+          }
+          function negatif() {
+            var x = document.getElementById("ubahsentimen1").value;
+            document.getElementById("pop").innerHTML = "" + x;
+            document.getElementById("warna").style.backgroundColor = "#F92B60";
+          }
+          function netral() {
+            var x = document.getElementById("ubahsentimen2").value;
+            document.getElementById("pop").innerHTML = "" + x;
+            document.getElementById("warna").style.backgroundColor = "#A2A5B9";
+          }
+          // // hidden konten
+          // function hilang(){
+          //   //alert("cheked the button - worked");
+          //   document.getElementById('hilang').style.visibility= 'hidden';
+          // }
 
         //hapus semua checkbox
         function uncek() {
