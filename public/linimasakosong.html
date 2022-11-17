@@ -81,8 +81,8 @@
     <!-- sidebar -->
     <!-- header -->
     <header>
-      <div id="side-menu" class="fixed top-0 left-[-350px] w-[350px] h-screen z-50 bg-white px-4
-      flex flex-col space-y-5 text-gray-900 duration-300 shadow-3xl">
+      <div id="side-menu" class="fixed top-0 left-[-750px] w-[350px] h-screen z-50 bg-white px-4
+      flex flex-col space-y-5 text-gray-900 duration-300 shadow-side">
       <div class="flex w-[320px] py-8 px-7 border-b-gray-300 border-b-2 shadow-none">
         <h1 class="font-bold text-xl -mx-5 ">TOPIK</h1>
         <img src="../public/img/topik png.png" alt="icon topik" class="w-[24px] h-full mx-56">
@@ -148,7 +148,7 @@
     <!-- component tombol urutan -->
     <section>
       <div class="container">
-        <div id="side-urutan" class="w-full bg-white shadow-top rounded-t-2xl fixed bottom-[-300px] h-72 z-50 flex flex-col space-y-5 text-gray-900 duration-300 shadow-3xl">
+        <div id="side-urutan" class="w-full bg-white shadow-sideurutan rounded-t-2xl fixed bottom-[-1400px] h-72 z-50 flex flex-col space-y-5 text-gray-900 duration-300 ">
           <span class="block self-center border-2 border-solid border-slate-300 w-12 rounded-full my-4"></span>
           <a href="javascript:void(0)" class="text-right text-[40px] text-slate-400 mx-6 w-5 absolute right-3" onclick="closeUrutan()">&times;</a>
           <h1 class="mx-7 absolute pt-6 text-2xl text-gray-900 font-extrabold">Urutkan</h1>
@@ -183,7 +183,7 @@
     <!-- component icon lainnya side bar -->
     <section>
       <div class="container">
-        <div id="side-keyword" class="w-full bg-white shadow-top rounded-t-2xl fixed bottom-[-420px] h-[410px] z-50 flex flex-col space-y-5 text-gray-900 duration-300 shadow-3xl">
+        <div id="side-keyword" class="w-full bg-white shadow-top rounded-t-2xl fixed bottom-[-420px] h-[410px] z-50 flex flex-col space-y-5 text-gray-900 duration-300 ">
           <span class="block self-center border-2 border-solid border-slate-300 w-12 rounded-full my-4"></span>
           <a href="javascript:void(0)" class="text-right text-[40px] text-slate-400 mx-6 w-5 absolute right-3" onclick="closeKeyword()">&times;</a>
           <h1 class="px-7 absolute pt-6 text-xl text-gray-900 font-extrabold border-b-[1px] pb-5 w-screen">PHK Startup Indenosia</h1>
@@ -252,7 +252,7 @@
     <!-- components tombol filter -->
     <section >
       <div class="container">
-        <div id="side-filter" class="overflow-auto fixed w-full bg-white shadow-top rounded-t-2xl bottom-[-920px] h-screen z-50 flex flex-col space-y-5 text-gray-900 duration-300 shadow-3xl pb-20">
+        <div id="side-filter" class="overflow-auto fixed w-full bg-white shadow-sidefilter rounded-t-2xl bottom-[-1020px] h-screen z-50 flex flex-col space-y-5 text-gray-900 duration-300  pb-20">
           <span class="fixed block self-center border-2 border-solid border-slate-300 w-12 rounded-full my-4"></span>
           <a href="javascript:void(0)" class="text-right text-[40px] text-slate-400 mx-6 w-5 absolute right-3" onclick="closeFilter()">&times;</a>
           <h1 class="mx-7 absolute pt-6 text-2xl text-gray-900 font-extrabold">Filter</h1>
@@ -349,7 +349,7 @@
 </section>
 <!-- filter Atur waktu -->
 <div class="container">
-  <div id="side-kustom" class="w-full bg-white shadow-top rounded-t-2xl fixed bottom-[-450px] h-[400px] z-50 flex flex-col space-y-5 text-gray-900 duration-300 shadow-3xl">
+  <div id="side-kustom" class="w-full bg-white shadow-sidewaktu rounded-t-2xl fixed bottom-[-1050px] h-[400px] z-50 flex flex-col space-y-5 text-gray-900 duration-300 ">
     <span class="block self-center border-2 border-solid border-slate-300 w-12 rounded-full my-4"></span>
     <a href="javascript:void(0)" class="text-right text-[40px] text-slate-400 mx-6 w-5 absolute right-3" onclick="closeKustom()">&times;</a>
     <span class="mx-8 absolute pt-6 text-2xl text-gray-900 font-extrabold my-auto">Atur Waktu</span>
@@ -417,7 +417,7 @@
 <!-- side Edit Topik -->
 <section>
   <div class="container">
-    <div id="side-edit" class="w-full bg-white shadow-top rounded-t-2xl fixed bottom-[-450px] h-[300px] z-50 flex flex-col space-y-5 text-gray-900 duration-300 shadow-3xl">
+    <div id="side-edit" class="w-full bg-white shadow-top rounded-t-2xl fixed bottom-[-450px] h-[300px] z-50 flex flex-col space-y-5 text-gray-900 duration-300 ">
       <span class="block self-center border-2 border-solid border-slate-300 w-12 rounded-full my-4"></span>
       <span class="mx-5 absolute pt-6 text-xl text-gray-900 font-extrabold my-auto">Edit Judul Topik</span>
         <div class="flex items-center mx-5 pt-10">     
@@ -448,7 +448,7 @@
   <!-- side hapus -->
 <section>
   <div class="container">
-    <div id="side-hapus" class="w-full bg-white shadow-top rounded-t-2xl fixed bottom-[-490px] h-[480px] z-50 flex flex-col space-y-5 text-gray-900 duration-300 shadow-3xl">
+    <div id="side-hapus" class="w-full bg-white shadow-top rounded-t-2xl fixed bottom-[-490px] h-[480px] z-50 flex flex-col space-y-5 text-gray-900 duration-300 ">
       <a href="javascript:void(0)" class="text-right text-[40px] text-slate-400 mx-6 w-5 absolute right-3" onclick="closeHapus(), openKeyword()">&times;</a>
       <span class="block self-center border-2 border-solid border-slate-300 w-12 rounded-full my-4"></span>
       <div class="flex items-center mx-8">     
@@ -491,7 +491,7 @@
       <!-- side notifikasi -->
       <section>
         <div class="container">
-          <div id="side-notifikasi" class="overflow-auto fixed w-full bg-white bottom-[-920px] h-screen z-50 flex flex-col space-y-5 text-gray-900 duration-300 shadow-3xl pb-20">
+          <div id="side-notifikasi" class="overflow-auto fixed w-full bg-white bottom-[-920px] h-screen z-50 flex flex-col space-y-5 text-gray-900 duration-300  pb-20">
             <div class="mb-10">
               <span class="pl-[70px] absolute pt-6 text-lg text-gray-900 font-extrabold my-auto w-full">Notifikasi "PHK Startup Indonesia"</span>
               <a href="javascript:void(0)" class="text-right text-slate-400 absolute left-1 flex" onclick="closeNotifikasi(), openLinimasanotif()">
@@ -628,7 +628,7 @@
 <!-- side minimal data terkumpul -->
   <section>
     <div class="container">
-      <div id="side-min" class="w-full bg-white shadow-top rounded-t-2xl fixed bottom-[-560px] h-[550px] z-50 flex flex-col space-y-5 text-gray-900 duration-300 shadow-3xl">
+      <div id="side-min" class="w-full bg-white shadow-top rounded-t-2xl fixed bottom-[-560px] h-[550px] z-50 flex flex-col space-y-5 text-gray-900 duration-300 ">
         <span class="block self-center border-2 border-solid border-slate-300 w-12 rounded-full my-4"></span>
         <a href="javascript:void(0)" class="text-right text-[40px] text-slate-400 mx-6 w-5 absolute right-3" onclick="closeMin(), openNotifikasi()">&times;</a>
         <h1 class="mx-7 absolute pt-6 text-xl text-gray-900 font-extrabold">Minimal data terkumpul</h1>
@@ -669,7 +669,7 @@
 <!-- side cek setiap -->
   <section>
     <div class="container">
-      <div id="side-cek" class="w-full bg-white shadow-top rounded-t-2xl fixed bottom-[-560px] h-[550px] z-50 flex flex-col space-y-5 text-gray-900 duration-300 shadow-3xl">
+      <div id="side-cek" class="w-full bg-white shadow-top rounded-t-2xl fixed bottom-[-560px] h-[550px] z-50 flex flex-col space-y-5 text-gray-900 duration-300 ">
         <span class="block self-center border-2 border-solid border-slate-300 w-12 rounded-full my-4"></span>
         <a href="javascript:void(0)" class="text-right text-[40px] text-slate-400 mx-6 w-5 absolute right-3" onclick="closeCek(), openNotifikasi()">&times;</a>
         <h1 class="mx-7 absolute pt-6 text-xl text-gray-900 font-extrabold">Cek setiap</h1>
