@@ -213,7 +213,7 @@ var sideEdit = document.getElementById('side-edit');
         }
         function openLinimasa(){
             setTimeout(function(){ 
-            window.location="linimasa.html"
+            window.location="linimasanotoast.html"
          }, 0);
         }
         function openLinimasaside(){
@@ -369,6 +369,11 @@ var sideEdit = document.getElementById('side-edit');
         function openTampil(){
             setTimeout(function(){ 
             window.location="linimasakontentampilnormal.html"
+         }, 0);
+        }
+        function openTampilblur(){
+            setTimeout(function(){ 
+            window.location="linimasakontentampil.html"
          }, 0);
         }
         function openTampil2(){

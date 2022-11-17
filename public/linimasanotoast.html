@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
@@ -46,8 +45,9 @@
         $("#datepicker1").datepicker();
       });
     </script>
+           <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="bg-slate-200" onload="toast3()">
+  <body class="bg-slate-200">
 
       <!-- navbar -->
     <section>
@@ -91,7 +91,7 @@
                 <h1 class="font-bold text-md mx-2 pb-4 w-screen text-slate-800 hover:text-[#4372EA] active:text-[#4372EA]" onclick="openSemua()">Semua <span class="absolute right-12">50.000</span></h1>
             </div>
             <div class="flex items-center border-b-2 w-full">
-                <h1 class="font-bold text-md mx-2 pb-4 pt-4 w-screen text-[#4372EA] hover:text-[#4372EA] active:text-[#4372EA]">PUBG Indonesia <span class="absolute right-12">50.000</span></h1>
+                <h1 class="font-bold text-md mx-2 pb-4 pt-4 w-screen text-[#4372EA] hover:text-[#4372EA] active:text-[#4372EA]">PUBG Esport Indonesia <span class="absolute right-12">50.000</span></h1>
                 <img src="../public/img/titik 3 png.png" alt="icon titik3" class="w-[4px] h-[20px] mx-2" onclick="openKeyword(), closeMenu()">
             </div>
             <h1 class="w-[230px] border-3 border-solid border-slate-600 m-9 ">
@@ -111,7 +111,7 @@
     <div class="container">
       <div class="p-8 flex items-center w-full bg-white fixed top-0">
         <span class="cursor-pointer text-3xl absolute left-4 text-gray-400" onclick="openMenu()">&#9776;</span>
-        <h1 class="text-lg ml-7 font-bold text-slate-800 w-full">PUBG Indonesia </h1>
+        <h1 class="text-lg ml-7 font-bold text-slate-800 w-full">PUBG Esport Indonesia </h1>
         <div class="relative left-10">
             <img src="../public/img/urutkan png.png" alt="icon filter" class="w-[19px] h-[20px] absolute mx-1" onclick="openUrutan()">
             <img src="../public/img/filter png.png" alt="icon filter" class="w-[18px] h-[21px] mx-[45px]" onclick="openFilter()"> 
@@ -127,7 +127,7 @@
           <a href="#" class="relative mx-auto">
             <h1 class="text-xl font-semibold text-blue-400 border-blue-500 border-b-4 w-52 text-center pb-2">Linimasa</h1>
           </a>
-          <a href="overviewkontenpubg.html">
+          <a href="overviewkonten.html">
             <h1 class="text-xl font-thin text-slate-300 border-slate-300 border-b-2 w-52 text-center pb-2">Overview</h1>
           </a>
         </div>
@@ -149,7 +149,7 @@
                     </div>
                     <!-- titik 3 -->
                     <div class="w-[5px] ml-[65px]">
-                        <img src="../public/img/titik 3 png.png" alt="icon titik" onclick="openLainnya()"> 
+                        <img src="../public/img/titik 3 png.png" alt="icon titik"> 
                     </div>
                     <div class="w-5">
                         <img src="../public/img/2 png.png" alt="twitter">
@@ -244,7 +244,7 @@
                       </div>
                       <!-- titik 3 -->
                       <div class="w-[5px] ml-[65px]">
-                          <img src="../public/img/titik 3 png.png" alt="icon titik" onclick="openLainnya()"> 
+                          <img src="../public/img/titik 3 png.png" alt="icon titik"> 
                       </div>
                       <div class="w-5">
                           <img src="../public/img/2 png.png" alt="twitter">
@@ -277,16 +277,6 @@
         </div>
       </section>
 
-      <div id="snackbar7">
-        <div class="flex items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white " viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd"
-            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-            clip-rule="evenodd" />
-          </svg> 
-          <span class="font-thin text-[16px] mx-3">Judul topik berhasil diganti</span>
-        </div>
-      </div>
 
       <div id="snackbar">
         <div class="flex items-center">
@@ -299,17 +289,6 @@
         </div>
       </div>
 
-      <div id="snackbar8">
-        <div class="flex items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white " viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd"
-            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-            clip-rule="evenodd" />
-          </svg> 
-          <span class="font-thin text-[16px] mx-3">Keyword pencarian berhasil diganti</span>
-        </div>
-      </div>
-
       <div id="snackbar2">
         <div class="flex items-center">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white " viewBox="0 0 20 20" fill="currentColor">
@@ -317,7 +296,7 @@
             d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
             clip-rule="evenodd" />
           </svg> 
-          <span class="font-thin text-[16px] mx-3">Topik Berhasil dibuat</span>
+          <span class="font-thin text-[16px] mx-3">Topik berhasil dibuat</span>
         </div>
       </div>
     
@@ -328,7 +307,7 @@
             d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
             clip-rule="evenodd" />
           </svg> 
-          <span class="font-thin text-[16px] mx-3">Notifikasi Berhasil diaktifkan</span>
+          <span class="font-thin text-[16px] mx-3">Notifikasi berhasil diaktifkan</span>
         </div>
       </div>
     
@@ -339,7 +318,18 @@
             d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
             clip-rule="evenodd" />
           </svg> 
-          <span class="font-thin text-[16px] mx-3">Sentimen Berhasil diganti</span>
+          <span class="font-thin text-[16px] mx-3">Sentimen berhasil diganti</span>
+        </div>
+      </div>
+    
+      <div id="snackbar6">
+        <div class="flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white " viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd"
+            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+            clip-rule="evenodd" />
+          </svg> 
+          <span class="font-thin text-[16px] mx-3">Judul topik berhasil diganti</span>
         </div>
       </div>
     
@@ -347,7 +337,7 @@
     <!-- component tombol urutan -->
     <section>
       <div class="container">
-        <div id="side-urutan" class="w-full bg-white shadow-sideurutan rounded-t-2xl fixed bottom-[-1400px] h-72 z-50 flex flex-col space-y-5 text-gray-900 duration-300 ">
+        <div id="side-urutan" class="w-full bg-white shadow-sideurutan rounded-t-2xl fixed bottom-[-1400px] h-72 z-50 flex flex-col space-y-5 text-gray-900 duration-300">
           <span class="block self-center border-2 border-solid border-slate-300 w-12 rounded-full my-4"></span>
           <a href="javascript:void(0)" class="text-right text-[40px] text-slate-400 mx-6 w-5 absolute right-3" onclick="closeUrutan()">&times;</a>
           <h1 class="mx-7 absolute pt-6 text-2xl text-gray-900 font-extrabold">Urutkan</h1>
@@ -370,10 +360,10 @@
     <!-- component icon lainnya side bar -->
     <section>
       <div class="container">
-        <div id="side-keyword" class="w-full bg-white shadow-sidekeyword rounded-t-2xl fixed bottom-[-1020px] h-[410px] z-50 flex flex-col space-y-5 text-gray-900 duration-300 ">
+        <div id="side-keyword" class="w-full bg-white shadow-sidekeyword rounded-t-2xl fixed bottom-[-1020px] h-[410px] z-50 flex flex-col space-y-5 text-gray-900 duration-300">
           <span class="block self-center border-2 border-solid border-slate-300 w-12 rounded-full my-4"></span>
           <div onclick="closeKeyword()">
-            <h1 class="px-7 absolute text-xl text-gray-900 font-extrabold border-b-[1px] pb-5 w-screen">PUBG Indonesia</h1>
+            <h1 class="px-7 absolute text-xl text-gray-900 font-extrabold border-b-[1px] pb-5 w-screen">PUBG Esport Indonesia</h1>
             <a class="text-right text-[40px] text-slate-400 mx-6 w-5 absolute right-3 top-9">&times;</a>
           </div>
           <div class="grid grid-rows-2 grid-flow-col items-center px-8 pt-11 border-b-[1px] w-screen" onclick="openEdit(), closeKeyword()">
@@ -384,7 +374,7 @@
               <h1 class="text-sm font-normal text-slate-700 -mx-[90px]">Judul topik</h1>
             </div>
             <div class="row-span-2">
-              <h1 class="text-sm font-light text-slate-300 pb-3 -mx-[90px]">PUBG Indonesia</h1>
+              <h1 class="text-sm font-light text-slate-300 pb-3 -mx-[90px]">PUBG Esport Indonesia</h1>
             </div>
           </div>
 
@@ -398,7 +388,7 @@
               <h1 class="text-sm font-normal text-slate-700 -mx-[90px]"  onclick="openUbahKeyword()">Keyword pencarian</h1>
             </div>
             <div class="row-span-2">
-              <h1 class="text-sm font-light text-slate-300 -mx-[90px]">PUBG</h1>
+              <h1 class="text-sm font-light text-slate-300 -mx-[90px]">PUBG Esport</h1>
             </div>
             <div class="row-span-3 absolute right-8">
               <img src="../public/img/copy png.png" alt="pensil" class="w-5" onclick="toast4(), closeKeyword()">
@@ -425,7 +415,7 @@
               <h1 class="text-sm font-normal text-slate-700 -mx-[90px]">Notifikasi</h1>
             </div>
             <div class="row-span-2">
-              <h1 class="text-sm font-light text-slate-300 -mx-[90px]">Aktif</h1>
+              <h1 class="text-sm font-light text-slate-300 -mx-[90px]">Tidak Aktif</h1>
             </div>
           </div>
           <div class="flex items-center mx-8 border-t-[1px] pt-5" onclick="openHapus(), closeKeyword()">
@@ -442,7 +432,7 @@
     <!-- components tombol filter -->
     <section>
       <div class="container">
-        <div id="side-filter" class="overflow-auto fixed w-full bg-white shadow-sidefilter rounded-t-2xl bottom-[-1020px] h-screen z-50 flex flex-col space-y-5 text-gray-900 duration-300  pb-20">
+        <div id="side-filter" class="overflow-auto fixed w-full bg-white shadow-sidefilter rounded-t-2xl bottom-[-1020px] h-screen z-50 flex flex-col space-y-5 text-gray-900 duration-300 pb-20">
           <span class="fixed block self-center border-2 border-solid border-slate-300 w-12 rounded-full my-4"></span>
           <a href="javascript:void(0)" class="text-right text-[40px] text-slate-400 mx-6 w-5 absolute right-3" onclick="closeFilter()">&times;</a>
           <h1 class="mx-7 absolute pt-6 text-2xl text-gray-900 font-extrabold">Filter</h1>
@@ -608,7 +598,7 @@
 <!-- side Edit Topik -->
 <section>
   <div class="container">
-    <div id="side-edit" class="w-full bg-white shadow-sidebagikan rounded-t-2xl fixed bottom-[-1250px] h-[300px] z-50 flex flex-col space-y-5 text-gray-900 duration-300 ">
+    <div id="side-edit" class="w-full bg-white shadow-sidebagikan rounded-t-2xl fixed bottom-[-1250px] h-[300px] z-50 flex flex-col space-y-5 text-gray-900 duration-300">
       <span class="block self-center border-2 border-solid border-slate-300 w-12 rounded-full my-4"></span>
       <span class="mx-5 absolute pt-6 text-xl text-gray-900 font-extrabold my-auto">Edit Judul Topik</span>
         <div class="flex items-center mx-5 pt-10">     
@@ -626,7 +616,7 @@
           <div class="flex mx-auto">
             <button class="w-[180px] h-[52px] bg-white border-2 rounded-lg mr-3 text-gray-900 text-base" onclick="openKeyword(), closeEdit()">Batal
             </button>
-            <button href="javascript:void" onclick="openKeyword(), closeEdit()" class="w-[180px] h-[52px] bg-blue-500 rounded-lg text-white text-base hover:bg-[#BFBFBF]">Simpan
+            <button href="javascript:void" onclick="openLinimasaKeyword(), closeEdit()" class="w-[180px] h-[52px] bg-blue-500 rounded-lg text-white text-base hover:bg-[#BFBFBF]">Simpan
             </button>
           </div>
       </a>
@@ -639,8 +629,8 @@
   <!-- side hapus -->
 <section>
   <div class="container">
-    <div id="side-hapus" class="w-full bg-white shadow-sidekeyword rounded-t-2xl fixed bottom-[-1090px] h-[480px] z-50 flex flex-col space-y-5 text-gray-900 duration-300 ">
-      <a href="javascript:void(0)" class="text-right text-[40px] text-slate-400 mx-6 w-5 absolute right-3" onclick="closeHapus()">&times;</a>
+    <div id="side-hapus" class="w-full bg-white shadow-sidekeyword rounded-t-2xl fixed bottom-[-1090px] h-[480px] z-50 flex flex-col space-y-5 text-gray-900 duration-300">
+      <a href="javascript:void(0)" class="text-right text-[40px] text-slate-400 mx-6 w-5 absolute right-3" onclick="closeHapus(), openKeyword()">&times;</a>
       <span class="block self-center border-2 border-solid border-slate-300 w-12 rounded-full my-4"></span>
       <div class="flex items-center mx-8">     
           <div class="block mx-auto">
@@ -649,7 +639,7 @@
           </div>
       </div>
       <div class="block mx-auto text-center px-11">
-        <h1 class="font-semibold text-slate-800">Anda yakin ingin menghapus topik "PUBG Indonesia"?</h1>
+        <h1 class="font-semibold text-slate-800">Anda yakin ingin menghapus topik "PUBG Esport Indonesia"?</h1>
       </div>
       
       <!-- button filter hapus -->
@@ -682,9 +672,9 @@
       <!-- side notifikasi -->
       <section>
         <div class="container">
-          <div id="side-notifikasi" class="overflow-auto fixed w-full bg-white bottom-[-920px] h-screen z-50 flex flex-col space-y-5 text-gray-900 duration-300  pb-20">
+          <div id="side-notifikasi" class="overflow-auto fixed w-full bg-white bottom-[-920px] h-screen z-50 flex flex-col space-y-5 text-gray-900 duration-300 shadow-3xl pb-20">
             <div class="mb-10">
-              <span class="pl-[70px] absolute pt-6 text-lg text-gray-900 font-extrabold my-auto w-full">Notifikasi "PUBG Indonesia"</span>
+              <span class="pl-[70px] absolute pt-6 text-lg text-gray-900 font-extrabold my-auto w-full">Notifikasi "PUBG Esport Indonesia"</span>
               <a href="javascript:void(0)" class="text-right text-slate-400 absolute left-1 flex" onclick="closeNotifikasi(), openLinimasanotif()">
                 <img src="../public/img/back-icon.png" alt="icon back" class="w-9 h-7 m-6 flex">
               </a>
@@ -695,7 +685,7 @@
                 <img src="../public/img/email png (1).png" alt="email" class="w-5">
                 <span class="mx-4 text-md font-bold text-slate-800">Email</span>
                 <label for="default-email" class="inline-flex absolute right-8 items-center cursor-pointer ">
-                  <input type="checkbox" value="" id="default-email" class="sr-only peer" checked>
+                  <input type="checkbox" value="" id="default-email" class="sr-only peer">
                   <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
                 </label>
               </div>
@@ -819,7 +809,7 @@
 <!-- side minimal data terkumpul -->
   <section>
     <div class="container">
-      <div id="side-min" class="w-full bg-white shadow-sidemindata rounded-t-2xl fixed bottom-[-1060px] h-[550px] z-50 flex flex-col space-y-5 text-gray-900 duration-300 ">
+      <div id="side-min" class="w-full bg-white shadow-sidemindata rounded-t-2xl fixed bottom-[-1060px] h-[550px] z-50 flex flex-col space-y-5 text-gray-900 duration-300">
         <span class="block self-center border-2 border-solid border-slate-300 w-12 rounded-full my-4"></span>
         <a href="javascript:void(0)" class="text-right text-[40px] text-slate-400 mx-6 w-5 absolute right-3" onclick="closeMin(), openNotifikasi()">&times;</a>
         <h1 class="mx-7 absolute pt-6 text-xl text-gray-900 font-extrabold">Minimal data terkumpul</h1>
@@ -860,7 +850,7 @@
 <!-- side cek setiap -->
   <section>
     <div class="container">
-      <div id="side-cek" class="w-full bg-white shadow-sidemindata rounded-t-2xl fixed bottom-[-1060px] h-[550px] z-50 flex flex-col space-y-5 text-gray-900 duration-300 ">
+      <div id="side-cek" class="w-full bg-white shadow-sidemindata rounded-t-2xl fixed bottom-[-1060px] h-[550px] z-50 flex flex-col space-y-5 text-gray-900 duration-300">
         <span class="block self-center border-2 border-solid border-slate-300 w-12 rounded-full my-4"></span>
         <a href="javascript:void(0)" class="text-right text-[40px] text-slate-400 mx-6 w-5 absolute right-3" onclick="closeCek(), openNotifikasi()">&times;</a>
         <h1 class="mx-7 absolute pt-6 text-xl text-gray-900 font-extrabold">Cek setiap</h1>
@@ -901,7 +891,7 @@
   <!-- aksi konten linimasa -->
   <section>
     <div class="container">
-      <div id="side-aksi" class="w-full bg-white shadow-sideaksi rounded-t-2xl fixed bottom-[-1050px] h-72 z-50 flex flex-col space-y-5 text-gray-900 duration-300 ">
+      <div id="side-aksi" class="w-full bg-white shadow-sideaksi rounded-t-2xl fixed bottom-[-1050px] h-72 z-50 flex flex-col space-y-5 text-gray-900 duration-300">
         <span class="block self-center border-2 border-solid border-slate-300 w-12 rounded-full my-4"></span>
         <a href="javascript:void(0)" class="text-right text-[40px] text-slate-400 mx-6 w-5 absolute right-3" onclick="closeAksi()">&times;</a>
         <h1 class="mx-7 absolute pt-6 text-xl text-gray-900 font-extrabold">Aksi</h1>
@@ -920,10 +910,10 @@
       </div>
     </div>
   </section>
-
+<!-- side  sentimen -->
   <section>
     <div class="container">
-      <div id="side-sentimen" class="w-full bg-white shadow-sideurutan rounded-t-2xl fixed bottom-[-1400px] h-72 z-50 flex flex-col space-y-5 text-gray-900 duration-300 ">
+      <div id="side-sentimen" class="w-full bg-white shadow-sideurutan rounded-t-2xl fixed bottom-[-1400px] h-72 z-50 flex flex-col space-y-5 text-gray-900 duration-300">
         <span class="block self-center border-2 border-solid border-slate-300 w-12 rounded-full my-4"></span>
         <a href="javascript:void(0)" class="text-right text-[40px] text-slate-400 mx-6 w-5 absolute right-3" onclick="closeSentimen(), openAksi()">&times;</a>
         <h1 class="mx-7 absolute pt-6 text-2xl text-gray-900 font-extrabold">pilih Sentimen</h1>
@@ -946,7 +936,7 @@
     <!-- side sembunyikan konten-->
 <section>
   <div class="container">
-    <div id="side-sembunyi" class="w-full bg-white shadow-sidekeyword rounded-t-2xl fixed bottom-[-1090px] h-[480px] z-50 flex flex-col space-y-5 text-gray-900 duration-300 ">
+    <div id="side-sembunyi" class="w-full bg-white shadow-sidekeyword rounded-t-2xl fixed bottom-[-1090px] h-[480px] z-50 flex flex-col space-y-5 text-gray-900 duration-300">
       <a href="javascript:void(0)" class="text-right text-[40px] text-slate-400 mx-6 w-5 absolute right-3" onclick="closeSembunyi()">&times;</a>
       <span class="block self-center border-2 border-solid border-slate-300 w-12 rounded-full my-4"></span>
       <div class="flex items-center mx-8">     
@@ -967,7 +957,7 @@
             <button class="w-[170px] h-[52px] bg-white border-2 rounded-lg text-gray-900 text-base ml-5" onclick="closeSembunyi(), openAksi()"><span>Batalkan</span> 
             </button>
         </div>
-        <button class="w-[170px] h-[52px] bg-[#E62864] rounded-lg text-white text-base mr-8" onclick="toast6(), closeSembunyi(), openHilang2()"><span>Ya. Sembunyikan</span> 
+        <button class="w-[170px] h-[52px] bg-[#E62864] rounded-lg text-white text-base mr-8" onclick="toast6(), closeSembunyi(), openHilang()"><span>Ya. Sembunyikan</span> 
         </button>
     </div>
   </div> 
@@ -989,8 +979,9 @@
 
 
 
-    <script src="../public/js/sideMenu.js">
-    </script>
+  <script src="../public/js/sideMenu.js">
+  </script>
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
-</body>
+   
+  </body>
 </html>
