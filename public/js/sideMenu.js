@@ -576,7 +576,7 @@ var sideEdit = document.getElementById('side-edit');
             var form = document.getElementById("form");
             var email = document.getElementById("email").value;
             var text = document.getElementById("text");
-            var pattern = "[sudaryanto]+@[gmail]+\.[a-z]{2,3}$";
+            var pattern = "[]+@[]+\.[a-z]{2,3}$";
 
             if(email.match(pattern))
             {
