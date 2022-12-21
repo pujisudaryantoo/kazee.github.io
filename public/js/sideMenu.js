@@ -89,6 +89,16 @@ var sideSumber = document.getElementById('side-sumber');
             sideSumber.classList.remove('bottom-0');
             sideSumber.classList.add('bottom-[-1040px]');
         }
+var sideBagikan = document.getElementById('side-bagikan');
+        function openBagikan(){
+            sideBagikan.classList.remove('bottom-[-1400px]');
+            sideBagikan.classList.add('bottom-0');
+        }
+
+        function closeBagikan(){
+            sideBagikan.classList.remove('bottom-0');
+            sideBagikan.classList.add('bottom-[-1400px]');
+        }
 
 
 var sideFilter = document.getElementById('side-filter');
@@ -561,6 +571,11 @@ var sideEdit = document.getElementById('side-edit');
           }
           function toast8() {
             var x = document.getElementById("snackbar8");
+            x.className = "show";
+            setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+          }
+          function toast10() {
+            var x = document.getElementById("snackbar10");
             x.className = "show";
             setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
           }

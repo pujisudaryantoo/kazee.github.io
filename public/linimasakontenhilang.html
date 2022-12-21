@@ -82,7 +82,10 @@
     <header>
       <div id="side-menu" class="fixed top-0 left-[-750px] w-[350px] h-screen z-50 bg-white px-4
       flex flex-col space-y-5 text-gray-900 duration-300 shadow-side">
-      <div class="flex w-[320px] py-8 px-7 border-b-gray-300 border-b-2 shadow-none">
+      <div class="block self-center mt-5 bg-[#F0F0F0] py-5 w-[350px]">
+        <img src="../public/img/logo hitam png.png" alt="logo" class="w-28 mx-auto">
+      </div>
+      <div class="flex w-[320px] pb-4 px-7 border-b-gray-300 border-b-2 shadow-none">
           <h1 class="font-bold text-xl -mx-5 ">TOPIK</h1>
           <img src="../public/img/topik png.png" alt="icon topik" class="w-[24px] h-full mx-56">
         </div>
@@ -856,7 +859,7 @@
           <img src="../public/img/sentimen png.png"  class="w-6 h-6 left-7 absolute">
           <h1 class=" text-base font-bold pl-11 text-slate-900">Koreksi sentimen <span id="ganti">"Netral"</span></h1>
         </div>
-        <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-2 w-full" onclick="closeAksi()">
+        <div class="flex items-center px-7 pt-1 pb-3 border-solid border-b-2 w-full" onclick="closeAksi(), openBagikan()">
           <img src="../public/img/share png.png"  class="w-5 h-5 left-7 absolute">
           <h1 class=" text-base font-bold pl-11 text-slate-900">Bagikan</h1>
         </div>
@@ -932,6 +935,64 @@
  
   </div>
   </div>
+  </section>
+
+  <div id="snackbar10">
+    <div class="flex items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white " viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd"
+        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+        clip-rule="evenodd" />
+      </svg> 
+      <span class="font-thin text-[16px] mx-3">Tautan konten berhasil disalin</span>
+    </div>
+  </div>
+
+  <!-- component bagikan -->
+  <section>
+    <div class="container">
+      <div id="side-bagikan" class="w-full bg-white shadow-sideurutan rounded-t-2xl fixed bottom-[-1400px] h-72 z-50 flex flex-col space-y-5 text-gray-900 duration-300">
+        <span class="block self-center border-2 border-solid border-slate-300 w-12 rounded-full my-4"></span>
+        <div href="" class="text-right text-slate-400 mx-5 absolute left-0" onclick="closeBagikan(), openAksi()">
+        <img src="../public/img/back-icon.png" alt="" class="h-8 w-full mt-5">
+      </div>
+        <h1 class="ml-20 absolute pt-5 text-xl text-gray-900 font-extrabold">Bagikan Konten</h1>
+        <div class="grid grid-cols-4 self-center absolute left-7 pt-[75px] gap-x-12 gap-y-9">
+          <div class="w-11 block text-center" onclick="closeBagikan()">
+            <img src="../public/img/wa.png" class="ml-4" alt="wa">
+            <span class="text-sm font-light">WhatsApp</span>
+          </div>
+          <div class="w-11 block text-center">
+            <img src="../public/img/ig.png" class="ml-4" alt="wa">
+            <span class="text-sm font-light pl-1.5">Instagram</span>
+          </div>
+          <div class="w-11 block text-center">
+            <img src="../public/img/twt.png" class="ml-4" alt="wa">
+            <span class="text-sm font-light pl-3.5">Twitter</span>
+          </div>
+          <div class="w-11 block text-center">
+            <img src="../public/img/fb.png" class="ml-4" alt="wa">
+            <span class="text-sm font-light pl-1">Facebook</span>
+          </div>
+          <div class="w-11 block text-center">
+            <img src="../public/img/line.png" class="ml-4" alt="wa">
+            <span class="text-sm font-light pl-6">Line</span>
+          </div>
+          <div class="w-11 block text-center">
+            <img src="../public/img/tele.png" class="ml-4" alt="wa">
+            <span class="text-sm font-light pl-1">Telegram</span>
+          </div>
+          <div class="w-11 block text-center">
+            <img src="../public/img/in.png" class="ml-4" alt="wa">
+            <span class="text-sm font-light pl-2">LinkedIn</span>
+          </div>
+          <div class="w-11 flr text-center" onclick="toast10(), closeBagikan()">
+            <img src="../public/img/link.png" class="ml-4" alt="wa">
+            <h1 class="text-sm font-light pt-1 pl-2">SalinLink</h1>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
 
