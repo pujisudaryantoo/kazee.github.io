@@ -1089,6 +1089,21 @@ video {
   margin-right: 38px;
 }
 
+.mx-60 {
+  margin-left: 15rem;
+  margin-right: 15rem;
+}
+
+.mx-\[220px\] {
+  margin-left: 220px;
+  margin-right: 220px;
+}
+
+.mx-\[240px\] {
+  margin-left: 240px;
+  margin-right: 240px;
+}
+
 .mr-8 {
   margin-right: 2rem;
 }
@@ -2261,11 +2276,6 @@ video {
 .px-12 {
   padding-left: 3rem;
   padding-right: 3rem;
-}
-
-.py-8 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
 }
 
 .py-3 {

@@ -1,0 +1,10 @@
+Cara Penggunaan Prototipe Aplikasi Kazee Media Monitoring
+
+1. Pastikan PC sudah terinstall software node js.
+2. Buka aplikasi visual studio code atau sejenisnya
+3. Import folder program KazeeApp ke aplikasi visual studio atau sejenisnya.
+4. Selanjutnya open terminal lalu ketikka perintah "npm run dev" untuk menjalankan program
+5. pilih file index kemudian klik kanan lalu open with live browser.
+6. Maka browser chrome atau sejenisnya akan terbuka dan muncul prototipe aplikasi kazee
+7. Lakukan inspect dengan cara klik kanan untuk merubah ukuran prototipe menjadi tipe android
+8. Prototipe berhasil digunakan.
